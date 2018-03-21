@@ -15,7 +15,7 @@ public class DisputeRequest implements java.io.Serializable
    @org.kie.api.definition.type.Label("Amount")
    private java.lang.Double amount;
 
-   @org.kie.api.definition.type.Label(value = "chargeback")
+   @org.kie.api.definition.type.Label("Chargeback")
    private java.lang.String chargeback;
 
    public DisputeRequest()
