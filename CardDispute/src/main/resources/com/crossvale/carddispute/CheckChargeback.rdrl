@@ -4,6 +4,7 @@ rule "CheckChargeback"
 	dialect "mvel"
 	ruleflow-group "disputes"
 	when
+		DisputeRequest( )
 	then
 		System.out.println("***Amount is less than $15 charge back initiated***");
 end
