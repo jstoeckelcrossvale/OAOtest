@@ -2,6 +2,7 @@ package com.crossvale.carddispute;
 
 rule "CheckChargeback"
 	dialect "mvel"
+	ruleflow-group "disputes"
 	when
 		disputeRequest : DisputeRequest( amount < 15.0 )
 	then
