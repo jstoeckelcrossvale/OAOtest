@@ -5,7 +5,13 @@
   <fixtures>
     <fact-data>
       <type>DisputeRequest</type>
-      <fieldData/>
+      <fieldData>
+        <field-data>
+          <name>amount</name>
+          <value>15.0</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
       <name>dr</name>
       <isModify>false</isModify>
     </fact-data>
@@ -13,23 +19,24 @@
       <executionTimeResult>0</executionTimeResult>
       <numberOfRulesFired>0</numberOfRulesFired>
     </execution-trace>
+    <expect-rule>
+      <ruleName>CheckChargeback</ruleName>
+      <expectedFire>true</expectedFire>
+    </expect-rule>
     <expect-fact>
       <fieldValues>
         <expect-field>
           <fieldName>chargeback</fieldName>
           <expected>yes</expected>
-          <actualResult>No match</actualResult>
-          <successResult>false</successResult>
-          <explanation>Fact of type [DisputeRequest] was not found in the results.</explanation>
           <operator>==</operator>
-          <nature>1</nature>
+          <nature>0</nature>
         </expect-field>
       </fieldValues>
-      <name>DisputeRequest</name>
-      <anonymous>true</anonymous>
+      <name>dr</name>
+      <anonymous>false</anonymous>
     </expect-fact>
   </fixtures>
-  <lastRunResult>2018-03-21 19:14:58.649 UTC</lastRunResult>
+  <lastRunResult>2018-03-21 19:18:00.868 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.crossvale.carddispute</packageName>
