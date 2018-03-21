@@ -12,8 +12,11 @@ public class DisputeRequest implements java.io.Serializable
    @org.kie.api.definition.type.Label("Fraud")
    private java.lang.String fraud;
 
-   @org.kie.api.definition.type.Label(value = "Amount")
+   @org.kie.api.definition.type.Label("Amount")
    private java.lang.Double amount;
+
+   @org.kie.api.definition.type.Label(value = "chargeback")
+   private java.lang.String chargeback;
 
    public DisputeRequest()
    {
@@ -39,10 +42,22 @@ public class DisputeRequest implements java.io.Serializable
       this.amount = amount;
    }
 
-   public DisputeRequest(java.lang.String fraud, java.lang.Double amount)
+   public java.lang.String getChargeback()
+   {
+      return this.chargeback;
+   }
+
+   public void setChargeback(java.lang.String chargeback)
+   {
+      this.chargeback = chargeback;
+   }
+
+   public DisputeRequest(java.lang.String fraud, java.lang.Double amount,
+         java.lang.String chargeback)
    {
       this.fraud = fraud;
       this.amount = amount;
+      this.chargeback = chargeback;
    }
 
 }
