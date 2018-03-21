@@ -9,8 +9,11 @@ public class DisputeRequest implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "Fraud")
+   @org.kie.api.definition.type.Label("Fraud")
    private java.lang.String fraud;
+
+   @org.kie.api.definition.type.Label(value = "Amount")
+   private java.lang.Double amount;
 
    public DisputeRequest()
    {
@@ -26,9 +29,20 @@ public class DisputeRequest implements java.io.Serializable
       this.fraud = fraud;
    }
 
-   public DisputeRequest(java.lang.String fraud)
+   public java.lang.Double getAmount()
+   {
+      return this.amount;
+   }
+
+   public void setAmount(java.lang.Double amount)
+   {
+      this.amount = amount;
+   }
+
+   public DisputeRequest(java.lang.String fraud, java.lang.Double amount)
    {
       this.fraud = fraud;
+      this.amount = amount;
    }
 
 }
