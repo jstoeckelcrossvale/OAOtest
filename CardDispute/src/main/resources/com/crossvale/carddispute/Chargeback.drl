@@ -1,7 +1,8 @@
 package com.crossvale.carddispute;
 
 rule "Chargeback"
-
+	ruleflow-group "disputes"
+	no-loop true
 	when
 		disputeRequest : DisputeRequest( amount <= 15.0 )
 	then
