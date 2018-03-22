@@ -4,9 +4,9 @@ rule "CheckChargeback"
 	ruleflow-group "disputes"
 	dialect "mvel"
 	when
-		disputeRequest : DisputeRequest( amount <= 15.0 )
+		dR : DisputeRequest( )
 	then
 		System.out.println("***Amount is less than  or equal to $15 charge back initiated***");
-		System.out.println("Chargeback " + disputeRequest.getChargeback());
-		disputeRequest.setChargeback( "yes" );
+		dR.setChargeback( "yes" );
+		System.out.println("***Chargeback" + dR.getChargeback());
 end
