@@ -16,8 +16,8 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace>
-      <executionTimeResult>0</executionTimeResult>
-      <numberOfRulesFired>0</numberOfRulesFired>
+      <executionTimeResult>7</executionTimeResult>
+      <numberOfRulesFired>1</numberOfRulesFired>
     </execution-trace>
     <expect-fact>
       <fieldValues>
@@ -25,8 +25,8 @@
           <fieldName>chargeback</fieldName>
           <expected>yes</expected>
           <actualResult></actualResult>
-          <successResult>false</successResult>
-          <explanation>[dr] field [chargeback] was [] expected [yes].</explanation>
+          <successResult>true</successResult>
+          <explanation>[dr] field [chargeback] was [yes].</explanation>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
@@ -36,10 +36,17 @@
     </expect-fact>
     <expect-rule>
       <ruleName>Chargeback</ruleName>
+      <explanation>Rule [Chargeback] was activated 1 times.</explanation>
+      <expectedFire>true</expectedFire>
+      <successResult>true</successResult>
+      <actualResult>1</actualResult>
+    </expect-rule>
+    <expect-rule>
+      <ruleName>CheckChargeback</ruleName>
       <expectedFire>true</expectedFire>
     </expect-rule>
   </fixtures>
-  <lastRunResult>2018-03-22 16:03:54.951 UTC</lastRunResult>
+  <lastRunResult>2018-03-22 16:42:26.913 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.crossvale.carddispute</packageName>
