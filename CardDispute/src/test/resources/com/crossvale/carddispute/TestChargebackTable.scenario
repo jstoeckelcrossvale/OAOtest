@@ -23,8 +23,42 @@
     <org.drools.workbench.models.testscenarios.shared.ActivateRuleFlowGroup>
       <name>disputes</name>
     </org.drools.workbench.models.testscenarios.shared.ActivateRuleFlowGroup>
+    <fact-data>
+      <type>DisputeRequest</type>
+      <fieldData>
+        <field-data>
+          <name>amount</name>
+          <value>50</value>
+          <nature>4</nature>
+        </field-data>
+        <field-data>
+          <name>customerType</name>
+          <value>business</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>dr2</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>DisputeRequest</type>
+      <fieldData>
+        <field-data>
+          <name>amount</name>
+          <value>15</value>
+          <nature>4</nature>
+        </field-data>
+        <field-data>
+          <name>customerType</name>
+          <value>consumer</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>dr3</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace>
-      <executionTimeResult>9</executionTimeResult>
+      <executionTimeResult>13</executionTimeResult>
       <numberOfRulesFired>1</numberOfRulesFired>
     </execution-trace>
     <expect-rule>
@@ -34,8 +68,12 @@
       <successResult>true</successResult>
       <actualResult>1</actualResult>
     </expect-rule>
+    <expect-rule>
+      <ruleName>Row 2 Chargeback</ruleName>
+      <expectedFire>true</expectedFire>
+    </expect-rule>
   </fixtures>
-  <lastRunResult>2018-04-04 19:25:25.29 UTC</lastRunResult>
+  <lastRunResult>2018-04-04 19:26:22.439 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.crossvale.carddispute</packageName>
