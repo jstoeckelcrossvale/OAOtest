@@ -18,6 +18,9 @@ public class DisputeRequest implements java.io.Serializable
    @org.kie.api.definition.type.Label("Chargeback")
    private java.lang.String chargeback;
 
+   @org.kie.api.definition.type.Label(value = "CustomerType")
+   private java.lang.String customerType;
+
    public DisputeRequest()
    {
    }
@@ -52,12 +55,23 @@ public class DisputeRequest implements java.io.Serializable
       this.amount = amount;
    }
 
+   public java.lang.String getCustomerType()
+   {
+      return this.customerType;
+   }
+
+   public void setCustomerType(java.lang.String customerType)
+   {
+      this.customerType = customerType;
+   }
+
    public DisputeRequest(java.lang.String fraud, java.lang.Float amount,
-         java.lang.String chargeback)
+         java.lang.String chargeback, java.lang.String customerType)
    {
       this.fraud = fraud;
       this.amount = amount;
       this.chargeback = chargeback;
+      this.customerType = customerType;
    }
 
 }
