@@ -10,8 +10,107 @@ public class Action implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
+   @org.kie.api.definition.type.Label(value = "actionNumber")
+   private java.lang.String actionNumber;
+   @org.kie.api.definition.type.Label(value = "actionTime")
+   private java.util.Date actionTime;
+   @org.kie.api.definition.type.Label(value = "username")
+   private java.lang.String username;
+   @org.kie.api.definition.type.Label(value = "ticketNumber")
+   private java.lang.String ticketNumber;
+   @org.kie.api.definition.type.Label(value = "actionType")
+   private java.lang.String actionType;
+   @org.kie.api.definition.type.Label(value = "description")
+   private java.lang.String description;
+   @org.kie.api.definition.type.Label(value = "customInfo")
+   private java.lang.String customInfo;
+
    public Action()
    {
+   }
+
+   public java.lang.String getActionNumber()
+   {
+      return this.actionNumber;
+   }
+
+   public void setActionNumber(java.lang.String actionNumber)
+   {
+      this.actionNumber = actionNumber;
+   }
+
+   public java.util.Date getActionTime()
+   {
+      return this.actionTime;
+   }
+
+   public void setActionTime(java.util.Date actionTime)
+   {
+      this.actionTime = actionTime;
+   }
+
+   public java.lang.String getUsername()
+   {
+      return this.username;
+   }
+
+   public void setUsername(java.lang.String username)
+   {
+      this.username = username;
+   }
+
+   public java.lang.String getTicketNumber()
+   {
+      return this.ticketNumber;
+   }
+
+   public void setTicketNumber(java.lang.String ticketNumber)
+   {
+      this.ticketNumber = ticketNumber;
+   }
+
+   public java.lang.String getActionType()
+   {
+      return this.actionType;
+   }
+
+   public void setActionType(java.lang.String actionType)
+   {
+      this.actionType = actionType;
+   }
+
+   public java.lang.String getDescription()
+   {
+      return this.description;
+   }
+
+   public void setDescription(java.lang.String description)
+   {
+      this.description = description;
+   }
+
+   public java.lang.String getCustomInfo()
+   {
+      return this.customInfo;
+   }
+
+   public void setCustomInfo(java.lang.String customInfo)
+   {
+      this.customInfo = customInfo;
+   }
+
+   public Action(java.lang.String actionNumber, java.util.Date actionTime,
+         java.lang.String username, java.lang.String ticketNumber,
+         java.lang.String actionType, java.lang.String description,
+         java.lang.String customInfo)
+   {
+      this.actionNumber = actionNumber;
+      this.actionTime = actionTime;
+      this.username = username;
+      this.ticketNumber = ticketNumber;
+      this.actionType = actionType;
+      this.description = description;
+      this.customInfo = customInfo;
    }
 
 }
