@@ -10,8 +10,6 @@ public class Customer implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label("customerNr")
-   private java.lang.String customerNr;
    @org.kie.api.definition.type.Label("customerName")
    private java.lang.String customerName;
    @org.kie.api.definition.type.Label("status")
@@ -37,21 +35,14 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("email")
    private java.lang.String email;
 
-   @org.kie.api.definition.type.Label(value = "phoneNr")
+   @org.kie.api.definition.type.Label("phoneNr")
    private com.crossvale.carddispute.PhoneNr phoneNr;
+
+   @org.kie.api.definition.type.Label(value = "customerNumber")
+   private java.lang.String customerNumber;
 
    public Customer()
    {
-   }
-
-   public java.lang.String getCustomerNr()
-   {
-      return this.customerNr;
-   }
-
-   public void setCustomerNr(java.lang.String customerNr)
-   {
-      this.customerNr = customerNr;
    }
 
    public java.lang.String getCustomerName()
@@ -164,15 +155,24 @@ public class Customer implements java.io.Serializable
       this.phoneNr = phoneNr;
    }
 
-   public Customer(java.lang.String customerNr, java.lang.String customerName,
-         java.lang.String status, java.lang.String id,
-         java.lang.String issuePlace, java.util.Date issueDate,
-         java.util.Date expirationDate,
+   public java.lang.String getCustomerNumber()
+   {
+      return this.customerNumber;
+   }
+
+   public void setCustomerNumber(java.lang.String customerNumber)
+   {
+      this.customerNumber = customerNumber;
+   }
+
+   public Customer(java.lang.String customerName, java.lang.String status,
+         java.lang.String id, java.lang.String issuePlace,
+         java.util.Date issueDate, java.util.Date expirationDate,
          com.crossvale.carddispute.Address address,
          java.lang.String nationalityCode, java.util.Date birthDate,
-         java.lang.String email, com.crossvale.carddispute.PhoneNr phoneNr)
+         java.lang.String email, com.crossvale.carddispute.PhoneNr phoneNr,
+         java.lang.String customerNumber)
    {
-      this.customerNr = customerNr;
       this.customerName = customerName;
       this.status = status;
       this.id = id;
@@ -184,6 +184,7 @@ public class Customer implements java.io.Serializable
       this.birthDate = birthDate;
       this.email = email;
       this.phoneNr = phoneNr;
+      this.customerNumber = customerNumber;
    }
 
 }
