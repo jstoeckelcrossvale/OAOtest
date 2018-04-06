@@ -22,8 +22,8 @@ public class Task implements java.io.Serializable
    private java.lang.String customInfo;
    @org.kie.api.definition.type.Label("dueDate")
    private java.util.Date dueDate;
-   @org.kie.api.definition.type.Label("username")
-   private java.lang.String userName;
+   @org.kie.api.definition.type.Label(value = "username")
+   private java.lang.String user;
 
    public Task()
    {
@@ -89,20 +89,20 @@ public class Task implements java.io.Serializable
       this.dueDate = dueDate;
    }
 
-   public java.lang.String getUserName()
+   public java.lang.String getUser()
    {
-      return this.userName;
+      return this.user;
    }
 
-   public void setUserName(java.lang.String userName)
+   public void setUser(java.lang.String user)
    {
-      this.userName = userName;
+      this.user = user;
    }
 
    public Task(java.lang.String taskNumber, java.lang.String taskType,
          java.lang.String description, java.lang.String ticketNumber,
          java.lang.String customInfo, java.util.Date dueDate,
-         java.lang.String userName)
+         java.lang.String user)
    {
       this.taskNumber = taskNumber;
       this.taskType = taskType;
@@ -110,7 +110,7 @@ public class Task implements java.io.Serializable
       this.ticketNumber = ticketNumber;
       this.customInfo = customInfo;
       this.dueDate = dueDate;
-      this.userName = userName;
+      this.user = user;
    }
 
 }
