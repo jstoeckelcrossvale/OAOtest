@@ -10,19 +10,19 @@ public class Task implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "taskNumber")
+   @org.kie.api.definition.type.Label("taskNumber")
    private java.lang.String taskNumber;
-   @org.kie.api.definition.type.Label(value = "taskType")
+   @org.kie.api.definition.type.Label("taskType")
    private java.lang.String taskType;
-   @org.kie.api.definition.type.Label(value = "description")
+   @org.kie.api.definition.type.Label("description")
    private java.lang.String description;
-   @org.kie.api.definition.type.Label(value = "ticketNumber")
+   @org.kie.api.definition.type.Label("ticketNumber")
    private java.lang.String ticketNumber;
-   @org.kie.api.definition.type.Label(value = "customInfo")
+   @org.kie.api.definition.type.Label("customInfo")
    private java.lang.String customInfo;
-   @org.kie.api.definition.type.Label(value = "dueDate")
+   @org.kie.api.definition.type.Label("dueDate")
    private java.util.Date dueDate;
-   @org.kie.api.definition.type.Label(value = "userName")
+   @org.kie.api.definition.type.Label("username")
    private java.lang.String userName;
 
    public Task()
