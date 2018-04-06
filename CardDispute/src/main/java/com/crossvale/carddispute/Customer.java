@@ -25,17 +25,20 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("expirationDate")
    private java.util.Date expirationDate;
 
-   @org.kie.api.definition.type.Label(value = "address")
+   @org.kie.api.definition.type.Label("address")
    private com.crossvale.carddispute.Address address;
 
-   @org.kie.api.definition.type.Label(value = "nationalityCode")
+   @org.kie.api.definition.type.Label("nationalityCode")
    private java.lang.String nationalityCode;
 
-   @org.kie.api.definition.type.Label(value = "birthDate")
+   @org.kie.api.definition.type.Label("birthDate")
    private java.util.Date birthDate;
 
-   @org.kie.api.definition.type.Label(value = "email")
+   @org.kie.api.definition.type.Label("email")
    private java.lang.String email;
+
+   @org.kie.api.definition.type.Label(value = "phoneNr")
+   private com.crossvale.carddispute.PhoneNr phoneNr;
 
    public Customer()
    {
@@ -151,13 +154,23 @@ public class Customer implements java.io.Serializable
       this.email = email;
    }
 
+   public com.crossvale.carddispute.PhoneNr getPhoneNr()
+   {
+      return this.phoneNr;
+   }
+
+   public void setPhoneNr(com.crossvale.carddispute.PhoneNr phoneNr)
+   {
+      this.phoneNr = phoneNr;
+   }
+
    public Customer(java.lang.String customerNr, java.lang.String customerName,
          java.lang.String status, java.lang.String id,
          java.lang.String issuePlace, java.util.Date issueDate,
          java.util.Date expirationDate,
          com.crossvale.carddispute.Address address,
          java.lang.String nationalityCode, java.util.Date birthDate,
-         java.lang.String email)
+         java.lang.String email, com.crossvale.carddispute.PhoneNr phoneNr)
    {
       this.customerNr = customerNr;
       this.customerName = customerName;
@@ -170,6 +183,7 @@ public class Customer implements java.io.Serializable
       this.nationalityCode = nationalityCode;
       this.birthDate = birthDate;
       this.email = email;
+      this.phoneNr = phoneNr;
    }
 
 }
