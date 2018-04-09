@@ -40,8 +40,8 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("phoneNr")
    private com.crossvale.carddispute.PhoneNr phoneNr;
 
-   @org.kie.api.definition.type.Label("customerNumber")
-   private java.lang.String customerNumber;
+   @org.kie.api.definition.type.Label(value = "customerNr")
+   private java.lang.String customerNr;
 
    public Customer()
    {
@@ -127,16 +127,6 @@ public class Customer implements java.io.Serializable
       this.phoneNr = phoneNr;
    }
 
-   public java.lang.String getCustomerNumber()
-   {
-      return this.customerNumber;
-   }
-
-   public void setCustomerNumber(java.lang.String customerNumber)
-   {
-      this.customerNumber = customerNumber;
-   }
-
    public java.lang.String getBirthDate()
    {
       return this.birthDate;
@@ -167,13 +157,23 @@ public class Customer implements java.io.Serializable
       this.issueDate = issueDate;
    }
 
+   public java.lang.String getCustomerNr()
+   {
+      return this.customerNr;
+   }
+
+   public void setCustomerNr(java.lang.String customerNr)
+   {
+      this.customerNr = customerNr;
+   }
+
    public Customer(java.lang.String customerName, java.lang.String status,
          java.lang.String id, java.lang.String issuePlace,
          java.util.Date issueDate, java.lang.String expirationDate,
          com.crossvale.carddispute.Address address,
          java.lang.String nationalityCode, java.lang.String birthDate,
          java.lang.String email, com.crossvale.carddispute.PhoneNr phoneNr,
-         java.lang.String customerNumber)
+         java.lang.String customerNr)
    {
       this.customerName = customerName;
       this.status = status;
@@ -186,7 +186,7 @@ public class Customer implements java.io.Serializable
       this.birthDate = birthDate;
       this.email = email;
       this.phoneNr = phoneNr;
-      this.customerNumber = customerNumber;
+      this.customerNr = customerNr;
    }
 
 }
