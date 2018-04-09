@@ -21,7 +21,7 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("issueDate")
    private String issueDate;
    @org.kie.api.definition.type.Label("expirationDate")
-   private java.util.Date expirationDate;
+   private String expirationDate;
 
    @org.kie.api.definition.type.Label("address")
    private com.crossvale.carddispute.Address address;
@@ -83,16 +83,6 @@ public class Customer implements java.io.Serializable
    public void setIssuePlace(java.lang.String issuePlace)
    {
       this.issuePlace = issuePlace;
-   }
-
-   public java.util.Date getExpirationDate()
-   {
-      return this.expirationDate;
-   }
-
-   public void setExpirationDate(java.util.Date expirationDate)
-   {
-      this.expirationDate = expirationDate;
    }
 
    public com.crossvale.carddispute.Address getAddress()
@@ -165,9 +155,19 @@ public class Customer implements java.io.Serializable
       this.birthDate = birthDate;
    }
 
+   public java.lang.String getExpirationDate()
+   {
+      return this.expirationDate;
+   }
+
+   public void setExpirationDate(java.lang.String expirationDate)
+   {
+      this.expirationDate = expirationDate;
+   }
+
    public Customer(java.lang.String customerName, java.lang.String status,
          java.lang.String id, java.lang.String issuePlace,
-         java.lang.String issueDate, java.util.Date expirationDate,
+         java.lang.String issueDate, java.lang.String expirationDate,
          com.crossvale.carddispute.Address address,
          java.lang.String nationalityCode, java.lang.String birthDate,
          java.lang.String email, com.crossvale.carddispute.PhoneNr phoneNr,
