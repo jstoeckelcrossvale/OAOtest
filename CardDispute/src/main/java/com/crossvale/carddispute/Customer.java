@@ -19,7 +19,7 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("issuePlace")
    private java.lang.String issuePlace;
    @org.kie.api.definition.type.Label("issueDate")
-   private java.util.Date issueDate;
+   private String issueDate;
    @org.kie.api.definition.type.Label("expirationDate")
    private java.util.Date expirationDate;
 
@@ -30,7 +30,7 @@ public class Customer implements java.io.Serializable
    private java.lang.String nationalityCode;
 
    @org.kie.api.definition.type.Label("birthDate")
-   private java.util.Date birthDate;
+   private String birthDate;
 
    @org.kie.api.definition.type.Label("email")
    private java.lang.String email;
@@ -38,7 +38,7 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("phoneNr")
    private com.crossvale.carddispute.PhoneNr phoneNr;
 
-   @org.kie.api.definition.type.Label(value = "customerNumber")
+   @org.kie.api.definition.type.Label("customerNumber")
    private java.lang.String customerNumber;
 
    public Customer()
@@ -85,16 +85,6 @@ public class Customer implements java.io.Serializable
       this.issuePlace = issuePlace;
    }
 
-   public java.util.Date getIssueDate()
-   {
-      return this.issueDate;
-   }
-
-   public void setIssueDate(java.util.Date issueDate)
-   {
-      this.issueDate = issueDate;
-   }
-
    public java.util.Date getExpirationDate()
    {
       return this.expirationDate;
@@ -123,16 +113,6 @@ public class Customer implements java.io.Serializable
    public void setNationalityCode(java.lang.String nationalityCode)
    {
       this.nationalityCode = nationalityCode;
-   }
-
-   public java.util.Date getBirthDate()
-   {
-      return this.birthDate;
-   }
-
-   public void setBirthDate(java.util.Date birthDate)
-   {
-      this.birthDate = birthDate;
    }
 
    public java.lang.String getEmail()
@@ -165,11 +145,31 @@ public class Customer implements java.io.Serializable
       this.customerNumber = customerNumber;
    }
 
+   public java.lang.String getIssueDate()
+   {
+      return this.issueDate;
+   }
+
+   public void setIssueDate(java.lang.String issueDate)
+   {
+      this.issueDate = issueDate;
+   }
+
+   public java.lang.String getBirthDate()
+   {
+      return this.birthDate;
+   }
+
+   public void setBirthDate(java.lang.String birthDate)
+   {
+      this.birthDate = birthDate;
+   }
+
    public Customer(java.lang.String customerName, java.lang.String status,
          java.lang.String id, java.lang.String issuePlace,
-         java.util.Date issueDate, java.util.Date expirationDate,
+         java.lang.String issueDate, java.util.Date expirationDate,
          com.crossvale.carddispute.Address address,
-         java.lang.String nationalityCode, java.util.Date birthDate,
+         java.lang.String nationalityCode, java.lang.String birthDate,
          java.lang.String email, com.crossvale.carddispute.PhoneNr phoneNr,
          java.lang.String customerNumber)
    {
