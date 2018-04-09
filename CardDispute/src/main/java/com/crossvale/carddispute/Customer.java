@@ -41,8 +41,8 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("customerNr")
    private java.lang.String customerNr;
 
-   @org.kie.api.definition.type.Label(value = "customer")
-   private java.lang.String customer;
+   @org.kie.api.definition.type.Label(value = "customerNumber")
+   private java.lang.String customerNumber;
 
    public Customer()
    {
@@ -158,14 +158,14 @@ public class Customer implements java.io.Serializable
       this.birthDate = birthDate;
    }
 
-   public java.lang.String getCustomer()
+   public java.lang.String getCustomerNumber()
    {
-      return this.customer;
+      return this.customerNumber;
    }
 
-   public void setCustomer(java.lang.String customer)
+   public void setCustomerNumber(java.lang.String customerNumber)
    {
-      this.customer = customer;
+      this.customerNumber = customerNumber;
    }
 
    public Customer(java.lang.String status, java.lang.String id,
@@ -174,7 +174,7 @@ public class Customer implements java.io.Serializable
          com.crossvale.carddispute.Address address,
          java.lang.String nationalityCode, java.util.Date birthDate,
          java.lang.String email, com.crossvale.carddispute.PhoneNr phoneNr,
-         java.lang.String customerNr, java.lang.String customer)
+         java.lang.String customerNr, java.lang.String customerNumber)
    {
       this.status = status;
       this.id = id;
@@ -187,7 +187,7 @@ public class Customer implements java.io.Serializable
       this.email = email;
       this.phoneNr = phoneNr;
       this.customerNr = customerNr;
-      this.customer = customer;
+      this.customerNumber = customerNumber;
    }
 
 }
