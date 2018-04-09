@@ -1,6 +1,6 @@
 package com.crossvale.carddispute;
 
-//from row number: 1
+
 rule "Question 1"
 	no-loop true
 	ruleflow-group "disputes"
@@ -9,5 +9,18 @@ rule "Question 1"
 		disputesQuestionnaire : Questionnaire()
 	then
 		disputesQuestionnaire.setQuestion("Why are you submitting this dispute?");
+		disputesQuestionnaire.setAnswerCode("1");
+		System.out.println(disputesQuestionnaire.getQuestion());
+		
+end
+
+rule "Question 2"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "1")
+	then
+		disputesQuestionnaire.setQuestion("Were you advised of the refund or cancellation policy at the time of sale?");
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
