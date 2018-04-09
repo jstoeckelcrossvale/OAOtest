@@ -15,7 +15,7 @@ public class Ticket implements java.io.Serializable
    @org.kie.api.definition.type.Label("ticketNumber")
    private java.lang.String ticketNumber;
    @org.kie.api.definition.type.Label("dateReceived")
-   private Date dateReceived;
+   private String dateReceived;
    @org.kie.api.definition.type.Label("source")
    private java.lang.String source;
    @org.kie.api.definition.type.Label("narrative")
@@ -24,25 +24,25 @@ public class Ticket implements java.io.Serializable
    private java.lang.String accountNumber;
    @org.kie.api.definition.type.Label("issue")
    private java.lang.String issue;
-   @org.kie.api.definition.type.Label(value = "customerNumber")
+   @org.kie.api.definition.type.Label("customerNumber")
    private java.lang.String customerNumber;
 
-   @org.kie.api.definition.type.Label(value = "groupAssigned")
+   @org.kie.api.definition.type.Label("groupAssigned")
    private java.lang.String groupAssigned;
 
-   @org.kie.api.definition.type.Label(value = "dueDate")
+   @org.kie.api.definition.type.Label("dueDate")
    private java.util.Date dueDate;
 
-   @org.kie.api.definition.type.Label(value = "status")
+   @org.kie.api.definition.type.Label("status")
    private java.lang.String status;
 
-   @org.kie.api.definition.type.Label(value = "customer")
+   @org.kie.api.definition.type.Label("customer")
    private com.crossvale.carddispute.Customer customer;
 
-   @org.kie.api.definition.type.Label(value = "tasks")
+   @org.kie.api.definition.type.Label("tasks")
    private java.util.List<com.crossvale.carddispute.Task> tasks;
 
-   @org.kie.api.definition.type.Label(value = "actions")
+   @org.kie.api.definition.type.Label("actions")
    private java.util.List<com.crossvale.carddispute.Action> actions;
 
    public Ticket()
@@ -97,16 +97,6 @@ public class Ticket implements java.io.Serializable
    public void setIssue(java.lang.String issue)
    {
       this.issue = issue;
-   }
-
-   public java.util.Date getDateReceived()
-   {
-      return this.dateReceived;
-   }
-
-   public void setDateReceived(java.util.Date dateReceived)
-   {
-      this.dateReceived = dateReceived;
    }
 
    public java.lang.String getCustomerNumber()
@@ -179,7 +169,17 @@ public class Ticket implements java.io.Serializable
       this.actions = actions;
    }
 
-   public Ticket(java.lang.String ticketNumber, java.util.Date dateReceived,
+   public java.lang.String getDateReceived()
+   {
+      return this.dateReceived;
+   }
+
+   public void setDateReceived(java.lang.String dateReceived)
+   {
+      this.dateReceived = dateReceived;
+   }
+
+   public Ticket(java.lang.String ticketNumber, java.lang.String dateReceived,
          java.lang.String source, java.lang.String narrative,
          java.lang.String accountNumber, java.lang.String issue,
          java.lang.String customerNumber, java.lang.String groupAssigned,
