@@ -1,2 +1,13 @@
 package com.crossvale.carddispute;
 
+//from row number: 1
+rule "Question 1"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire()
+	then
+		disputesQuestionnaire.setQuestion("Why are you submitting this dispute?");
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
