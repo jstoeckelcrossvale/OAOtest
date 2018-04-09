@@ -38,11 +38,11 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("phoneNr")
    private com.crossvale.carddispute.PhoneNr phoneNr;
 
-   @org.kie.api.definition.type.Label("customerNr")
-   private java.lang.String customerNr;
-
-   @org.kie.api.definition.type.Label(value = "customerNumber")
+   @org.kie.api.definition.type.Label("customerNumber")
    private java.lang.String customerNumber;
+
+   @org.kie.api.definition.type.Label(value = "customerName")
+   private java.lang.String customerName;
 
    public Customer()
    {
@@ -128,16 +128,6 @@ public class Customer implements java.io.Serializable
       this.issueDate = issueDate;
    }
 
-   public java.lang.String getCustomerNr()
-   {
-      return this.customerNr;
-   }
-
-   public void setCustomerNr(java.lang.String customerNr)
-   {
-      this.customerNr = customerNr;
-   }
-
    public java.util.Date getExpirationDate()
    {
       return this.expirationDate;
@@ -168,13 +158,23 @@ public class Customer implements java.io.Serializable
       this.customerNumber = customerNumber;
    }
 
+   public java.lang.String getCustomerName()
+   {
+      return this.customerName;
+   }
+
+   public void setCustomerName(java.lang.String customerName)
+   {
+      this.customerName = customerName;
+   }
+
    public Customer(java.lang.String status, java.lang.String id,
          java.lang.String issuePlace, java.util.Date issueDate,
          java.util.Date expirationDate,
          com.crossvale.carddispute.Address address,
          java.lang.String nationalityCode, java.util.Date birthDate,
          java.lang.String email, com.crossvale.carddispute.PhoneNr phoneNr,
-         java.lang.String customerNr, java.lang.String customerNumber)
+         java.lang.String customerNumber, java.lang.String customerName)
    {
       this.status = status;
       this.id = id;
@@ -186,8 +186,8 @@ public class Customer implements java.io.Serializable
       this.birthDate = birthDate;
       this.email = email;
       this.phoneNr = phoneNr;
-      this.customerNr = customerNr;
       this.customerNumber = customerNumber;
+      this.customerName = customerName;
    }
 
 }
