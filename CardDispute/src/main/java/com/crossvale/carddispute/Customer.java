@@ -12,8 +12,6 @@ public class Customer implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label("customerName")
-   private java.lang.String customerName;
    @org.kie.api.definition.type.Label("status")
    private java.lang.String status;
    @org.kie.api.definition.type.Label("id")
@@ -43,18 +41,11 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("customerNr")
    private java.lang.String customerNr;
 
+   @org.kie.api.definition.type.Label(value = "customer")
+   private java.lang.String customer;
+
    public Customer()
    {
-   }
-
-   public java.lang.String getCustomerName()
-   {
-      return this.customerName;
-   }
-
-   public void setCustomerName(java.lang.String customerName)
-   {
-      this.customerName = customerName;
    }
 
    public java.lang.String getStatus()
@@ -167,15 +158,24 @@ public class Customer implements java.io.Serializable
       this.birthDate = birthDate;
    }
 
-   public Customer(java.lang.String customerName, java.lang.String status,
-         java.lang.String id, java.lang.String issuePlace,
-         java.util.Date issueDate, java.util.Date expirationDate,
+   public java.lang.String getCustomer()
+   {
+      return this.customer;
+   }
+
+   public void setCustomer(java.lang.String customer)
+   {
+      this.customer = customer;
+   }
+
+   public Customer(java.lang.String status, java.lang.String id,
+         java.lang.String issuePlace, java.util.Date issueDate,
+         java.util.Date expirationDate,
          com.crossvale.carddispute.Address address,
          java.lang.String nationalityCode, java.util.Date birthDate,
          java.lang.String email, com.crossvale.carddispute.PhoneNr phoneNr,
-         java.lang.String customerNr)
+         java.lang.String customerNr, java.lang.String customer)
    {
-      this.customerName = customerName;
       this.status = status;
       this.id = id;
       this.issuePlace = issuePlace;
@@ -187,6 +187,7 @@ public class Customer implements java.io.Serializable
       this.email = email;
       this.phoneNr = phoneNr;
       this.customerNr = customerNr;
+      this.customer = customer;
    }
 
 }
