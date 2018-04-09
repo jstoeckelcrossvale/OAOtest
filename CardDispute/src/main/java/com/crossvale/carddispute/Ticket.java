@@ -15,7 +15,7 @@ public class Ticket implements java.io.Serializable
    @org.kie.api.definition.type.Label("ticketNumber")
    private java.lang.String ticketNumber;
    @org.kie.api.definition.type.Label("dateReceived")
-   private String dateReceived;
+   private Date dateReceived;
    @org.kie.api.definition.type.Label("source")
    private java.lang.String source;
    @org.kie.api.definition.type.Label("narrative")
@@ -31,7 +31,7 @@ public class Ticket implements java.io.Serializable
    private java.lang.String groupAssigned;
 
    @org.kie.api.definition.type.Label("dueDate")
-   private String dueDate;
+   private Date dueDate;
 
    @org.kie.api.definition.type.Label("status")
    private java.lang.String status;
@@ -159,31 +159,31 @@ public class Ticket implements java.io.Serializable
       this.actions = actions;
    }
 
-   public java.lang.String getDateReceived()
+   public java.util.Date getDateReceived()
    {
       return this.dateReceived;
    }
 
-   public void setDateReceived(java.lang.String dateReceived)
+   public void setDateReceived(java.util.Date dateReceived)
    {
       this.dateReceived = dateReceived;
    }
 
-   public java.lang.String getDueDate()
+   public java.util.Date getDueDate()
    {
       return this.dueDate;
    }
 
-   public void setDueDate(java.lang.String dueDate)
+   public void setDueDate(java.util.Date dueDate)
    {
       this.dueDate = dueDate;
    }
 
-   public Ticket(java.lang.String ticketNumber, java.lang.String dateReceived,
+   public Ticket(java.lang.String ticketNumber, java.util.Date dateReceived,
          java.lang.String source, java.lang.String narrative,
          java.lang.String accountNumber, java.lang.String issue,
          java.lang.String customerNumber, java.lang.String groupAssigned,
-         java.lang.String dueDate, java.lang.String status,
+         java.util.Date dueDate, java.lang.String status,
          com.crossvale.carddispute.Customer customer,
          java.util.List<com.crossvale.carddispute.Task> tasks,
          java.util.List<com.crossvale.carddispute.Action> actions)
