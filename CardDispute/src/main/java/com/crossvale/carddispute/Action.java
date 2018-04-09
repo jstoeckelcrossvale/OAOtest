@@ -10,19 +10,19 @@ public class Action implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "actionNumber")
+   @org.kie.api.definition.type.Label("actionNumber")
    private java.lang.String actionNumber;
-   @org.kie.api.definition.type.Label(value = "actionTime")
-   private java.util.Date actionTime;
-   @org.kie.api.definition.type.Label(value = "username")
+   @org.kie.api.definition.type.Label("actionTime")
+   private String actionTime;
+   @org.kie.api.definition.type.Label("username")
    private java.lang.String username;
-   @org.kie.api.definition.type.Label(value = "ticketNumber")
+   @org.kie.api.definition.type.Label("ticketNumber")
    private java.lang.String ticketNumber;
-   @org.kie.api.definition.type.Label(value = "actionType")
+   @org.kie.api.definition.type.Label("actionType")
    private java.lang.String actionType;
-   @org.kie.api.definition.type.Label(value = "description")
+   @org.kie.api.definition.type.Label("description")
    private java.lang.String description;
-   @org.kie.api.definition.type.Label(value = "customInfo")
+   @org.kie.api.definition.type.Label("customInfo")
    private java.lang.String customInfo;
 
    public Action()
@@ -37,16 +37,6 @@ public class Action implements java.io.Serializable
    public void setActionNumber(java.lang.String actionNumber)
    {
       this.actionNumber = actionNumber;
-   }
-
-   public java.util.Date getActionTime()
-   {
-      return this.actionTime;
-   }
-
-   public void setActionTime(java.util.Date actionTime)
-   {
-      this.actionTime = actionTime;
    }
 
    public java.lang.String getUsername()
@@ -99,7 +89,17 @@ public class Action implements java.io.Serializable
       this.customInfo = customInfo;
    }
 
-   public Action(java.lang.String actionNumber, java.util.Date actionTime,
+   public java.lang.String getActionTime()
+   {
+      return this.actionTime;
+   }
+
+   public void setActionTime(java.lang.String actionTime)
+   {
+      this.actionTime = actionTime;
+   }
+
+   public Action(java.lang.String actionNumber, java.lang.String actionTime,
          java.lang.String username, java.lang.String ticketNumber,
          java.lang.String actionType, java.lang.String description,
          java.lang.String customInfo)
