@@ -31,7 +31,7 @@ public class Ticket implements java.io.Serializable
    private java.lang.String groupAssigned;
 
    @org.kie.api.definition.type.Label("dueDate")
-   private java.util.Date dueDate;
+   private String dueDate;
 
    @org.kie.api.definition.type.Label("status")
    private java.lang.String status;
@@ -119,16 +119,6 @@ public class Ticket implements java.io.Serializable
       this.groupAssigned = groupAssigned;
    }
 
-   public java.util.Date getDueDate()
-   {
-      return this.dueDate;
-   }
-
-   public void setDueDate(java.util.Date dueDate)
-   {
-      this.dueDate = dueDate;
-   }
-
    public java.lang.String getStatus()
    {
       return this.status;
@@ -179,11 +169,21 @@ public class Ticket implements java.io.Serializable
       this.dateReceived = dateReceived;
    }
 
+   public java.lang.String getDueDate()
+   {
+      return this.dueDate;
+   }
+
+   public void setDueDate(java.lang.String dueDate)
+   {
+      this.dueDate = dueDate;
+   }
+
    public Ticket(java.lang.String ticketNumber, java.lang.String dateReceived,
          java.lang.String source, java.lang.String narrative,
          java.lang.String accountNumber, java.lang.String issue,
          java.lang.String customerNumber, java.lang.String groupAssigned,
-         java.util.Date dueDate, java.lang.String status,
+         java.lang.String dueDate, java.lang.String status,
          com.crossvale.carddispute.Customer customer,
          java.util.List<com.crossvale.carddispute.Task> tasks,
          java.util.List<com.crossvale.carddispute.Action> actions)
