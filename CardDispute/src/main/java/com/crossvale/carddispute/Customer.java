@@ -23,7 +23,7 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("issueDate")
    private Date issueDate;
    @org.kie.api.definition.type.Label("expirationDate")
-   private String expirationDate;
+   private Date expirationDate;
 
    @org.kie.api.definition.type.Label("address")
    private com.crossvale.carddispute.Address address;
@@ -32,7 +32,7 @@ public class Customer implements java.io.Serializable
    private java.lang.String nationalityCode;
 
    @org.kie.api.definition.type.Label("birthDate")
-   private String birthDate;
+   private Date birthDate;
 
    @org.kie.api.definition.type.Label("email")
    private java.lang.String email;
@@ -40,7 +40,7 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("phoneNr")
    private com.crossvale.carddispute.PhoneNr phoneNr;
 
-   @org.kie.api.definition.type.Label(value = "customerNr")
+   @org.kie.api.definition.type.Label("customerNr")
    private java.lang.String customerNr;
 
    public Customer()
@@ -127,26 +127,6 @@ public class Customer implements java.io.Serializable
       this.phoneNr = phoneNr;
    }
 
-   public java.lang.String getBirthDate()
-   {
-      return this.birthDate;
-   }
-
-   public void setBirthDate(java.lang.String birthDate)
-   {
-      this.birthDate = birthDate;
-   }
-
-   public java.lang.String getExpirationDate()
-   {
-      return this.expirationDate;
-   }
-
-   public void setExpirationDate(java.lang.String expirationDate)
-   {
-      this.expirationDate = expirationDate;
-   }
-
    public java.util.Date getIssueDate()
    {
       return this.issueDate;
@@ -167,11 +147,31 @@ public class Customer implements java.io.Serializable
       this.customerNr = customerNr;
    }
 
+   public java.util.Date getExpirationDate()
+   {
+      return this.expirationDate;
+   }
+
+   public void setExpirationDate(java.util.Date expirationDate)
+   {
+      this.expirationDate = expirationDate;
+   }
+
+   public java.util.Date getBirthDate()
+   {
+      return this.birthDate;
+   }
+
+   public void setBirthDate(java.util.Date birthDate)
+   {
+      this.birthDate = birthDate;
+   }
+
    public Customer(java.lang.String customerName, java.lang.String status,
          java.lang.String id, java.lang.String issuePlace,
-         java.util.Date issueDate, java.lang.String expirationDate,
+         java.util.Date issueDate, java.util.Date expirationDate,
          com.crossvale.carddispute.Address address,
-         java.lang.String nationalityCode, java.lang.String birthDate,
+         java.lang.String nationalityCode, java.util.Date birthDate,
          java.lang.String email, com.crossvale.carddispute.PhoneNr phoneNr,
          java.lang.String customerNr)
    {
