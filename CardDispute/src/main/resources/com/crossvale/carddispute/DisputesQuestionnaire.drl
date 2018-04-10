@@ -111,3 +111,58 @@ rule "Question 10"
 	    modify( disputesQuestionnaire ){ setQuestion("Please provide the cancellation number. (Answer n/a if you do not have this information available.)") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
+
+rule "Question 11"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "11")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Was it returned by a carrier? (FedEx, UPS, etc.)") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 12"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "12")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you return the merchandise?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 13"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "13")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Please provide the carrier name and tracking number. (Answer n/a if you do not have this information available.)") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 14"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "14")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Did you attempt to contact the merchant to resolve the issue?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 15"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "15")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you contact the merchant?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
