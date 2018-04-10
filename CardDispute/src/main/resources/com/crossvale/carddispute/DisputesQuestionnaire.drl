@@ -45,3 +45,14 @@ rule "Question 4"
 	    modify( disputesQuestionnaire ){ setQuestion("Do you have the receipt?") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
+
+rule "Question 5"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "5")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Do you have the receipt, cancelled check or other bank card statement?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
