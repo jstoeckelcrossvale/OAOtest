@@ -8,9 +8,7 @@ rule "Question 1"
 	when
 		disputesQuestionnaire : Questionnaire()
 	then
-		disputesQuestionnaire.setQuestion("Why are you submitting this dispute?");
-		disputesQuestionnaire.setAnswerCode("1");
-		insert(disputesQuestionnaire);
+		modify( disputesQuestionnaire ){ setAnswerCode("1"),setQuestion("Why are you submitting this dispute?") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 		System.out.println(disputesQuestionnaire.getAnswerCode());
 		
