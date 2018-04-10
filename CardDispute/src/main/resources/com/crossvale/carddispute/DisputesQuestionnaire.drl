@@ -166,3 +166,69 @@ rule "Question 15"
 	    modify( disputesQuestionnaire ){ setQuestion("What date did you contact the merchant?") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
+
+rule "Question 16"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "16")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("What was the merchants's response?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 17"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "17")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you receive the merchandise or services?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 18"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "18")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Please explain what was wrong with the merchandise or services.") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 19"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "19")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Have you returned the merchandise? Note: If this was a service-related transaction, select n/a.") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 20"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "20")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("When and how was the merchandise returned?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 21"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "20")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Are you currently in possession of the merchandise?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
