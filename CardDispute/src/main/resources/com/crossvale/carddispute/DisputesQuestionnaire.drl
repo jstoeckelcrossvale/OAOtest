@@ -227,8 +227,52 @@ rule "Question 21"
 	ruleflow-group "disputes"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( answerCode == "20")
+		disputesQuestionnaire : Questionnaire( answerCode == "21")
 	then
 	    modify( disputesQuestionnaire ){ setQuestion("Are you currently in possession of the merchandise?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 22"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "22")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Could the extra amount be due to one of the following?<br/> * Tip<br/> * Surcharge from a hotel, rental car or cruise line<br/> * Currency conversion difference") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 23"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "23")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Do you still wish to dispute all or part of the transaction(s)?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 24"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "24")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("What is the amount you should have been charged?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 25"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "25")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("What is the amount you should have been charged?") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
