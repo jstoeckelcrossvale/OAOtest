@@ -6,11 +6,10 @@ rule "Question 1"
 	ruleflow-group "disputes"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire()
+		disputesQuestionnaire : Questionnaire( answerCode == "1" )
 	then
-		modify( disputesQuestionnaire ){ setAnswerCode("1"),setQuestion("Why are you submitting this dispute?") };
-		System.out.println(disputesQuestionnaire.getQuestion());
-		System.out.println(disputesQuestionnaire.getAnswerCode());
+		modify( disputesQuestionnaire ){ setAnswerCode("2"), setQuestion("Why are you submitting this dispute?") };
+		System.out.println(disputesQuestionnaire.getQuestion()); 
 		
 end
 
@@ -19,8 +18,30 @@ rule "Question 2"
 	ruleflow-group "disputes"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( answerCode == "1")
+		disputesQuestionnaire : Questionnaire( answerCode == "2")
 	then
-		disputesQuestionnaire.setQuestion("Were you advised of the refund or cancellation policy at the time of sale?");
+	    modify( disputesQuestionnaire ){ setAnswerCode("3"), setQuestion("Were you advised of the refund or cancellation policy at the time of sale?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 3"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "3")
+	then
+	    modify( disputesQuestionnaire ){ setAnswerCode("4"), setQuestion("Please provide a description of the merchandise or services") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 4"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "4")
+	then
+	    modify( disputesQuestionnaire ){ setAnswerCode("5"), setQuestion("Do you have the receipt?") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
