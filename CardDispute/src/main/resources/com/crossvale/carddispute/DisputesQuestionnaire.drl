@@ -8,7 +8,7 @@ rule "Question 1"
 	when
 		disputesQuestionnaire : Questionnaire( answerCode == "1" )
 	then
-		modify( disputesQuestionnaire ){ setAnswerCode("2"), setQuestion("Why are you submitting this dispute?") };
+		modify( disputesQuestionnaire ){ setQuestion("Why are you submitting this dispute?") };
 		System.out.println(disputesQuestionnaire.getQuestion()); 
 		
 end
@@ -20,7 +20,7 @@ rule "Question 2"
 	when
 		disputesQuestionnaire : Questionnaire( answerCode == "2")
 	then
-	    modify( disputesQuestionnaire ){ setAnswerCode("3"), setQuestion("Were you advised of the refund or cancellation policy at the time of sale?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Were you advised of the refund or cancellation policy at the time of sale?") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -31,7 +31,7 @@ rule "Question 3"
 	when
 		disputesQuestionnaire : Questionnaire( answerCode == "3")
 	then
-	    modify( disputesQuestionnaire ){ setAnswerCode("4"), setQuestion("Please provide a description of the merchandise or services") };
+	    modify( disputesQuestionnaire ){ setQuestion("Please provide a description of the merchandise or services") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -42,6 +42,6 @@ rule "Question 4"
 	when
 		disputesQuestionnaire : Questionnaire( answerCode == "4")
 	then
-	    modify( disputesQuestionnaire ){ setAnswerCode("5"), setQuestion("Do you have the receipt?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Do you have the receipt?") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
