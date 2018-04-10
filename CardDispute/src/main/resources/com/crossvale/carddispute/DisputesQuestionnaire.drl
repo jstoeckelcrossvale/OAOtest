@@ -67,3 +67,47 @@ rule "Question 6"
 	    modify( disputesQuestionnaire ){ setQuestion("Was it a cancellation or a return?") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
+
+rule "Question 7"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "7")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you cancel the purchase?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 8"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "8")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("What was the reason for the cancellation?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 9"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "9")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Did the merchant provide a cancellation number?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 10"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "10")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Please provide the cancellation number. (Answer n/a if you do not have this information available.)") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
