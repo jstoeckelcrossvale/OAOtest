@@ -386,3 +386,36 @@ rule "Question 35"
 	    modify( disputesQuestionnaire ){ setQuestion("Have you given your card or PIN to anyone?") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
+
+rule "Question 36"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "36")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Who would have access to the card(s)?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 37"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "37")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Are any of the following conditions applicable to the transaction(s)?<br/> * I recognize part of the transaction(s)<br/> * I have recently done business with the merchant(s)<br/> * I have attended an event where the merchant(s) may have been operating under a different name<br/> * I have regularly occurring charges from the merchant(s)") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
+
+rule "Question 38"
+	no-loop true
+	ruleflow-group "disputes"
+	dialect "mvel"
+	when
+		disputesQuestionnaire : Questionnaire( answerCode == "38")
+	then
+	    modify( disputesQuestionnaire ){ setQuestion("Based on the reason selected, you indicate that this may be a fraudulent transaction. If you complete the dispute process and receive confirmation, your card(s) will be closed and new card(s) will be mailed to you. Do you wish to continue?") };
+		System.out.println(disputesQuestionnaire.getQuestion());
+end
