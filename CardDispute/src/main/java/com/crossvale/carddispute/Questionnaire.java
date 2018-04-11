@@ -9,10 +9,13 @@ public class Questionnaire implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "question")
+   @org.kie.api.definition.type.Label("question")
    private java.lang.String question;
-   @org.kie.api.definition.type.Label(value = "answerCode")
+   @org.kie.api.definition.type.Label("answerCode")
    private java.lang.String answerCode;
+
+   @org.kie.api.definition.type.Label(value = "nextQuestionCode")
+   private java.lang.String nextQuestionCode;
 
    public Questionnaire()
    {
@@ -38,10 +41,22 @@ public class Questionnaire implements java.io.Serializable
       this.answerCode = answerCode;
    }
 
-   public Questionnaire(java.lang.String question, java.lang.String answerCode)
+   public java.lang.String getNextQuestionCode()
+   {
+      return this.nextQuestionCode;
+   }
+
+   public void setNextQuestionCode(java.lang.String nextQuestionCode)
+   {
+      this.nextQuestionCode = nextQuestionCode;
+   }
+
+   public Questionnaire(java.lang.String question, java.lang.String answerCode,
+         java.lang.String nextQuestionCode)
    {
       this.question = question;
       this.answerCode = answerCode;
+      this.nextQuestionCode = nextQuestionCode;
    }
 
 }
