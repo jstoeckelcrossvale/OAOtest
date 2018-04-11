@@ -11,11 +11,11 @@ public class Questionnaire implements java.io.Serializable
 
    @org.kie.api.definition.type.Label("question")
    private java.lang.String question;
-   @org.kie.api.definition.type.Label("answerCode")
-   private java.lang.String answerCode;
-
-   @org.kie.api.definition.type.Label(value = "nextQuestionCode")
+   @org.kie.api.definition.type.Label("nextQuestionCode")
    private java.lang.String nextQuestionCode;
+
+   @org.kie.api.definition.type.Label(value = "questionCode")
+   private java.lang.String questionCode;
 
    public Questionnaire()
    {
@@ -31,16 +31,6 @@ public class Questionnaire implements java.io.Serializable
       this.question = question;
    }
 
-   public java.lang.String getAnswerCode()
-   {
-      return this.answerCode;
-   }
-
-   public void setAnswerCode(java.lang.String answerCode)
-   {
-      this.answerCode = answerCode;
-   }
-
    public java.lang.String getNextQuestionCode()
    {
       return this.nextQuestionCode;
@@ -51,12 +41,22 @@ public class Questionnaire implements java.io.Serializable
       this.nextQuestionCode = nextQuestionCode;
    }
 
-   public Questionnaire(java.lang.String question, java.lang.String answerCode,
-         java.lang.String nextQuestionCode)
+   public java.lang.String getQuestionCode()
+   {
+      return this.questionCode;
+   }
+
+   public void setQuestionCode(java.lang.String questionCode)
+   {
+      this.questionCode = questionCode;
+   }
+
+   public Questionnaire(java.lang.String question,
+         java.lang.String nextQuestionCode, java.lang.String questionCode)
    {
       this.question = question;
-      this.answerCode = answerCode;
       this.nextQuestionCode = nextQuestionCode;
+      this.questionCode = questionCode;
    }
 
 }
