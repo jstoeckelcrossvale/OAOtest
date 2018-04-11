@@ -8,7 +8,7 @@ rule "Question 1"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "1" )
 	then
-		modify( disputesQuestionnaire ){ setQuestion("Why are you submitting this dispute?"), setNextQuestionCode("2") };
+		modify( disputesQuestionnaire ){ setQuestion("Why are you submitting this dispute?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion()); 
 		
 end
@@ -20,7 +20,7 @@ rule "Question 2"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "2")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Were you advised of the refund or cancellation policy at the time of sale?"), setNextQuestionCode("3") };
+	    modify( disputesQuestionnaire ){ setQuestion("Were you advised of the refund or cancellation policy at the time of sale?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -31,7 +31,7 @@ rule "Question 3"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "3")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Please provide a description of the merchandise or services"), setNextQuestionCode("4") };
+	    modify( disputesQuestionnaire ){ setQuestion("Please provide a description of the merchandise or services"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -42,7 +42,7 @@ rule "Question 4"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "4")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Do you have the receipt?"), setNextQuestionCode("5")};
+	    modify( disputesQuestionnaire ){ setQuestion("Do you have the receipt?"), setNextQuestionCode("N/A")};
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -53,7 +53,7 @@ rule "Question 5"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "5")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Do you have the receipt, cancelled check or other bank card statement?"), setNextQuestionCode("6") };
+	    modify( disputesQuestionnaire ){ setQuestion("Do you have the receipt, cancelled check or other bank card statement?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -64,7 +64,7 @@ rule "Question 6"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "6")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Was it a cancellation or a return?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Was it a cancellation or a return?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -75,7 +75,7 @@ rule "Question 7"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "7")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What date did you cancel the purchase?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you cancel the purchase?"), setNextQuestionCode("8") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -86,7 +86,7 @@ rule "Question 8"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "8")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What was the reason for the cancellation?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What was the reason for the cancellation?"), setNextQuestionCode("9") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -97,7 +97,7 @@ rule "Question 9"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "9")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Did the merchant provide a cancellation number?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Did the merchant provide a cancellation number?"), setNextQuestionCode("10") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -108,7 +108,7 @@ rule "Question 10"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "10")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Please provide the cancellation number. (Answer n/a if you do not have this information available.)") };
+	    modify( disputesQuestionnaire ){ setQuestion("Please provide the cancellation number. (Answer n/a if you do not have this information available.)"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -119,7 +119,7 @@ rule "Question 11"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "11")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Was it returned by a carrier? (FedEx, UPS, etc.)") };
+	    modify( disputesQuestionnaire ){ setQuestion("Was it returned by a carrier? (FedEx, UPS, etc.)"), setNextQuestionCode("12") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -130,7 +130,7 @@ rule "Question 12"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "12")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What date did you return the merchandise?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you return the merchandise?"), setNextQuestionCode("13") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -141,7 +141,7 @@ rule "Question 13"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "13")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Please provide the carrier name and tracking number. (Answer n/a if you do not have this information available.)") };
+	    modify( disputesQuestionnaire ){ setQuestion("Please provide the carrier name and tracking number. (Answer n/a if you do not have this information available.)"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -152,7 +152,7 @@ rule "Question 14"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "14")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Did you attempt to contact the merchant to resolve the issue?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Did you attempt to contact the merchant to resolve the issue?"), setNextQuestionCode("15") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -163,7 +163,7 @@ rule "Question 15"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "15")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What date did you contact the merchant?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you contact the merchant?"), setNextQuestionCode("16") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -174,7 +174,7 @@ rule "Question 16"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "16")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What was the merchants's response?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What was the merchants's response?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -185,7 +185,7 @@ rule "Question 17"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "17")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What date did you receive the merchandise or services?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you receive the merchandise or services?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -196,7 +196,7 @@ rule "Question 18"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "18")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Please explain what was wrong with the merchandise or services.") };
+	    modify( disputesQuestionnaire ){ setQuestion("Please explain what was wrong with the merchandise or services."), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -207,7 +207,7 @@ rule "Question 19"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "19")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Have you returned the merchandise? Note: If this was a service-related transaction, select n/a.") };
+	    modify( disputesQuestionnaire ){ setQuestion("Have you returned the merchandise? Note: If this was a service-related transaction, select n/a."), setNextQuestionCode("20") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -218,7 +218,7 @@ rule "Question 20"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "20")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("When and how was the merchandise returned?") };
+	    modify( disputesQuestionnaire ){ setQuestion("When and how was the merchandise returned?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -229,7 +229,7 @@ rule "Question 21"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "21")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Are you currently in possession of the merchandise?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Are you currently in possession of the merchandise?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -240,7 +240,7 @@ rule "Question 22"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "22")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Could the extra amount be due to one of the following?<br/> * Tip<br/> * Surcharge from a hotel, rental car or cruise line<br/> * Currency conversion difference") };
+	    modify( disputesQuestionnaire ){ setQuestion("Could the extra amount be due to one of the following?<br/> * Tip<br/> * Surcharge from a hotel, rental car or cruise line<br/> * Currency conversion difference"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -251,7 +251,7 @@ rule "Question 23"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "23")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Do you still wish to dispute all or part of the transaction(s)?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Do you still wish to dispute all or part of the transaction(s)?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -262,18 +262,7 @@ rule "Question 24"
 	when
 		disputesQuestionnaire : Questionnaire( questionCode == "24")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What is the amount you should have been charged?") };
-		System.out.println(disputesQuestionnaire.getQuestion());
-end
-
-rule "Question 25"
-	no-loop true
-	ruleflow-group "questionnaire"
-	dialect "mvel"
-	when
-		disputesQuestionnaire : Questionnaire( questionCode == "25")
-	then
-	    modify( disputesQuestionnaire ){ setQuestion("What is the amount you should have been charged?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What is the amount you should have been charged?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -282,9 +271,9 @@ rule "Question 26"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "26")
+		disputesQuestionnaire : Questionnaire( questionCode == "25")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What is the date of the original transaction?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What is the date of the original transaction?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -293,9 +282,9 @@ rule "Question 27"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "27")
+		disputesQuestionnaire : Questionnaire( questionCode == "26")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What is the amount of the original transaction?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What is the amount of the original transaction?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -304,9 +293,9 @@ rule "Question 28"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "28")
+		disputesQuestionnaire : Questionnaire( questionCode == "27")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What was the alternate means of payment?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What was the alternate means of payment?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -315,9 +304,9 @@ rule "Question 29"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "29")
+		disputesQuestionnaire : Questionnaire( questionCode == "28")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What date did you expect to receive the merchandise or services?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you expect to receive the merchandise or services?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -326,9 +315,9 @@ rule "Question 30"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "30")
+		disputesQuestionnaire : Questionnaire( questionCode == "29")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Please provide a description of the merchandise or services expected. If your order was partially filled, please describe the merchandise or services received.") };
+	    modify( disputesQuestionnaire ){ setQuestion("Please provide a description of the merchandise or services expected. If your order was partially filled, please describe the merchandise or services received."), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -337,9 +326,9 @@ rule "Question 31"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "31")
+		disputesQuestionnaire : Questionnaire( questionCode == "30")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Does everyone listed on the account have their card(s)?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Does everyone listed on the account have their card(s)?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -348,9 +337,9 @@ rule "Question 32"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "32")
+		disputesQuestionnaire : Questionnaire( questionCode == "31")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What date did you realize the card(s) were missing?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you realize the card(s) were missing?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -359,9 +348,9 @@ rule "Question 33"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "33")
+		disputesQuestionnaire : Questionnaire( questionCode == "32")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What date did you last use the card(s)?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you last use the card(s)?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -370,9 +359,9 @@ rule "Question 34"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "34")
+		disputesQuestionnaire : Questionnaire( questionCode == "33")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("What date did you discover the fraudulent charges?") };
+	    modify( disputesQuestionnaire ){ setQuestion("What date did you discover the fraudulent charges?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -381,9 +370,9 @@ rule "Question 35"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "35")
+		disputesQuestionnaire : Questionnaire( questionCode == "34")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Have you given your card or PIN to anyone?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Have you given your card or PIN to anyone?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -392,9 +381,9 @@ rule "Question 36"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "36")
+		disputesQuestionnaire : Questionnaire( questionCode == "35")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Who would have access to the card(s)?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Who would have access to the card(s)?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -403,9 +392,9 @@ rule "Question 37"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "37")
+		disputesQuestionnaire : Questionnaire( questionCode == "36")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Are any of the following conditions applicable to the transaction(s)?<br/> * I recognize part of the transaction(s)<br/> * I have recently done business with the merchant(s)<br/> * I have attended an event where the merchant(s) may have been operating under a different name<br/> * I have regularly occurring charges from the merchant(s)") };
+	    modify( disputesQuestionnaire ){ setQuestion("Are any of the following conditions applicable to the transaction(s)?<br/> * I recognize part of the transaction(s)<br/> * I have recently done business with the merchant(s)<br/> * I have attended an event where the merchant(s) may have been operating under a different name<br/> * I have regularly occurring charges from the merchant(s)"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -414,8 +403,8 @@ rule "Question 38"
 	ruleflow-group "questionnaire"
 	dialect "mvel"
 	when
-		disputesQuestionnaire : Questionnaire( questionCode == "38")
+		disputesQuestionnaire : Questionnaire( questionCode == "37")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Based on the reason selected, you indicate that this may be a fraudulent transaction. If you complete the dispute process and receive confirmation, your card(s) will be closed and new card(s) will be mailed to you. Do you wish to continue?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Based on the reason selected, you indicate that this may be a fraudulent transaction. If you complete the dispute process and receive confirmation, your card(s) will be closed and new card(s) will be mailed to you. Do you wish to continue?"), setNextQuestionCode("N/A") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
