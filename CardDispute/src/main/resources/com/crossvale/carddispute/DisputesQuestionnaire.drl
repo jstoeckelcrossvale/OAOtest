@@ -8,7 +8,7 @@ rule "Question 1"
 	when
 		disputesQuestionnaire : Questionnaire( answerCode == "1" )
 	then
-		modify( disputesQuestionnaire ){ setQuestion("Why are you submitting this dispute?") };
+		modify( disputesQuestionnaire ){ setQuestion("Why are you submitting this dispute?"), setNextQuestionCode("2") };
 		System.out.println(disputesQuestionnaire.getQuestion()); 
 		
 end
@@ -20,7 +20,7 @@ rule "Question 2"
 	when
 		disputesQuestionnaire : Questionnaire( answerCode == "2")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Were you advised of the refund or cancellation policy at the time of sale?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Were you advised of the refund or cancellation policy at the time of sale?"), setNextQuestionCode("3") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -31,7 +31,7 @@ rule "Question 3"
 	when
 		disputesQuestionnaire : Questionnaire( answerCode == "3")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Please provide a description of the merchandise or services") };
+	    modify( disputesQuestionnaire ){ setQuestion("Please provide a description of the merchandise or services"), setNextQuestionCode("4") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -42,7 +42,7 @@ rule "Question 4"
 	when
 		disputesQuestionnaire : Questionnaire( answerCode == "4")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Do you have the receipt?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Do you have the receipt?"), setNextQuestionCode("5")};
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
@@ -53,7 +53,7 @@ rule "Question 5"
 	when
 		disputesQuestionnaire : Questionnaire( answerCode == "5")
 	then
-	    modify( disputesQuestionnaire ){ setQuestion("Do you have the receipt, cancelled check or other bank card statement?") };
+	    modify( disputesQuestionnaire ){ setQuestion("Do you have the receipt, cancelled check or other bank card statement?"), setNextQuestionCode("6") };
 		System.out.println(disputesQuestionnaire.getQuestion());
 end
 
