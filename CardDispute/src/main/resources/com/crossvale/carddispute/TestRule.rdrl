@@ -4,6 +4,10 @@ import java.lang.Number;
 
 rule "TestRule"
 	dialect "mvel"
+	no-loop true
+	ruleflow-group "disputes"
 	when
+		DisputeRequest( )
 	then
+		System.out.println("In TestRule consequence");
 end
