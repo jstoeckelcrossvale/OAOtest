@@ -38,44 +38,44 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("customerName")
    private java.lang.String customerName;
 
-   @org.kie.api.definition.type.Label(value = "customerType")
+   @org.kie.api.definition.type.Label("customerType")
    private java.lang.String customerType;
 
-   @org.kie.api.definition.type.Label(value = "ssn")
+   @org.kie.api.definition.type.Label("ssn")
    private java.lang.String ssn;
 
-   @org.kie.api.definition.type.Label(value = "primaryPhoneNumber")
+   @org.kie.api.definition.type.Label("primaryPhoneNumber")
    private java.lang.String primaryPhoneNumber;
 
-   @org.kie.api.definition.type.Label(value = "alternatePhoneNumber")
+   @org.kie.api.definition.type.Label("alternatePhoneNumber")
    private java.lang.String alternatePhoneNumber;
 
-   @org.kie.api.definition.type.Label(value = "address1")
+   @org.kie.api.definition.type.Label("address1")
    private java.lang.String address1;
 
-   @org.kie.api.definition.type.Label(value = "address2")
+   @org.kie.api.definition.type.Label("address2")
    private java.lang.String address2;
 
-   @org.kie.api.definition.type.Label(value = "city")
+   @org.kie.api.definition.type.Label("city")
    private java.lang.String city;
 
-   @org.kie.api.definition.type.Label(value = "state")
+   @org.kie.api.definition.type.Label("state")
    private java.lang.String state;
 
-   @org.kie.api.definition.type.Label(value = "postalCode")
+   @org.kie.api.definition.type.Label("postalCode")
    private java.lang.String postalCode;
 
-   @org.kie.api.definition.type.Label(value = "countryCode")
+   @org.kie.api.definition.type.Label("countryCode")
    private java.lang.String countryCode;
 
-   @org.kie.api.definition.type.Label(value = "countyName")
-   private java.lang.String countyName;
-
-   @org.kie.api.definition.type.Label(value = "primaryEmail")
+   @org.kie.api.definition.type.Label("primaryEmail")
    private java.lang.String primaryEmail;
 
-   @org.kie.api.definition.type.Label(value = "alternateEmail")
+   @org.kie.api.definition.type.Label("alternateEmail")
    private java.lang.String alternateEmail;
+
+   @org.kie.api.definition.type.Label(value = "countryName")
+   private java.lang.String countryName;
 
    public Customer()
    {
@@ -281,16 +281,6 @@ public class Customer implements java.io.Serializable
       this.countryCode = countryCode;
    }
 
-   public java.lang.String getCountyName()
-   {
-      return this.countyName;
-   }
-
-   public void setCountyName(java.lang.String countyName)
-   {
-      this.countyName = countyName;
-   }
-
    public java.lang.String getPrimaryEmail()
    {
       return this.primaryEmail;
@@ -311,6 +301,16 @@ public class Customer implements java.io.Serializable
       this.alternateEmail = alternateEmail;
    }
 
+   public java.lang.String getCountryName()
+   {
+      return this.countryName;
+   }
+
+   public void setCountryName(java.lang.String countryName)
+   {
+      this.countryName = countryName;
+   }
+
    public Customer(java.lang.String status, java.lang.String id,
          java.lang.String issuePlace, java.util.Date issueDate,
          java.util.Date expirationDate, java.lang.String nationalityCode,
@@ -321,8 +321,8 @@ public class Customer implements java.io.Serializable
          java.lang.String alternatePhoneNumber, java.lang.String address1,
          java.lang.String address2, java.lang.String city,
          java.lang.String state, java.lang.String postalCode,
-         java.lang.String countryCode, java.lang.String countyName,
-         java.lang.String primaryEmail, java.lang.String alternateEmail)
+         java.lang.String countryCode, java.lang.String primaryEmail,
+         java.lang.String alternateEmail, java.lang.String countryName)
    {
       this.status = status;
       this.id = id;
@@ -344,9 +344,9 @@ public class Customer implements java.io.Serializable
       this.state = state;
       this.postalCode = postalCode;
       this.countryCode = countryCode;
-      this.countyName = countyName;
       this.primaryEmail = primaryEmail;
       this.alternateEmail = alternateEmail;
+      this.countryName = countryName;
    }
 
 }
