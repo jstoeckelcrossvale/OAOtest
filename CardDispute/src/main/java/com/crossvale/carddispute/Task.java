@@ -14,18 +14,34 @@ public class Task implements java.io.Serializable
 
    @org.kie.api.definition.type.Label("taskNumber")
    private java.lang.String taskNumber;
-   @org.kie.api.definition.type.Label("taskType")
-   private java.lang.String taskType;
-   @org.kie.api.definition.type.Label("description")
-   private java.lang.String description;
    @org.kie.api.definition.type.Label("ticketNumber")
    private java.lang.String ticketNumber;
-   @org.kie.api.definition.type.Label("customInfo")
-   private java.lang.String customInfo;
-   @org.kie.api.definition.type.Label("dueDate")
-   private Date dueDate;
-   @org.kie.api.definition.type.Label("username")
-   private java.lang.String username;
+   @org.kie.api.definition.type.Label(value = "taskCode")
+   private java.lang.String taskCode;
+
+   @org.kie.api.definition.type.Label(value = "customData")
+   private java.lang.String customData;
+
+   @org.kie.api.definition.type.Label(value = "slaDate")
+   private java.util.Date slaDate;
+
+   @org.kie.api.definition.type.Label(value = "taskBpm")
+   private java.lang.String taskBpm;
+
+   @org.kie.api.definition.type.Label(value = "createdDate")
+   private java.util.Date createdDate;
+
+   @org.kie.api.definition.type.Label(value = "status")
+   private com.crossvale.carddispute.CodeValue status;
+
+   @org.kie.api.definition.type.Label(value = "assignTo")
+   private com.crossvale.carddispute.AssignTo assignTo;
+
+   @org.kie.api.definition.type.Label(value = "slaStatus")
+   private com.crossvale.carddispute.CodeValue slaStatus;
+
+   @org.kie.api.definition.type.Label(value = "audit")
+   private com.crossvale.carddispute.Audit audit;
 
    public Task()
    {
@@ -41,26 +57,6 @@ public class Task implements java.io.Serializable
       this.taskNumber = taskNumber;
    }
 
-   public java.lang.String getTaskType()
-   {
-      return this.taskType;
-   }
-
-   public void setTaskType(java.lang.String taskType)
-   {
-      this.taskType = taskType;
-   }
-
-   public java.lang.String getDescription()
-   {
-      return this.description;
-   }
-
-   public void setDescription(java.lang.String description)
-   {
-      this.description = description;
-   }
-
    public java.lang.String getTicketNumber()
    {
       return this.ticketNumber;
@@ -71,48 +67,115 @@ public class Task implements java.io.Serializable
       this.ticketNumber = ticketNumber;
    }
 
-   public java.lang.String getCustomInfo()
+   public java.lang.String getTaskCode()
    {
-      return this.customInfo;
+      return this.taskCode;
    }
 
-   public void setCustomInfo(java.lang.String customInfo)
+   public void setTaskCode(java.lang.String taskCode)
    {
-      this.customInfo = customInfo;
+      this.taskCode = taskCode;
    }
 
-   public java.lang.String getUsername()
+   public java.lang.String getCustomData()
    {
-      return this.username;
+      return this.customData;
    }
 
-   public void setUsername(java.lang.String username)
+   public void setCustomData(java.lang.String customData)
    {
-      this.username = username;
+      this.customData = customData;
    }
 
-   public java.util.Date getDueDate()
+   public java.util.Date getSlaDate()
    {
-      return this.dueDate;
+      return this.slaDate;
    }
 
-   public void setDueDate(java.util.Date dueDate)
+   public void setSlaDate(java.util.Date slaDate)
    {
-      this.dueDate = dueDate;
+      this.slaDate = slaDate;
    }
 
-   public Task(java.lang.String taskNumber, java.lang.String taskType,
-         java.lang.String description, java.lang.String ticketNumber,
-         java.lang.String customInfo, java.util.Date dueDate,
-         java.lang.String username)
+   public java.lang.String getTaskBpm()
+   {
+      return this.taskBpm;
+   }
+
+   public void setTaskBpm(java.lang.String taskBpm)
+   {
+      this.taskBpm = taskBpm;
+   }
+
+   public java.util.Date getCreatedDate()
+   {
+      return this.createdDate;
+   }
+
+   public void setCreatedDate(java.util.Date createdDate)
+   {
+      this.createdDate = createdDate;
+   }
+
+   public com.crossvale.carddispute.CodeValue getStatus()
+   {
+      return this.status;
+   }
+
+   public void setStatus(com.crossvale.carddispute.CodeValue status)
+   {
+      this.status = status;
+   }
+
+   public com.crossvale.carddispute.AssignTo getAssignTo()
+   {
+      return this.assignTo;
+   }
+
+   public void setAssignTo(com.crossvale.carddispute.AssignTo assignTo)
+   {
+      this.assignTo = assignTo;
+   }
+
+   public com.crossvale.carddispute.CodeValue getSlaStatus()
+   {
+      return this.slaStatus;
+   }
+
+   public void setSlaStatus(com.crossvale.carddispute.CodeValue slaStatus)
+   {
+      this.slaStatus = slaStatus;
+   }
+
+   public com.crossvale.carddispute.Audit getAudit()
+   {
+      return this.audit;
+   }
+
+   public void setAudit(com.crossvale.carddispute.Audit audit)
+   {
+      this.audit = audit;
+   }
+
+   public Task(java.lang.String taskNumber, java.lang.String ticketNumber,
+         java.lang.String taskCode, java.lang.String customData,
+         java.util.Date slaDate, java.lang.String taskBpm,
+         java.util.Date createdDate, com.crossvale.carddispute.CodeValue status,
+         com.crossvale.carddispute.AssignTo assignTo,
+         com.crossvale.carddispute.CodeValue slaStatus,
+         com.crossvale.carddispute.Audit audit)
    {
       this.taskNumber = taskNumber;
-      this.taskType = taskType;
-      this.description = description;
       this.ticketNumber = ticketNumber;
-      this.customInfo = customInfo;
-      this.dueDate = dueDate;
-      this.username = username;
+      this.taskCode = taskCode;
+      this.customData = customData;
+      this.slaDate = slaDate;
+      this.taskBpm = taskBpm;
+      this.createdDate = createdDate;
+      this.status = status;
+      this.assignTo = assignTo;
+      this.slaStatus = slaStatus;
+      this.audit = audit;
    }
 
 }
