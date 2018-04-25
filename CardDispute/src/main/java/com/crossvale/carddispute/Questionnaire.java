@@ -5,6 +5,7 @@ package com.crossvale.carddispute;
  */
 
 @org.kie.api.remote.Remotable
+@org.kie.api.definition.type.Label("Questionnaire")
 public class Questionnaire implements java.io.Serializable
 {
 
