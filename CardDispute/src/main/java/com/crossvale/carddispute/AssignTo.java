@@ -9,10 +9,16 @@ public class AssignTo implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "user")
+   @org.kie.api.definition.type.Label("user")
    private com.crossvale.carddispute.CodeValue user;
-   @org.kie.api.definition.type.Label(value = "group")
+   @org.kie.api.definition.type.Label("group")
    private com.crossvale.carddispute.CodeValue group;
+
+   @org.kie.api.definition.type.Label(value = "firstName")
+   private java.lang.String firstName;
+
+   @org.kie.api.definition.type.Label(value = "lastName")
+   private java.lang.String lastName;
 
    public AssignTo()
    {
@@ -38,11 +44,34 @@ public class AssignTo implements java.io.Serializable
       this.group = group;
    }
 
+   public java.lang.String getFirstName()
+   {
+      return this.firstName;
+   }
+
+   public void setFirstName(java.lang.String firstName)
+   {
+      this.firstName = firstName;
+   }
+
+   public java.lang.String getLastName()
+   {
+      return this.lastName;
+   }
+
+   public void setLastName(java.lang.String lastName)
+   {
+      this.lastName = lastName;
+   }
+
    public AssignTo(com.crossvale.carddispute.CodeValue user,
-         com.crossvale.carddispute.CodeValue group)
+         com.crossvale.carddispute.CodeValue group, java.lang.String firstName,
+         java.lang.String lastName)
    {
       this.user = user;
       this.group = group;
+      this.firstName = firstName;
+      this.lastName = lastName;
    }
 
 }
