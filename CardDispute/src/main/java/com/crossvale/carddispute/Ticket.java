@@ -30,20 +30,53 @@ public class Ticket implements java.io.Serializable
    @org.kie.api.definition.type.Label("actions")
    private java.util.List<com.crossvale.carddispute.Action> actions;
 
-   @org.kie.api.definition.type.Label(value = "complaintFlag")
+   @org.kie.api.definition.type.Label("complaintFlag")
    private java.lang.String complaintFlag;
 
-   @org.kie.api.definition.type.Label(value = "approvalFlag")
+   @org.kie.api.definition.type.Label("approvalFlag")
    private java.lang.String approvalFlag;
 
-   @org.kie.api.definition.type.Label(value = "securityLevelCode")
+   @org.kie.api.definition.type.Label("securityLevelCode")
    private java.lang.String securityLevelCode;
 
-   @org.kie.api.definition.type.Label(value = "createdDate")
+   @org.kie.api.definition.type.Label("createdDate")
    private java.util.Date createdDate;
 
-   @org.kie.api.definition.type.Label(value = "receivedDate")
+   @org.kie.api.definition.type.Label("receivedDate")
    private java.util.Date receivedDate;
+
+   @org.kie.api.definition.type.Label(value = "assignTo")
+   private com.crossvale.carddispute.AssignTo assignTo;
+
+   @org.kie.api.definition.type.Label(value = "audit")
+   private com.crossvale.carddispute.Audit audit;
+
+   @org.kie.api.definition.type.Label(value = "category")
+   private com.crossvale.carddispute.CodeValue category;
+
+   @org.kie.api.definition.type.Label(value = "item")
+   private com.crossvale.carddispute.CodeValue item;
+
+   @org.kie.api.definition.type.Label(value = "status")
+   private com.crossvale.carddispute.CodeValue status;
+
+   @org.kie.api.definition.type.Label(value = "severity")
+   private com.crossvale.carddispute.CodeValue severity;
+
+   @org.kie.api.definition.type.Label(value = "priority")
+   private com.crossvale.carddispute.CodeValue priority;
+
+   @org.kie.api.definition.type.Label(value = "originator")
+   private com.crossvale.carddispute.Originator originator;
+
+   @org.kie.api.definition.type.Label(value = "requestor")
+   private com.crossvale.carddispute.Requestor requestor;
+
+   @org.kie.api.definition.type.Label(value = "contactMethod")
+   private com.crossvale.carddispute.ContactMethod contactMethod;
+
+   @org.kie.api.definition.type.Label(value = "classification")
+   private com.crossvale.carddispute.Classification classification;
 
    public Ticket()
    {
@@ -169,6 +202,118 @@ public class Ticket implements java.io.Serializable
       this.receivedDate = receivedDate;
    }
 
+   public com.crossvale.carddispute.AssignTo getAssignTo()
+   {
+      return this.assignTo;
+   }
+
+   public void setAssignTo(com.crossvale.carddispute.AssignTo assignTo)
+   {
+      this.assignTo = assignTo;
+   }
+
+   public com.crossvale.carddispute.Audit getAudit()
+   {
+      return this.audit;
+   }
+
+   public void setAudit(com.crossvale.carddispute.Audit audit)
+   {
+      this.audit = audit;
+   }
+
+   public com.crossvale.carddispute.CodeValue getCategory()
+   {
+      return this.category;
+   }
+
+   public void setCategory(com.crossvale.carddispute.CodeValue category)
+   {
+      this.category = category;
+   }
+
+   public com.crossvale.carddispute.CodeValue getItem()
+   {
+      return this.item;
+   }
+
+   public void setItem(com.crossvale.carddispute.CodeValue item)
+   {
+      this.item = item;
+   }
+
+   public com.crossvale.carddispute.CodeValue getStatus()
+   {
+      return this.status;
+   }
+
+   public void setStatus(com.crossvale.carddispute.CodeValue status)
+   {
+      this.status = status;
+   }
+
+   public com.crossvale.carddispute.CodeValue getSeverity()
+   {
+      return this.severity;
+   }
+
+   public void setSeverity(com.crossvale.carddispute.CodeValue severity)
+   {
+      this.severity = severity;
+   }
+
+   public com.crossvale.carddispute.CodeValue getPriority()
+   {
+      return this.priority;
+   }
+
+   public void setPriority(com.crossvale.carddispute.CodeValue priority)
+   {
+      this.priority = priority;
+   }
+
+   public com.crossvale.carddispute.Originator getOriginator()
+   {
+      return this.originator;
+   }
+
+   public void setOriginator(com.crossvale.carddispute.Originator originator)
+   {
+      this.originator = originator;
+   }
+
+   public com.crossvale.carddispute.Requestor getRequestor()
+   {
+      return this.requestor;
+   }
+
+   public void setRequestor(com.crossvale.carddispute.Requestor requestor)
+   {
+      this.requestor = requestor;
+   }
+
+   public com.crossvale.carddispute.ContactMethod getContactMethod()
+   {
+      return this.contactMethod;
+   }
+
+   public void setContactMethod(
+         com.crossvale.carddispute.ContactMethod contactMethod)
+   {
+      this.contactMethod = contactMethod;
+   }
+
+   public com.crossvale.carddispute.Classification getClassification()
+   {
+      return this.classification;
+   }
+
+   public void setClassification(
+         com.crossvale.carddispute.Classification classification)
+   {
+      this.classification = classification;
+   }
+
    public Ticket(java.lang.String ticketNumber, java.lang.String narrative,
          java.lang.String accountNumber, java.lang.String customerNumber,
          com.crossvale.carddispute.Customer customer,
@@ -176,7 +321,18 @@ public class Ticket implements java.io.Serializable
          java.util.List<com.crossvale.carddispute.Action> actions,
          java.lang.String complaintFlag, java.lang.String approvalFlag,
          java.lang.String securityLevelCode, java.util.Date createdDate,
-         java.util.Date receivedDate)
+         java.util.Date receivedDate,
+         com.crossvale.carddispute.AssignTo assignTo,
+         com.crossvale.carddispute.Audit audit,
+         com.crossvale.carddispute.CodeValue category,
+         com.crossvale.carddispute.CodeValue item,
+         com.crossvale.carddispute.CodeValue status,
+         com.crossvale.carddispute.CodeValue severity,
+         com.crossvale.carddispute.CodeValue priority,
+         com.crossvale.carddispute.Originator originator,
+         com.crossvale.carddispute.Requestor requestor,
+         com.crossvale.carddispute.ContactMethod contactMethod,
+         com.crossvale.carddispute.Classification classification)
    {
       this.ticketNumber = ticketNumber;
       this.narrative = narrative;
@@ -190,6 +346,17 @@ public class Ticket implements java.io.Serializable
       this.securityLevelCode = securityLevelCode;
       this.createdDate = createdDate;
       this.receivedDate = receivedDate;
+      this.assignTo = assignTo;
+      this.audit = audit;
+      this.category = category;
+      this.item = item;
+      this.status = status;
+      this.severity = severity;
+      this.priority = priority;
+      this.originator = originator;
+      this.requestor = requestor;
+      this.contactMethod = contactMethod;
+      this.classification = classification;
    }
 
 }
