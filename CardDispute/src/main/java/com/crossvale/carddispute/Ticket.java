@@ -14,27 +14,12 @@ public class Ticket implements java.io.Serializable
 
    @org.kie.api.definition.type.Label("ticketNumber")
    private java.lang.String ticketNumber;
-   @org.kie.api.definition.type.Label("dateReceived")
-   private Date dateReceived;
-   @org.kie.api.definition.type.Label("source")
-   private java.lang.String source;
    @org.kie.api.definition.type.Label("narrative")
    private java.lang.String narrative;
    @org.kie.api.definition.type.Label("accountNumber")
    private java.lang.String accountNumber;
-   @org.kie.api.definition.type.Label("issue")
-   private java.lang.String issue;
    @org.kie.api.definition.type.Label("customerNumber")
    private java.lang.String customerNumber;
-
-   @org.kie.api.definition.type.Label("groupAssigned")
-   private java.lang.String groupAssigned;
-
-   @org.kie.api.definition.type.Label("dueDate")
-   private Date dueDate;
-
-   @org.kie.api.definition.type.Label("status")
-   private java.lang.String status;
 
    @org.kie.api.definition.type.Label("customer")
    private com.crossvale.carddispute.Customer customer;
@@ -44,6 +29,21 @@ public class Ticket implements java.io.Serializable
 
    @org.kie.api.definition.type.Label("actions")
    private java.util.List<com.crossvale.carddispute.Action> actions;
+
+   @org.kie.api.definition.type.Label(value = "complaintFlag")
+   private java.lang.String complaintFlag;
+
+   @org.kie.api.definition.type.Label(value = "approvalFlag")
+   private java.lang.String approvalFlag;
+
+   @org.kie.api.definition.type.Label(value = "securityLevelCode")
+   private java.lang.String securityLevelCode;
+
+   @org.kie.api.definition.type.Label(value = "createdDate")
+   private java.util.Date createdDate;
+
+   @org.kie.api.definition.type.Label(value = "receivedDate")
+   private java.util.Date receivedDate;
 
    public Ticket()
    {
@@ -57,16 +57,6 @@ public class Ticket implements java.io.Serializable
    public void setTicketNumber(java.lang.String ticketNumber)
    {
       this.ticketNumber = ticketNumber;
-   }
-
-   public java.lang.String getSource()
-   {
-      return this.source;
-   }
-
-   public void setSource(java.lang.String source)
-   {
-      this.source = source;
    }
 
    public java.lang.String getNarrative()
@@ -89,16 +79,6 @@ public class Ticket implements java.io.Serializable
       this.accountNumber = accountNumber;
    }
 
-   public java.lang.String getIssue()
-   {
-      return this.issue;
-   }
-
-   public void setIssue(java.lang.String issue)
-   {
-      this.issue = issue;
-   }
-
    public java.lang.String getCustomerNumber()
    {
       return this.customerNumber;
@@ -107,26 +87,6 @@ public class Ticket implements java.io.Serializable
    public void setCustomerNumber(java.lang.String customerNumber)
    {
       this.customerNumber = customerNumber;
-   }
-
-   public java.lang.String getGroupAssigned()
-   {
-      return this.groupAssigned;
-   }
-
-   public void setGroupAssigned(java.lang.String groupAssigned)
-   {
-      this.groupAssigned = groupAssigned;
-   }
-
-   public java.lang.String getStatus()
-   {
-      return this.status;
-   }
-
-   public void setStatus(java.lang.String status)
-   {
-      this.status = status;
    }
 
    public com.crossvale.carddispute.Customer getCustomer()
@@ -159,48 +119,77 @@ public class Ticket implements java.io.Serializable
       this.actions = actions;
    }
 
-   public java.util.Date getDateReceived()
+   public java.lang.String getComplaintFlag()
    {
-      return this.dateReceived;
+      return this.complaintFlag;
    }
 
-   public void setDateReceived(java.util.Date dateReceived)
+   public void setComplaintFlag(java.lang.String complaintFlag)
    {
-      this.dateReceived = dateReceived;
+      this.complaintFlag = complaintFlag;
    }
 
-   public java.util.Date getDueDate()
+   public java.lang.String getApprovalFlag()
    {
-      return this.dueDate;
+      return this.approvalFlag;
    }
 
-   public void setDueDate(java.util.Date dueDate)
+   public void setApprovalFlag(java.lang.String approvalFlag)
    {
-      this.dueDate = dueDate;
+      this.approvalFlag = approvalFlag;
    }
 
-   public Ticket(java.lang.String ticketNumber, java.util.Date dateReceived,
-         java.lang.String source, java.lang.String narrative,
-         java.lang.String accountNumber, java.lang.String issue,
-         java.lang.String customerNumber, java.lang.String groupAssigned,
-         java.util.Date dueDate, java.lang.String status,
+   public java.lang.String getSecurityLevelCode()
+   {
+      return this.securityLevelCode;
+   }
+
+   public void setSecurityLevelCode(java.lang.String securityLevelCode)
+   {
+      this.securityLevelCode = securityLevelCode;
+   }
+
+   public java.util.Date getCreatedDate()
+   {
+      return this.createdDate;
+   }
+
+   public void setCreatedDate(java.util.Date createdDate)
+   {
+      this.createdDate = createdDate;
+   }
+
+   public java.util.Date getReceivedDate()
+   {
+      return this.receivedDate;
+   }
+
+   public void setReceivedDate(java.util.Date receivedDate)
+   {
+      this.receivedDate = receivedDate;
+   }
+
+   public Ticket(java.lang.String ticketNumber, java.lang.String narrative,
+         java.lang.String accountNumber, java.lang.String customerNumber,
          com.crossvale.carddispute.Customer customer,
          java.util.List<com.crossvale.carddispute.Task> tasks,
-         java.util.List<com.crossvale.carddispute.Action> actions)
+         java.util.List<com.crossvale.carddispute.Action> actions,
+         java.lang.String complaintFlag, java.lang.String approvalFlag,
+         java.lang.String securityLevelCode, java.util.Date createdDate,
+         java.util.Date receivedDate)
    {
       this.ticketNumber = ticketNumber;
-      this.dateReceived = dateReceived;
-      this.source = source;
       this.narrative = narrative;
       this.accountNumber = accountNumber;
-      this.issue = issue;
       this.customerNumber = customerNumber;
-      this.groupAssigned = groupAssigned;
-      this.dueDate = dueDate;
-      this.status = status;
       this.customer = customer;
       this.tasks = tasks;
       this.actions = actions;
+      this.complaintFlag = complaintFlag;
+      this.approvalFlag = approvalFlag;
+      this.securityLevelCode = securityLevelCode;
+      this.createdDate = createdDate;
+      this.receivedDate = receivedDate;
    }
 
 }
