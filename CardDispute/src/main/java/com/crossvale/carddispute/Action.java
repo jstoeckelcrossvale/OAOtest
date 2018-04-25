@@ -25,26 +25,29 @@ public class Action implements java.io.Serializable
    @org.kie.api.definition.type.Label("customInfo")
    private java.lang.String customInfo;
 
-   @org.kie.api.definition.type.Label(value = "actionCode")
+   @org.kie.api.definition.type.Label("actionCode")
    private java.lang.String actionCode;
 
-   @org.kie.api.definition.type.Label(value = "globalId")
+   @org.kie.api.definition.type.Label("globalId")
    private java.lang.String globalId;
 
-   @org.kie.api.definition.type.Label(value = "narrative")
+   @org.kie.api.definition.type.Label("narrative")
    private java.lang.String narrative;
 
-   @org.kie.api.definition.type.Label(value = "statusFlag")
+   @org.kie.api.definition.type.Label("statusFlag")
    private java.lang.String statusFlag;
 
-   @org.kie.api.definition.type.Label(value = "assignTo")
+   @org.kie.api.definition.type.Label("assignTo")
    private com.crossvale.carddispute.AssignTo assignTo;
 
-   @org.kie.api.definition.type.Label(value = "level")
+   @org.kie.api.definition.type.Label("level")
    private com.crossvale.carddispute.CodeValue level;
 
-   @org.kie.api.definition.type.Label(value = "type")
+   @org.kie.api.definition.type.Label("type")
    private com.crossvale.carddispute.CodeValue type;
+
+   @org.kie.api.definition.type.Label(value = "paramList")
+   private java.util.List<com.crossvale.carddispute.KeyValueParam> paramList;
 
    public Action()
    {
@@ -180,6 +183,17 @@ public class Action implements java.io.Serializable
       this.type = type;
    }
 
+   public java.util.List<com.crossvale.carddispute.KeyValueParam> getParamList()
+   {
+      return this.paramList;
+   }
+
+   public void setParamList(
+         java.util.List<com.crossvale.carddispute.KeyValueParam> paramList)
+   {
+      this.paramList = paramList;
+   }
+
    public Action(java.lang.String actionNumber, java.util.Date actionTime,
          java.lang.String username, java.lang.String ticketNumber,
          java.lang.String description, java.lang.String customInfo,
@@ -187,7 +201,8 @@ public class Action implements java.io.Serializable
          java.lang.String narrative, java.lang.String statusFlag,
          com.crossvale.carddispute.AssignTo assignTo,
          com.crossvale.carddispute.CodeValue level,
-         com.crossvale.carddispute.CodeValue type)
+         com.crossvale.carddispute.CodeValue type,
+         java.util.List<com.crossvale.carddispute.KeyValueParam> paramList)
    {
       this.actionNumber = actionNumber;
       this.actionTime = actionTime;
@@ -202,6 +217,7 @@ public class Action implements java.io.Serializable
       this.assignTo = assignTo;
       this.level = level;
       this.type = type;
+      this.paramList = paramList;
    }
 
 }
