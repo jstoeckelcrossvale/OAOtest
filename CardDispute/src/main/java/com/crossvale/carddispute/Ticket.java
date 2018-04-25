@@ -45,38 +45,53 @@ public class Ticket implements java.io.Serializable
    @org.kie.api.definition.type.Label("receivedDate")
    private java.util.Date receivedDate;
 
-   @org.kie.api.definition.type.Label(value = "assignTo")
+   @org.kie.api.definition.type.Label("assignTo")
    private com.crossvale.carddispute.AssignTo assignTo;
 
-   @org.kie.api.definition.type.Label(value = "audit")
+   @org.kie.api.definition.type.Label("audit")
    private com.crossvale.carddispute.Audit audit;
 
-   @org.kie.api.definition.type.Label(value = "category")
+   @org.kie.api.definition.type.Label("category")
    private com.crossvale.carddispute.CodeValue category;
 
-   @org.kie.api.definition.type.Label(value = "item")
+   @org.kie.api.definition.type.Label("item")
    private com.crossvale.carddispute.CodeValue item;
 
-   @org.kie.api.definition.type.Label(value = "status")
+   @org.kie.api.definition.type.Label("status")
    private com.crossvale.carddispute.CodeValue status;
 
-   @org.kie.api.definition.type.Label(value = "severity")
+   @org.kie.api.definition.type.Label("severity")
    private com.crossvale.carddispute.CodeValue severity;
 
-   @org.kie.api.definition.type.Label(value = "priority")
+   @org.kie.api.definition.type.Label("priority")
    private com.crossvale.carddispute.CodeValue priority;
 
-   @org.kie.api.definition.type.Label(value = "originator")
+   @org.kie.api.definition.type.Label("originator")
    private com.crossvale.carddispute.Originator originator;
 
-   @org.kie.api.definition.type.Label(value = "requestor")
+   @org.kie.api.definition.type.Label("requestor")
    private com.crossvale.carddispute.Requestor requestor;
 
-   @org.kie.api.definition.type.Label(value = "contactMethod")
+   @org.kie.api.definition.type.Label("contactMethod")
    private com.crossvale.carddispute.ContactMethod contactMethod;
 
-   @org.kie.api.definition.type.Label(value = "classification")
+   @org.kie.api.definition.type.Label("classification")
    private com.crossvale.carddispute.Classification classification;
+
+   @org.kie.api.definition.type.Label(value = "transactionList")
+   private java.util.List<com.crossvale.carddispute.Transaction> transactionList;
+
+   @org.kie.api.definition.type.Label(value = "attributeList")
+   private java.util.List<com.crossvale.carddispute.Attribute> attributeList;
+
+   @org.kie.api.definition.type.Label(value = "attachmentList")
+   private java.util.List<com.crossvale.carddispute.Attachment> attachmentList;
+
+   @org.kie.api.definition.type.Label(value = "actionList")
+   private java.util.List<com.crossvale.carddispute.Action> actionList;
+
+   @org.kie.api.definition.type.Label(value = "taskList")
+   private java.util.List<com.crossvale.carddispute.Task> taskList;
 
    public Ticket()
    {
@@ -314,6 +329,60 @@ public class Ticket implements java.io.Serializable
       this.classification = classification;
    }
 
+   public java.util.List<com.crossvale.carddispute.Transaction> getTransactionList()
+   {
+      return this.transactionList;
+   }
+
+   public void setTransactionList(
+         java.util.List<com.crossvale.carddispute.Transaction> transactionList)
+   {
+      this.transactionList = transactionList;
+   }
+
+   public java.util.List<com.crossvale.carddispute.Attribute> getAttributeList()
+   {
+      return this.attributeList;
+   }
+
+   public void setAttributeList(
+         java.util.List<com.crossvale.carddispute.Attribute> attributeList)
+   {
+      this.attributeList = attributeList;
+   }
+
+   public java.util.List<com.crossvale.carddispute.Attachment> getAttachmentList()
+   {
+      return this.attachmentList;
+   }
+
+   public void setAttachmentList(
+         java.util.List<com.crossvale.carddispute.Attachment> attachmentList)
+   {
+      this.attachmentList = attachmentList;
+   }
+
+   public java.util.List<com.crossvale.carddispute.Action> getActionList()
+   {
+      return this.actionList;
+   }
+
+   public void setActionList(
+         java.util.List<com.crossvale.carddispute.Action> actionList)
+   {
+      this.actionList = actionList;
+   }
+
+   public java.util.List<com.crossvale.carddispute.Task> getTaskList()
+   {
+      return this.taskList;
+   }
+
+   public void setTaskList(java.util.List<com.crossvale.carddispute.Task> taskList)
+   {
+      this.taskList = taskList;
+   }
+
    public Ticket(java.lang.String ticketNumber, java.lang.String narrative,
          java.lang.String accountNumber, java.lang.String customerNumber,
          com.crossvale.carddispute.Customer customer,
@@ -332,7 +401,12 @@ public class Ticket implements java.io.Serializable
          com.crossvale.carddispute.Originator originator,
          com.crossvale.carddispute.Requestor requestor,
          com.crossvale.carddispute.ContactMethod contactMethod,
-         com.crossvale.carddispute.Classification classification)
+         com.crossvale.carddispute.Classification classification,
+         java.util.List<com.crossvale.carddispute.Transaction> transactionList,
+         java.util.List<com.crossvale.carddispute.Attribute> attributeList,
+         java.util.List<com.crossvale.carddispute.Attachment> attachmentList,
+         java.util.List<com.crossvale.carddispute.Action> actionList,
+         java.util.List<com.crossvale.carddispute.Task> taskList)
    {
       this.ticketNumber = ticketNumber;
       this.narrative = narrative;
@@ -357,6 +431,11 @@ public class Ticket implements java.io.Serializable
       this.requestor = requestor;
       this.contactMethod = contactMethod;
       this.classification = classification;
+      this.transactionList = transactionList;
+      this.attributeList = attributeList;
+      this.attachmentList = attachmentList;
+      this.actionList = actionList;
+      this.taskList = taskList;
    }
 
 }
