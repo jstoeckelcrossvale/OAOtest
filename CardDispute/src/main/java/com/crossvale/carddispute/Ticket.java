@@ -24,12 +24,6 @@ public class Ticket implements java.io.Serializable
    @org.kie.api.definition.type.Label("customer")
    private com.crossvale.carddispute.Customer customer;
 
-   @org.kie.api.definition.type.Label("tasks")
-   private java.util.List<com.crossvale.carddispute.Task> tasks;
-
-   @org.kie.api.definition.type.Label("actions")
-   private java.util.List<com.crossvale.carddispute.Action> actions;
-
    @org.kie.api.definition.type.Label("complaintFlag")
    private java.lang.String complaintFlag;
 
@@ -78,19 +72,19 @@ public class Ticket implements java.io.Serializable
    @org.kie.api.definition.type.Label("classification")
    private com.crossvale.carddispute.Classification classification;
 
-   @org.kie.api.definition.type.Label(value = "transactionList")
+   @org.kie.api.definition.type.Label("transactionList")
    private java.util.List<com.crossvale.carddispute.Transaction> transactionList;
 
-   @org.kie.api.definition.type.Label(value = "attributeList")
+   @org.kie.api.definition.type.Label("attributeList")
    private java.util.List<com.crossvale.carddispute.Attribute> attributeList;
 
-   @org.kie.api.definition.type.Label(value = "attachmentList")
+   @org.kie.api.definition.type.Label("attachmentList")
    private java.util.List<com.crossvale.carddispute.Attachment> attachmentList;
 
-   @org.kie.api.definition.type.Label(value = "actionList")
+   @org.kie.api.definition.type.Label("actionList")
    private java.util.List<com.crossvale.carddispute.Action> actionList;
 
-   @org.kie.api.definition.type.Label(value = "taskList")
+   @org.kie.api.definition.type.Label("taskList")
    private java.util.List<com.crossvale.carddispute.Task> taskList;
 
    public Ticket()
@@ -145,26 +139,6 @@ public class Ticket implements java.io.Serializable
    public void setCustomer(com.crossvale.carddispute.Customer customer)
    {
       this.customer = customer;
-   }
-
-   public java.util.List<com.crossvale.carddispute.Task> getTasks()
-   {
-      return this.tasks;
-   }
-
-   public void setTasks(java.util.List<com.crossvale.carddispute.Task> tasks)
-   {
-      this.tasks = tasks;
-   }
-
-   public java.util.List<com.crossvale.carddispute.Action> getActions()
-   {
-      return this.actions;
-   }
-
-   public void setActions(java.util.List<com.crossvale.carddispute.Action> actions)
-   {
-      this.actions = actions;
    }
 
    public java.lang.String getComplaintFlag()
@@ -386,8 +360,6 @@ public class Ticket implements java.io.Serializable
    public Ticket(java.lang.String ticketNumber, java.lang.String narrative,
          java.lang.String accountNumber, java.lang.String customerNumber,
          com.crossvale.carddispute.Customer customer,
-         java.util.List<com.crossvale.carddispute.Task> tasks,
-         java.util.List<com.crossvale.carddispute.Action> actions,
          java.lang.String complaintFlag, java.lang.String approvalFlag,
          java.lang.String securityLevelCode, java.util.Date createdDate,
          java.util.Date receivedDate,
@@ -413,8 +385,6 @@ public class Ticket implements java.io.Serializable
       this.accountNumber = accountNumber;
       this.customerNumber = customerNumber;
       this.customer = customer;
-      this.tasks = tasks;
-      this.actions = actions;
       this.complaintFlag = complaintFlag;
       this.approvalFlag = approvalFlag;
       this.securityLevelCode = securityLevelCode;
