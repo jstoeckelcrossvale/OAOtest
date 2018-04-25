@@ -20,12 +20,31 @@ public class Action implements java.io.Serializable
    private java.lang.String username;
    @org.kie.api.definition.type.Label("ticketNumber")
    private java.lang.String ticketNumber;
-   @org.kie.api.definition.type.Label("actionType")
-   private java.lang.String actionType;
    @org.kie.api.definition.type.Label("description")
    private java.lang.String description;
    @org.kie.api.definition.type.Label("customInfo")
    private java.lang.String customInfo;
+
+   @org.kie.api.definition.type.Label(value = "actionCode")
+   private java.lang.String actionCode;
+
+   @org.kie.api.definition.type.Label(value = "globalId")
+   private java.lang.String globalId;
+
+   @org.kie.api.definition.type.Label(value = "narrative")
+   private java.lang.String narrative;
+
+   @org.kie.api.definition.type.Label(value = "statusFlag")
+   private java.lang.String statusFlag;
+
+   @org.kie.api.definition.type.Label(value = "assignTo")
+   private com.crossvale.carddispute.AssignTo assignTo;
+
+   @org.kie.api.definition.type.Label(value = "level")
+   private com.crossvale.carddispute.CodeValue level;
+
+   @org.kie.api.definition.type.Label(value = "type")
+   private com.crossvale.carddispute.CodeValue type;
 
    public Action()
    {
@@ -61,16 +80,6 @@ public class Action implements java.io.Serializable
       this.ticketNumber = ticketNumber;
    }
 
-   public java.lang.String getActionType()
-   {
-      return this.actionType;
-   }
-
-   public void setActionType(java.lang.String actionType)
-   {
-      this.actionType = actionType;
-   }
-
    public java.lang.String getDescription()
    {
       return this.description;
@@ -101,18 +110,98 @@ public class Action implements java.io.Serializable
       this.actionTime = actionTime;
    }
 
+   public java.lang.String getActionCode()
+   {
+      return this.actionCode;
+   }
+
+   public void setActionCode(java.lang.String actionCode)
+   {
+      this.actionCode = actionCode;
+   }
+
+   public java.lang.String getGlobalId()
+   {
+      return this.globalId;
+   }
+
+   public void setGlobalId(java.lang.String globalId)
+   {
+      this.globalId = globalId;
+   }
+
+   public java.lang.String getNarrative()
+   {
+      return this.narrative;
+   }
+
+   public void setNarrative(java.lang.String narrative)
+   {
+      this.narrative = narrative;
+   }
+
+   public java.lang.String getStatusFlag()
+   {
+      return this.statusFlag;
+   }
+
+   public void setStatusFlag(java.lang.String statusFlag)
+   {
+      this.statusFlag = statusFlag;
+   }
+
+   public com.crossvale.carddispute.AssignTo getAssignTo()
+   {
+      return this.assignTo;
+   }
+
+   public void setAssignTo(com.crossvale.carddispute.AssignTo assignTo)
+   {
+      this.assignTo = assignTo;
+   }
+
+   public com.crossvale.carddispute.CodeValue getLevel()
+   {
+      return this.level;
+   }
+
+   public void setLevel(com.crossvale.carddispute.CodeValue level)
+   {
+      this.level = level;
+   }
+
+   public com.crossvale.carddispute.CodeValue getType()
+   {
+      return this.type;
+   }
+
+   public void setType(com.crossvale.carddispute.CodeValue type)
+   {
+      this.type = type;
+   }
+
    public Action(java.lang.String actionNumber, java.util.Date actionTime,
          java.lang.String username, java.lang.String ticketNumber,
-         java.lang.String actionType, java.lang.String description,
-         java.lang.String customInfo)
+         java.lang.String description, java.lang.String customInfo,
+         java.lang.String actionCode, java.lang.String globalId,
+         java.lang.String narrative, java.lang.String statusFlag,
+         com.crossvale.carddispute.AssignTo assignTo,
+         com.crossvale.carddispute.CodeValue level,
+         com.crossvale.carddispute.CodeValue type)
    {
       this.actionNumber = actionNumber;
       this.actionTime = actionTime;
       this.username = username;
       this.ticketNumber = ticketNumber;
-      this.actionType = actionType;
       this.description = description;
       this.customInfo = customInfo;
+      this.actionCode = actionCode;
+      this.globalId = globalId;
+      this.narrative = narrative;
+      this.statusFlag = statusFlag;
+      this.assignTo = assignTo;
+      this.level = level;
+      this.type = type;
    }
 
 }
