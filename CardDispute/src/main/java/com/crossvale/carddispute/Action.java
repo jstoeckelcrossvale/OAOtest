@@ -16,15 +16,8 @@ public class Action implements java.io.Serializable
    private java.lang.String actionNumber;
    @org.kie.api.definition.type.Label("actionTime")
    private Date actionTime;
-   @org.kie.api.definition.type.Label("username")
-   private java.lang.String username;
    @org.kie.api.definition.type.Label("ticketNumber")
    private java.lang.String ticketNumber;
-   @org.kie.api.definition.type.Label("description")
-   private java.lang.String description;
-   @org.kie.api.definition.type.Label("customInfo")
-   private java.lang.String customInfo;
-
    @org.kie.api.definition.type.Label("actionCode")
    private java.lang.String actionCode;
 
@@ -46,7 +39,7 @@ public class Action implements java.io.Serializable
    @org.kie.api.definition.type.Label("type")
    private com.crossvale.carddispute.CodeValue type;
 
-   @org.kie.api.definition.type.Label(value = "paramList")
+   @org.kie.api.definition.type.Label("paramList")
    private java.util.List<com.crossvale.carddispute.KeyValueParam> paramList;
 
    public Action()
@@ -63,16 +56,6 @@ public class Action implements java.io.Serializable
       this.actionNumber = actionNumber;
    }
 
-   public java.lang.String getUsername()
-   {
-      return this.username;
-   }
-
-   public void setUsername(java.lang.String username)
-   {
-      this.username = username;
-   }
-
    public java.lang.String getTicketNumber()
    {
       return this.ticketNumber;
@@ -81,26 +64,6 @@ public class Action implements java.io.Serializable
    public void setTicketNumber(java.lang.String ticketNumber)
    {
       this.ticketNumber = ticketNumber;
-   }
-
-   public java.lang.String getDescription()
-   {
-      return this.description;
-   }
-
-   public void setDescription(java.lang.String description)
-   {
-      this.description = description;
-   }
-
-   public java.lang.String getCustomInfo()
-   {
-      return this.customInfo;
-   }
-
-   public void setCustomInfo(java.lang.String customInfo)
-   {
-      this.customInfo = customInfo;
    }
 
    public java.util.Date getActionTime()
@@ -195,10 +158,9 @@ public class Action implements java.io.Serializable
    }
 
    public Action(java.lang.String actionNumber, java.util.Date actionTime,
-         java.lang.String username, java.lang.String ticketNumber,
-         java.lang.String description, java.lang.String customInfo,
-         java.lang.String actionCode, java.lang.String globalId,
-         java.lang.String narrative, java.lang.String statusFlag,
+         java.lang.String ticketNumber, java.lang.String actionCode,
+         java.lang.String globalId, java.lang.String narrative,
+         java.lang.String statusFlag,
          com.crossvale.carddispute.AssignTo assignTo,
          com.crossvale.carddispute.CodeValue level,
          com.crossvale.carddispute.CodeValue type,
@@ -206,10 +168,7 @@ public class Action implements java.io.Serializable
    {
       this.actionNumber = actionNumber;
       this.actionTime = actionTime;
-      this.username = username;
       this.ticketNumber = ticketNumber;
-      this.description = description;
-      this.customInfo = customInfo;
       this.actionCode = actionCode;
       this.globalId = globalId;
       this.narrative = narrative;
