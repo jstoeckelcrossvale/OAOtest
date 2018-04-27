@@ -15,7 +15,7 @@ public class Action implements java.io.Serializable
    @org.kie.api.definition.type.Label("actionNumber")
    private java.lang.String actionNumber;
    @org.kie.api.definition.type.Label("actionTime")
-   private Date actionTime;
+   private String actionTime;
    @org.kie.api.definition.type.Label("ticketNumber")
    private java.lang.String ticketNumber;
    @org.kie.api.definition.type.Label("actionCode")
@@ -64,16 +64,6 @@ public class Action implements java.io.Serializable
    public void setTicketNumber(java.lang.String ticketNumber)
    {
       this.ticketNumber = ticketNumber;
-   }
-
-   public java.util.Date getActionTime()
-   {
-      return this.actionTime;
-   }
-
-   public void setActionTime(java.util.Date actionTime)
-   {
-      this.actionTime = actionTime;
    }
 
    public java.lang.String getActionCode()
@@ -157,7 +147,17 @@ public class Action implements java.io.Serializable
       this.paramList = paramList;
    }
 
-   public Action(java.lang.String actionNumber, java.util.Date actionTime,
+   public java.lang.String getActionTime()
+   {
+      return this.actionTime;
+   }
+
+   public void setActionTime(java.lang.String actionTime)
+   {
+      this.actionTime = actionTime;
+   }
+
+   public Action(java.lang.String actionNumber, java.lang.String actionTime,
          java.lang.String ticketNumber, java.lang.String actionCode,
          java.lang.String globalId, java.lang.String narrative,
          java.lang.String statusFlag,
