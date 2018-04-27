@@ -23,7 +23,7 @@ public class Task implements java.io.Serializable
    private java.lang.String customData;
 
    @org.kie.api.definition.type.Label("slaDate")
-   private java.util.Date slaDate;
+   private String slaDate;
 
    @org.kie.api.definition.type.Label("taskBpm")
    private java.lang.String taskBpm;
@@ -87,16 +87,6 @@ public class Task implements java.io.Serializable
       this.customData = customData;
    }
 
-   public java.util.Date getSlaDate()
-   {
-      return this.slaDate;
-   }
-
-   public void setSlaDate(java.util.Date slaDate)
-   {
-      this.slaDate = slaDate;
-   }
-
    public java.lang.String getTaskBpm()
    {
       return this.taskBpm;
@@ -157,9 +147,19 @@ public class Task implements java.io.Serializable
       this.createdDate = createdDate;
    }
 
+   public java.lang.String getSlaDate()
+   {
+      return this.slaDate;
+   }
+
+   public void setSlaDate(java.lang.String slaDate)
+   {
+      this.slaDate = slaDate;
+   }
+
    public Task(java.lang.String taskNumber, java.lang.String ticketNumber,
          java.lang.String taskCode, java.lang.String customData,
-         java.util.Date slaDate, java.lang.String taskBpm,
+         java.lang.String slaDate, java.lang.String taskBpm,
          java.lang.String createdDate,
          com.crossvale.carddispute.CodeValue status,
          com.crossvale.carddispute.AssignTo assignTo,
