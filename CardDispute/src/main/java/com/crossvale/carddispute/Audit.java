@@ -13,9 +13,9 @@ public class Audit implements java.io.Serializable
    @org.kie.api.definition.type.Label("userCreation")
    private java.lang.String userCreation;
    @org.kie.api.definition.type.Label("timeCreation")
-   private java.util.Date timeCreation;
+   private String timeCreation;
    @org.kie.api.definition.type.Label("timeModification")
-   private java.util.Date timeModification;
+   private String timeModification;
 
    public Audit()
    {
@@ -31,28 +31,28 @@ public class Audit implements java.io.Serializable
       this.userCreation = userCreation;
    }
 
-   public java.util.Date getTimeCreation()
+   public java.lang.String getTimeCreation()
    {
       return this.timeCreation;
    }
 
-   public void setTimeCreation(java.util.Date timeCreation)
+   public void setTimeCreation(java.lang.String timeCreation)
    {
       this.timeCreation = timeCreation;
    }
 
-   public java.util.Date getTimeModification()
+   public java.lang.String getTimeModification()
    {
       return this.timeModification;
    }
 
-   public void setTimeModification(java.util.Date timeModification)
+   public void setTimeModification(java.lang.String timeModification)
    {
       this.timeModification = timeModification;
    }
 
-   public Audit(java.lang.String userCreation, java.util.Date timeCreation,
-         java.util.Date timeModification)
+   public Audit(java.lang.String userCreation, java.lang.String timeCreation,
+         java.lang.String timeModification)
    {
       this.userCreation = userCreation;
       this.timeCreation = timeCreation;
