@@ -42,6 +42,9 @@ public class Action implements java.io.Serializable
    @org.kie.api.definition.type.Label("paramList")
    private java.util.List<com.crossvale.carddispute.KeyValueParam> paramList;
 
+   @org.kie.api.definition.type.Label(value = "taskNumber")
+   private java.lang.String taskNumber;
+
    public Action()
    {
    }
@@ -157,6 +160,16 @@ public class Action implements java.io.Serializable
       this.actionTime = actionTime;
    }
 
+   public java.lang.String getTaskNumber()
+   {
+      return this.taskNumber;
+   }
+
+   public void setTaskNumber(java.lang.String taskNumber)
+   {
+      this.taskNumber = taskNumber;
+   }
+
    public Action(java.lang.String actionNumber, java.lang.String actionTime,
          java.lang.String ticketNumber, java.lang.String actionCode,
          java.lang.String globalId, java.lang.String narrative,
@@ -164,7 +177,8 @@ public class Action implements java.io.Serializable
          com.crossvale.carddispute.AssignTo assignTo,
          com.crossvale.carddispute.CodeValue level,
          com.crossvale.carddispute.CodeValue type,
-         java.util.List<com.crossvale.carddispute.KeyValueParam> paramList)
+         java.util.List<com.crossvale.carddispute.KeyValueParam> paramList,
+         java.lang.String taskNumber)
    {
       this.actionNumber = actionNumber;
       this.actionTime = actionTime;
@@ -177,6 +191,7 @@ public class Action implements java.io.Serializable
       this.level = level;
       this.type = type;
       this.paramList = paramList;
+      this.taskNumber = taskNumber;
    }
 
 }
