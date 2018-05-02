@@ -22,6 +22,9 @@ public class DisputeRequest implements java.io.Serializable
    @org.kie.api.definition.type.Label("CustomerType")
    private java.lang.String customerType;
 
+   @org.kie.api.definition.type.Label(value = "account")
+   private java.lang.String account;
+
    public DisputeRequest()
    {
    }
@@ -66,13 +69,25 @@ public class DisputeRequest implements java.io.Serializable
       this.customerType = customerType;
    }
 
+   public java.lang.String getAccount()
+   {
+      return this.account;
+   }
+
+   public void setAccount(java.lang.String account)
+   {
+      this.account = account;
+   }
+
    public DisputeRequest(java.lang.String fraud, java.lang.Float amount,
-         java.lang.String chargeback, java.lang.String customerType)
+         java.lang.String chargeback, java.lang.String customerType,
+         java.lang.String account)
    {
       this.fraud = fraud;
       this.amount = amount;
       this.chargeback = chargeback;
       this.customerType = customerType;
+      this.account = account;
    }
 
 }
