@@ -19,6 +19,9 @@ public class Questionnaire implements java.io.Serializable
    @org.kie.api.definition.type.Label("questionCode")
    private java.lang.String questionCode;
 
+   @org.kie.api.definition.type.Label(value = "previousQuestionCode")
+   private java.lang.String previousQuestionCode;
+
    public Questionnaire()
    {
    }
@@ -53,12 +56,24 @@ public class Questionnaire implements java.io.Serializable
       this.questionCode = questionCode;
    }
 
+   public java.lang.String getPreviousQuestionCode()
+   {
+      return this.previousQuestionCode;
+   }
+
+   public void setPreviousQuestionCode(java.lang.String previousQuestionCode)
+   {
+      this.previousQuestionCode = previousQuestionCode;
+   }
+
    public Questionnaire(java.lang.String question,
-         java.lang.String nextQuestionCode, java.lang.String questionCode)
+         java.lang.String nextQuestionCode, java.lang.String questionCode,
+         java.lang.String previousQuestionCode)
    {
       this.question = question;
       this.nextQuestionCode = nextQuestionCode;
       this.questionCode = questionCode;
+      this.previousQuestionCode = previousQuestionCode;
    }
 
 }
