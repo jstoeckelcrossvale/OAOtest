@@ -87,6 +87,9 @@ public class Ticket implements java.io.Serializable
    @org.kie.api.definition.type.Label("taskList")
    private java.util.List<com.crossvale.carddispute.Task> taskList;
 
+   @org.kie.api.definition.type.Label(value = "sla")
+   private java.lang.String sla;
+
    public Ticket()
    {
    }
@@ -357,6 +360,16 @@ public class Ticket implements java.io.Serializable
       this.taskList = taskList;
    }
 
+   public java.lang.String getSla()
+   {
+      return this.sla;
+   }
+
+   public void setSla(java.lang.String sla)
+   {
+      this.sla = sla;
+   }
+
    public Ticket(java.lang.String ticketNumber, java.lang.String narrative,
          java.lang.String accountNumber, java.lang.String customerNumber,
          com.crossvale.carddispute.Customer customer,
@@ -378,7 +391,8 @@ public class Ticket implements java.io.Serializable
          java.util.List<com.crossvale.carddispute.Attribute> attributeList,
          java.util.List<com.crossvale.carddispute.Attachment> attachmentList,
          java.util.List<com.crossvale.carddispute.Action> actionList,
-         java.util.List<com.crossvale.carddispute.Task> taskList)
+         java.util.List<com.crossvale.carddispute.Task> taskList,
+         java.lang.String sla)
    {
       this.ticketNumber = ticketNumber;
       this.narrative = narrative;
@@ -406,6 +420,7 @@ public class Ticket implements java.io.Serializable
       this.attachmentList = attachmentList;
       this.actionList = actionList;
       this.taskList = taskList;
+      this.sla = sla;
    }
 
 }
