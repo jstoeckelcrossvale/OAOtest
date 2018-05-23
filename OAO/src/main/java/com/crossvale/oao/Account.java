@@ -10,25 +10,111 @@ public class Account implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    @org.kie.api.definition.type.Label(value = "Account Number")
-   private java.lang.Integer accountNBR;
+   private java.lang.String accountNumber;
+
+   @org.kie.api.definition.type.Label(value = "Customer Number")
+   private java.lang.String customerNumber;
+
+   @org.kie.api.definition.type.Label(value = "Account Name")
+   private java.lang.String accountName;
+
+   @org.kie.api.definition.type.Label(value = "Account Type")
+   private java.lang.String accountType;
+
+   @org.kie.api.definition.type.Label(value = "Amount Available")
+   private java.lang.Float available;
+
+   @org.kie.api.definition.type.Label(value = "Posted")
+   private boolean posted;
+
+   @org.kie.api.definition.type.Label(value = "Status")
+   private java.lang.String status;
 
    public Account()
    {
    }
 
-   public java.lang.Integer getAccountNBR()
+   public java.lang.String getAccountNumber()
    {
-      return this.accountNBR;
+      return this.accountNumber;
    }
 
-   public void setAccountNBR(java.lang.Integer accountNBR)
+   public void setAccountNumber(java.lang.String accountNumber)
    {
-      this.accountNBR = accountNBR;
+      this.accountNumber = accountNumber;
    }
 
-   public Account(java.lang.Integer accountNBR)
+   public java.lang.String getCustomerNumber()
    {
-      this.accountNBR = accountNBR;
+      return this.customerNumber;
+   }
+
+   public void setCustomerNumber(java.lang.String customerNumber)
+   {
+      this.customerNumber = customerNumber;
+   }
+
+   public java.lang.String getAccountName()
+   {
+      return this.accountName;
+   }
+
+   public void setAccountName(java.lang.String accountName)
+   {
+      this.accountName = accountName;
+   }
+
+   public java.lang.String getAccountType()
+   {
+      return this.accountType;
+   }
+
+   public void setAccountType(java.lang.String accountType)
+   {
+      this.accountType = accountType;
+   }
+
+   public java.lang.Float getAvailable()
+   {
+      return this.available;
+   }
+
+   public void setAvailable(java.lang.Float available)
+   {
+      this.available = available;
+   }
+
+   public boolean isPosted()
+   {
+      return this.posted;
+   }
+
+   public void setPosted(boolean posted)
+   {
+      this.posted = posted;
+   }
+
+   public java.lang.String getStatus()
+   {
+      return this.status;
+   }
+
+   public void setStatus(java.lang.String status)
+   {
+      this.status = status;
+   }
+
+   public Account(java.lang.String accountNumber, java.lang.String customerNumber,
+         java.lang.String accountName, java.lang.String accountType,
+         java.lang.Float available, boolean posted, java.lang.String status)
+   {
+      this.accountNumber = accountNumber;
+      this.customerNumber = customerNumber;
+      this.accountName = accountName;
+      this.accountType = accountType;
+      this.available = available;
+      this.posted = posted;
+      this.status = status;
    }
 
 }
