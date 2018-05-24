@@ -9,25 +9,25 @@ public class Account implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "Account Number")
+   @org.kie.api.definition.type.Label("Account Number")
    private java.lang.String accountNumber;
 
-   @org.kie.api.definition.type.Label(value = "Customer Number")
+   @org.kie.api.definition.type.Label("Customer Number")
    private java.lang.String customerNumber;
 
-   @org.kie.api.definition.type.Label(value = "Account Name")
+   @org.kie.api.definition.type.Label("Account Name")
    private java.lang.String accountName;
 
-   @org.kie.api.definition.type.Label(value = "Account Type")
+   @org.kie.api.definition.type.Label("Account Type")
    private java.lang.String accountType;
 
-   @org.kie.api.definition.type.Label(value = "Amount Available")
-   private java.lang.Float available;
+   @org.kie.api.definition.type.Label("Amount Available")
+   private Double available;
 
-   @org.kie.api.definition.type.Label(value = "Posted")
+   @org.kie.api.definition.type.Label("Posted")
    private boolean posted;
 
-   @org.kie.api.definition.type.Label(value = "Status")
+   @org.kie.api.definition.type.Label("Status")
    private java.lang.String status;
 
    public Account()
@@ -74,16 +74,6 @@ public class Account implements java.io.Serializable
       this.accountType = accountType;
    }
 
-   public java.lang.Float getAvailable()
-   {
-      return this.available;
-   }
-
-   public void setAvailable(java.lang.Float available)
-   {
-      this.available = available;
-   }
-
    public boolean isPosted()
    {
       return this.posted;
@@ -104,9 +94,19 @@ public class Account implements java.io.Serializable
       this.status = status;
    }
 
+   public java.lang.Double getAvailable()
+   {
+      return this.available;
+   }
+
+   public void setAvailable(java.lang.Double available)
+   {
+      this.available = available;
+   }
+
    public Account(java.lang.String accountNumber, java.lang.String customerNumber,
          java.lang.String accountName, java.lang.String accountType,
-         java.lang.Float available, boolean posted, java.lang.String status)
+         java.lang.Double available, boolean posted, java.lang.String status)
    {
       this.accountNumber = accountNumber;
       this.customerNumber = customerNumber;
