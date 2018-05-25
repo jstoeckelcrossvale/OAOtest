@@ -1,5 +1,4 @@
 package com.crossvale.oao;
-import package com.crossvale.carddispute;
 
 import java.util.Date;
 
@@ -23,7 +22,7 @@ public class Ticket implements java.io.Serializable
    private java.lang.String customerNumber;
 
    @org.kie.api.definition.type.Label("customer")
-   private com.crossvale.carddispute.Customer customer;
+   private com.crossvale.oao.Customer customer;
 
    @org.kie.api.definition.type.Label("complaintFlag")
    private java.lang.String complaintFlag;
@@ -41,52 +40,52 @@ public class Ticket implements java.io.Serializable
    private java.util.Date receivedDate;
 
    @org.kie.api.definition.type.Label("assignTo")
-   private com.crossvale.carddispute.AssignTo assignTo;
+   private com.crossvale.oao.AssignTo assignTo;
 
    @org.kie.api.definition.type.Label("audit")
-   private com.crossvale.carddispute.Audit audit;
+   private com.crossvale.oao.Audit audit;
 
    @org.kie.api.definition.type.Label("category")
-   private com.crossvale.carddispute.CodeValue category;
+   private com.crossvale.oao.CodeValue category;
 
    @org.kie.api.definition.type.Label("item")
-   private com.crossvale.carddispute.CodeValue item;
+   private com.crossvale.oao.CodeValue item;
 
    @org.kie.api.definition.type.Label("status")
-   private com.crossvale.carddispute.CodeValue status;
+   private com.crossvale.oao.CodeValue status;
 
    @org.kie.api.definition.type.Label("severity")
-   private com.crossvale.carddispute.CodeValue severity;
+   private com.crossvale.oao.CodeValue severity;
 
    @org.kie.api.definition.type.Label("priority")
-   private com.crossvale.carddispute.CodeValue priority;
+   private com.crossvale.oao.CodeValue priority;
 
    @org.kie.api.definition.type.Label("originator")
-   private com.crossvale.carddispute.Originator originator;
+   private com.crossvale.oao.Originator originator;
 
    @org.kie.api.definition.type.Label("requestor")
-   private com.crossvale.carddispute.Requestor requestor;
+   private com.crossvale.oao.Requestor requestor;
 
    @org.kie.api.definition.type.Label("contactMethod")
-   private com.crossvale.carddispute.ContactMethod contactMethod;
+   private com.crossvale.oao.ContactMethod contactMethod;
 
    @org.kie.api.definition.type.Label("classification")
-   private com.crossvale.carddispute.Classification classification;
+   private com.crossvale.oao.Classification classification;
 
    @org.kie.api.definition.type.Label("transactionList")
-   private java.util.List<com.crossvale.carddispute.Transaction> transactionList;
+   private java.util.List<com.crossvale.oao.Transaction> transactionList;
 
    @org.kie.api.definition.type.Label("attributeList")
-   private java.util.List<com.crossvale.carddispute.Attribute> attributeList;
+   private java.util.List<com.crossvale.oao.Attribute> attributeList;
 
    @org.kie.api.definition.type.Label("attachmentList")
-   private java.util.List<com.crossvale.carddispute.Attachment> attachmentList;
+   private java.util.List<com.crossvale.oao.Attachment> attachmentList;
 
    @org.kie.api.definition.type.Label("actionList")
-   private java.util.List<com.crossvale.carddispute.Action> actionList;
+   private java.util.List<com.crossvale.oao.Action> actionList;
 
    @org.kie.api.definition.type.Label("taskList")
-   private java.util.List<com.crossvale.carddispute.Task> taskList;
+   private java.util.List<com.crossvale.oao.Task> taskList;
 
    @org.kie.api.definition.type.Label(value = "sla")
    private java.lang.String sla;
@@ -135,12 +134,12 @@ public class Ticket implements java.io.Serializable
       this.customerNumber = customerNumber;
    }
 
-   public com.crossvale.carddispute.Customer getCustomer()
+   public com.crossvale.oao.Customer getCustomer()
    {
       return this.customer;
    }
 
-   public void setCustomer(com.crossvale.carddispute.Customer customer)
+   public void setCustomer(com.crossvale.oao.Customer customer)
    {
       this.customer = customer;
    }
@@ -195,168 +194,168 @@ public class Ticket implements java.io.Serializable
       this.receivedDate = receivedDate;
    }
 
-   public com.crossvale.carddispute.AssignTo getAssignTo()
+   public com.crossvale.oao.AssignTo getAssignTo()
    {
       return this.assignTo;
    }
 
-   public void setAssignTo(com.crossvale.carddispute.AssignTo assignTo)
+   public void setAssignTo(com.crossvale.oao.AssignTo assignTo)
    {
       this.assignTo = assignTo;
    }
 
-   public com.crossvale.carddispute.Audit getAudit()
+   public com.crossvale.oao.Audit getAudit()
    {
       return this.audit;
    }
 
-   public void setAudit(com.crossvale.carddispute.Audit audit)
+   public void setAudit(com.crossvale.oao.Audit audit)
    {
       this.audit = audit;
    }
 
-   public com.crossvale.carddispute.CodeValue getCategory()
+   public com.crossvale.oao.CodeValue getCategory()
    {
       return this.category;
    }
 
-   public void setCategory(com.crossvale.carddispute.CodeValue category)
+   public void setCategory(com.crossvale.oao.CodeValue category)
    {
       this.category = category;
    }
 
-   public com.crossvale.carddispute.CodeValue getItem()
+   public com.crossvale.oao.CodeValue getItem()
    {
       return this.item;
    }
 
-   public void setItem(com.crossvale.carddispute.CodeValue item)
+   public void setItem(com.crossvale.oao.CodeValue item)
    {
       this.item = item;
    }
 
-   public com.crossvale.carddispute.CodeValue getStatus()
+   public com.crossvale.oao.CodeValue getStatus()
    {
       return this.status;
    }
 
-   public void setStatus(com.crossvale.carddispute.CodeValue status)
+   public void setStatus(com.crossvale.oao.CodeValue status)
    {
       this.status = status;
    }
 
-   public com.crossvale.carddispute.CodeValue getSeverity()
+   public com.crossvale.oao.CodeValue getSeverity()
    {
       return this.severity;
    }
 
-   public void setSeverity(com.crossvale.carddispute.CodeValue severity)
+   public void setSeverity(com.crossvale.oao.CodeValue severity)
    {
       this.severity = severity;
    }
 
-   public com.crossvale.carddispute.CodeValue getPriority()
+   public com.crossvale.oao.CodeValue getPriority()
    {
       return this.priority;
    }
 
-   public void setPriority(com.crossvale.carddispute.CodeValue priority)
+   public void setPriority(com.crossvale.oao.CodeValue priority)
    {
       this.priority = priority;
    }
 
-   public com.crossvale.carddispute.Originator getOriginator()
+   public com.crossvale.oao.Originator getOriginator()
    {
       return this.originator;
    }
 
-   public void setOriginator(com.crossvale.carddispute.Originator originator)
+   public void setOriginator(com.crossvale.oao.Originator originator)
    {
       this.originator = originator;
    }
 
-   public com.crossvale.carddispute.Requestor getRequestor()
+   public com.crossvale.oao.Requestor getRequestor()
    {
       return this.requestor;
    }
 
-   public void setRequestor(com.crossvale.carddispute.Requestor requestor)
+   public void setRequestor(com.crossvale.oao.Requestor requestor)
    {
       this.requestor = requestor;
    }
 
-   public com.crossvale.carddispute.ContactMethod getContactMethod()
+   public com.crossvale.oao.ContactMethod getContactMethod()
    {
       return this.contactMethod;
    }
 
    public void setContactMethod(
-         com.crossvale.carddispute.ContactMethod contactMethod)
+         com.crossvale.oao.ContactMethod contactMethod)
    {
       this.contactMethod = contactMethod;
    }
 
-   public com.crossvale.carddispute.Classification getClassification()
+   public com.crossvale.oao.Classification getClassification()
    {
       return this.classification;
    }
 
    public void setClassification(
-         com.crossvale.carddispute.Classification classification)
+         com.crossvale.oao.Classification classification)
    {
       this.classification = classification;
    }
 
-   public java.util.List<com.crossvale.carddispute.Transaction> getTransactionList()
+   public java.util.List<com.crossvale.oao.Transaction> getTransactionList()
    {
       return this.transactionList;
    }
 
    public void setTransactionList(
-         java.util.List<com.crossvale.carddispute.Transaction> transactionList)
+         java.util.List<com.crossvale.oao.Transaction> transactionList)
    {
       this.transactionList = transactionList;
    }
 
-   public java.util.List<com.crossvale.carddispute.Attribute> getAttributeList()
+   public java.util.List<com.crossvale.oao.Attribute> getAttributeList()
    {
       return this.attributeList;
    }
 
    public void setAttributeList(
-         java.util.List<com.crossvale.carddispute.Attribute> attributeList)
+         java.util.List<com.crossvale.oao.Attribute> attributeList)
    {
       this.attributeList = attributeList;
    }
 
-   public java.util.List<com.crossvale.carddispute.Attachment> getAttachmentList()
+   public java.util.List<com.crossvale.oao.Attachment> getAttachmentList()
    {
       return this.attachmentList;
    }
 
    public void setAttachmentList(
-         java.util.List<com.crossvale.carddispute.Attachment> attachmentList)
+         java.util.List<com.crossvale.oao.Attachment> attachmentList)
    {
       this.attachmentList = attachmentList;
    }
 
-   public java.util.List<com.crossvale.carddispute.Action> getActionList()
+   public java.util.List<com.crossvale.oao.Action> getActionList()
    {
       return this.actionList;
    }
 
    public void setActionList(
-         java.util.List<com.crossvale.carddispute.Action> actionList)
+         java.util.List<com.crossvale.oao.Action> actionList)
    {
       this.actionList = actionList;
    }
 
-   public java.util.List<com.crossvale.carddispute.Task> getTaskList()
+   public java.util.List<com.crossvale.oao.Task> getTaskList()
    {
       return this.taskList;
    }
 
-   public void setTaskList(java.util.List<com.crossvale.carddispute.Task> taskList)
+   public void setTaskList(java.util.List<com.crossvale.oao.Task> taskList)
    {
       this.taskList = taskList;
    }
@@ -373,26 +372,26 @@ public class Ticket implements java.io.Serializable
 
    public Ticket(java.lang.String ticketNumber, java.lang.String narrative,
          java.lang.String accountNumber, java.lang.String customerNumber,
-         com.crossvale.carddispute.Customer customer,
+         com.crossvale.oao.Customer customer,
          java.lang.String complaintFlag, java.lang.String approvalFlag,
          java.lang.String securityLevelCode, java.util.Date createdDate,
          java.util.Date receivedDate,
-         com.crossvale.carddispute.AssignTo assignTo,
-         com.crossvale.carddispute.Audit audit,
-         com.crossvale.carddispute.CodeValue category,
-         com.crossvale.carddispute.CodeValue item,
-         com.crossvale.carddispute.CodeValue status,
-         com.crossvale.carddispute.CodeValue severity,
-         com.crossvale.carddispute.CodeValue priority,
-         com.crossvale.carddispute.Originator originator,
-         com.crossvale.carddispute.Requestor requestor,
-         com.crossvale.carddispute.ContactMethod contactMethod,
-         com.crossvale.carddispute.Classification classification,
-         java.util.List<com.crossvale.carddispute.Transaction> transactionList,
-         java.util.List<com.crossvale.carddispute.Attribute> attributeList,
-         java.util.List<com.crossvale.carddispute.Attachment> attachmentList,
-         java.util.List<com.crossvale.carddispute.Action> actionList,
-         java.util.List<com.crossvale.carddispute.Task> taskList,
+         com.crossvale.oao.AssignTo assignTo,
+         com.crossvale.oao.Audit audit,
+         com.crossvale.oao.CodeValue category,
+         com.crossvale.oao.CodeValue item,
+         com.crossvale.oao.CodeValue status,
+         com.crossvale.oao.CodeValue severity,
+         com.crossvale.oao.CodeValue priority,
+         com.crossvale.oao.Originator originator,
+         com.crossvale.oao.Requestor requestor,
+         com.crossvale.oao.ContactMethod contactMethod,
+         com.crossvale.oao.Classification classification,
+         java.util.List<com.crossvale.oao.Transaction> transactionList,
+         java.util.List<com.crossvale.oao.Attribute> attributeList,
+         java.util.List<com.crossvale.oao.Attachment> attachmentList,
+         java.util.List<com.crossvale.oao.Action> actionList,
+         java.util.List<com.crossvale.oao.Task> taskList,
          java.lang.String sla)
    {
       this.ticketNumber = ticketNumber;
