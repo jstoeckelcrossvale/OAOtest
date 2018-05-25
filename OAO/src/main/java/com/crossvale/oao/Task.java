@@ -1,5 +1,4 @@
 package com.crossvale.oao;
-import package com.crossvale.carddispute;
 
 
 import java.util.Date;
@@ -34,16 +33,16 @@ public class Task implements java.io.Serializable
    private String createdDate;
 
    @org.kie.api.definition.type.Label("status")
-   private com.crossvale.carddispute.CodeValue status;
+   private com.crossvale.oao.CodeValue status;
 
    @org.kie.api.definition.type.Label("assignTo")
-   private com.crossvale.carddispute.AssignTo assignTo;
+   private com.crossvale.oao.AssignTo assignTo;
 
    @org.kie.api.definition.type.Label("slaStatus")
-   private com.crossvale.carddispute.CodeValue slaStatus;
+   private com.crossvale.oao.CodeValue slaStatus;
 
    @org.kie.api.definition.type.Label("audit")
-   private com.crossvale.carddispute.Audit audit;
+   private com.crossvale.oao.Audit audit;
 
    public Task()
    {
@@ -99,42 +98,42 @@ public class Task implements java.io.Serializable
       this.taskBpm = taskBpm;
    }
 
-   public com.crossvale.carddispute.CodeValue getStatus()
+   public com.crossvale.oao.CodeValue getStatus()
    {
       return this.status;
    }
 
-   public void setStatus(com.crossvale.carddispute.CodeValue status)
+   public void setStatus(com.crossvale.oao.CodeValue status)
    {
       this.status = status;
    }
 
-   public com.crossvale.carddispute.AssignTo getAssignTo()
+   public com.crossvale.oao.AssignTo getAssignTo()
    {
       return this.assignTo;
    }
 
-   public void setAssignTo(com.crossvale.carddispute.AssignTo assignTo)
+   public void setAssignTo(com.crossvale.oao.AssignTo assignTo)
    {
       this.assignTo = assignTo;
    }
 
-   public com.crossvale.carddispute.CodeValue getSlaStatus()
+   public com.crossvale.oao.CodeValue getSlaStatus()
    {
       return this.slaStatus;
    }
 
-   public void setSlaStatus(com.crossvale.carddispute.CodeValue slaStatus)
+   public void setSlaStatus(com.crossvale.oao.CodeValue slaStatus)
    {
       this.slaStatus = slaStatus;
    }
 
-   public com.crossvale.carddispute.Audit getAudit()
+   public com.crossvale.oao.Audit getAudit()
    {
       return this.audit;
    }
 
-   public void setAudit(com.crossvale.carddispute.Audit audit)
+   public void setAudit(com.crossvale.oao.Audit audit)
    {
       this.audit = audit;
    }
@@ -163,10 +162,10 @@ public class Task implements java.io.Serializable
          java.lang.String taskCode, java.lang.String customData,
          java.lang.String slaDate, java.lang.String taskBpm,
          java.lang.String createdDate,
-         com.crossvale.carddispute.CodeValue status,
-         com.crossvale.carddispute.AssignTo assignTo,
-         com.crossvale.carddispute.CodeValue slaStatus,
-         com.crossvale.carddispute.Audit audit)
+         com.crossvale.oao.CodeValue status,
+         com.crossvale.oao.AssignTo assignTo,
+         com.crossvale.oao.CodeValue slaStatus,
+         com.crossvale.oao.Audit audit)
    {
       this.taskNumber = taskNumber;
       this.ticketNumber = ticketNumber;
