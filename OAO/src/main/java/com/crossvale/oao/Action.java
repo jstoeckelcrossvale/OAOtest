@@ -1,5 +1,4 @@
 package com.crossvale.oao;
-import package com.crossvale.carddispute;
 
 
 import java.util.Date;
@@ -33,16 +32,16 @@ public class Action implements java.io.Serializable
    private java.lang.String statusFlag;
 
    @org.kie.api.definition.type.Label("assignTo")
-   private com.crossvale.carddispute.AssignTo assignTo;
+   private com.crossvale.oao.AssignTo assignTo;
 
    @org.kie.api.definition.type.Label("level")
-   private com.crossvale.carddispute.CodeValue level;
+   private com.crossvale.oao.CodeValue level;
 
    @org.kie.api.definition.type.Label("type")
-   private com.crossvale.carddispute.CodeValue type;
+   private com.crossvale.oao.CodeValue type;
 
    @org.kie.api.definition.type.Label("paramList")
-   private java.util.List<com.crossvale.carddispute.KeyValueParam> paramList;
+   private java.util.List<com.crossvale.oao.KeyValueParam> paramList;
 
    @org.kie.api.definition.type.Label(value = "taskNumber")
    private java.lang.String taskNumber;
@@ -111,43 +110,43 @@ public class Action implements java.io.Serializable
       this.statusFlag = statusFlag;
    }
 
-   public com.crossvale.carddispute.AssignTo getAssignTo()
+   public com.crossvale.oao.AssignTo getAssignTo()
    {
       return this.assignTo;
    }
 
-   public void setAssignTo(com.crossvale.carddispute.AssignTo assignTo)
+   public void setAssignTo(com.crossvale.oao.AssignTo assignTo)
    {
       this.assignTo = assignTo;
    }
 
-   public com.crossvale.carddispute.CodeValue getLevel()
+   public com.crossvale.oao.CodeValue getLevel()
    {
       return this.level;
    }
 
-   public void setLevel(com.crossvale.carddispute.CodeValue level)
+   public void setLevel(com.crossvale.oao.CodeValue level)
    {
       this.level = level;
    }
 
-   public com.crossvale.carddispute.CodeValue getType()
+   public com.crossvale.oao.CodeValue getType()
    {
       return this.type;
    }
 
-   public void setType(com.crossvale.carddispute.CodeValue type)
+   public void setType(com.crossvale.oao.CodeValue type)
    {
       this.type = type;
    }
 
-   public java.util.List<com.crossvale.carddispute.KeyValueParam> getParamList()
+   public java.util.List<com.crossvale.oao.KeyValueParam> getParamList()
    {
       return this.paramList;
    }
 
    public void setParamList(
-         java.util.List<com.crossvale.carddispute.KeyValueParam> paramList)
+         java.util.List<com.crossvale.oao.KeyValueParam> paramList)
    {
       this.paramList = paramList;
    }
@@ -176,10 +175,10 @@ public class Action implements java.io.Serializable
          java.lang.String ticketNumber, java.lang.String actionCode,
          java.lang.String globalId, java.lang.String narrative,
          java.lang.String statusFlag,
-         com.crossvale.carddispute.AssignTo assignTo,
-         com.crossvale.carddispute.CodeValue level,
-         com.crossvale.carddispute.CodeValue type,
-         java.util.List<com.crossvale.carddispute.KeyValueParam> paramList,
+         com.crossvale.oao.AssignTo assignTo,
+         com.crossvale.oao.CodeValue level,
+         com.crossvale.oao.CodeValue type,
+         java.util.List<com.crossvale.oao.KeyValueParam> paramList,
          java.lang.String taskNumber)
    {
       this.actionNumber = actionNumber;
