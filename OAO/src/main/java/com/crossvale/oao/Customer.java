@@ -1,6 +1,5 @@
 package com.crossvale.oao;
 
-
 import java.util.Date;
 
 /**
