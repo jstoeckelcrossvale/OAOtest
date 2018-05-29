@@ -30,9 +30,6 @@ public class Account implements java.io.Serializable
    @org.kie.api.definition.type.Label("Status")
    private java.lang.String status;
 
-   @org.kie.api.definition.type.Label(value = "Balance")
-   private org.javamoney.moneta.Money balance;
-
    public Account()
    {
    }
@@ -107,20 +104,9 @@ public class Account implements java.io.Serializable
       this.available = available;
    }
 
-   public org.javamoney.moneta.Money getBalance()
-   {
-      return this.balance;
-   }
-
-   public void setBalance(org.javamoney.moneta.Money balance)
-   {
-      this.balance = balance;
-   }
-
    public Account(java.lang.String accountNumber, java.lang.String customerNumber,
          java.lang.String accountName, java.lang.String accountType,
-         java.lang.Double available, boolean posted, java.lang.String status,
-         org.javamoney.moneta.Money balance)
+         java.lang.Double available, boolean posted, java.lang.String status)
    {
       this.accountNumber = accountNumber;
       this.customerNumber = customerNumber;
@@ -129,7 +115,6 @@ public class Account implements java.io.Serializable
       this.available = available;
       this.posted = posted;
       this.status = status;
-      this.balance = balance;
    }
 
 }
