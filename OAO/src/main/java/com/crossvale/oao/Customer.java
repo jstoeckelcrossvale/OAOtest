@@ -12,113 +12,47 @@ public class Customer implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label("status")
-   private java.lang.String status;
-   @org.kie.api.definition.type.Label("id")
-   private java.lang.String id;
-   @org.kie.api.definition.type.Label("issuePlace")
-   private java.lang.String issuePlace;
-   @org.kie.api.definition.type.Label("issueDate")
-   private Date issueDate;
-   @org.kie.api.definition.type.Label("expirationDate")
-   private Date expirationDate;
-
-   @org.kie.api.definition.type.Label("nationalityCode")
-   private java.lang.String nationalityCode;
-
-   @org.kie.api.definition.type.Label("birthDate")
-   private Date birthDate;
-
-   @org.kie.api.definition.type.Label("email")
+   @org.kie.api.definition.type.Label("Email")
    private java.lang.String email;
 
    @org.kie.api.definition.type.Label("customerNumber")
    private java.lang.String customerNumber;
 
-   @org.kie.api.definition.type.Label("customerName")
-   private java.lang.String customerName;
+   @org.kie.api.definition.type.Label(value = "KYC Status")
+   private java.lang.String kycStatus;
 
-   @org.kie.api.definition.type.Label("customerType")
-   private java.lang.String customerType;
+   @org.kie.api.definition.type.Label(value = "User ID")
+   private java.lang.String userId;
 
-   @org.kie.api.definition.type.Label("ssn")
-   private java.lang.String ssn;
+   @org.kie.api.definition.type.Label(value = "Last OK Date")
+   private java.util.Date lastOkDate;
 
-   @org.kie.api.definition.type.Label("primaryPhoneNumber")
-   private java.lang.String primaryPhoneNumber;
+   @org.kie.api.definition.type.Label(value = "Date of Birth")
+   private java.util.Date dateOfBirth;
 
-   @org.kie.api.definition.type.Label("alternatePhoneNumber")
-   private java.lang.String alternatePhoneNumber;
+   @org.kie.api.definition.type.Label(value = "Legal Name")
+   private java.lang.String legalName;
 
-   @org.kie.api.definition.type.Label("address1")
-   private java.lang.String address1;
+   @org.kie.api.definition.type.Label(value = "Mobile Phone Number")
+   private java.lang.String mobilePhoneNumber;
 
-   @org.kie.api.definition.type.Label("address2")
-   private java.lang.String address2;
+   @org.kie.api.definition.type.Label(value = "Relationship Status")
+   private java.lang.String relationshipStatus;
 
-   @org.kie.api.definition.type.Label("city")
-   private java.lang.String city;
+   @org.kie.api.definition.type.Label(value = "Credit Rating")
+   private java.lang.String creditRating;
 
-   @org.kie.api.definition.type.Label("state")
-   private java.lang.String state;
+   @org.kie.api.definition.type.Label(value = "Credit Limit")
+   private java.lang.String creditLimit;
 
-   @org.kie.api.definition.type.Label("postalCode")
-   private java.lang.String postalCode;
+   @org.kie.api.definition.type.Label(value = "Highest Education Attained")
+   private java.lang.String highestEducationAttained;
 
-   @org.kie.api.definition.type.Label("countryCode")
-   private java.lang.String countryCode;
-
-   @org.kie.api.definition.type.Label("primaryEmail")
-   private java.lang.String primaryEmail;
-
-   @org.kie.api.definition.type.Label("alternateEmail")
-   private java.lang.String alternateEmail;
-
-   @org.kie.api.definition.type.Label(value = "countryName")
-   private java.lang.String countryName;
+   @org.kie.api.definition.type.Label(value = "Employment Status")
+   private java.lang.String employmentStatus;
 
    public Customer()
    {
-   }
-
-   public java.lang.String getStatus()
-   {
-      return this.status;
-   }
-
-   public void setStatus(java.lang.String status)
-   {
-      this.status = status;
-   }
-
-   public java.lang.String getId()
-   {
-      return this.id;
-   }
-
-   public void setId(java.lang.String id)
-   {
-      this.id = id;
-   }
-
-   public java.lang.String getIssuePlace()
-   {
-      return this.issuePlace;
-   }
-
-   public void setIssuePlace(java.lang.String issuePlace)
-   {
-      this.issuePlace = issuePlace;
-   }
-
-   public java.lang.String getNationalityCode()
-   {
-      return this.nationalityCode;
-   }
-
-   public void setNationalityCode(java.lang.String nationalityCode)
-   {
-      this.nationalityCode = nationalityCode;
    }
 
    public java.lang.String getEmail()
@@ -131,36 +65,6 @@ public class Customer implements java.io.Serializable
       this.email = email;
    }
 
-   public java.util.Date getIssueDate()
-   {
-      return this.issueDate;
-   }
-
-   public void setIssueDate(java.util.Date issueDate)
-   {
-      this.issueDate = issueDate;
-   }
-
-   public java.util.Date getExpirationDate()
-   {
-      return this.expirationDate;
-   }
-
-   public void setExpirationDate(java.util.Date expirationDate)
-   {
-      this.expirationDate = expirationDate;
-   }
-
-   public java.util.Date getBirthDate()
-   {
-      return this.birthDate;
-   }
-
-   public void setBirthDate(java.util.Date birthDate)
-   {
-      this.birthDate = birthDate;
-   }
-
    public java.lang.String getCustomerNumber()
    {
       return this.customerNumber;
@@ -171,182 +75,139 @@ public class Customer implements java.io.Serializable
       this.customerNumber = customerNumber;
    }
 
-   public java.lang.String getCustomerName()
+   public java.lang.String getKycStatus()
    {
-      return this.customerName;
+      return this.kycStatus;
    }
 
-   public void setCustomerName(java.lang.String customerName)
+   public void setKycStatus(java.lang.String kycStatus)
    {
-      this.customerName = customerName;
+      this.kycStatus = kycStatus;
    }
 
-   public java.lang.String getCustomerType()
+   public java.lang.String getUserId()
    {
-      return this.customerType;
+      return this.userId;
    }
 
-   public void setCustomerType(java.lang.String customerType)
+   public void setUserId(java.lang.String userId)
    {
-      this.customerType = customerType;
+      this.userId = userId;
    }
 
-   public java.lang.String getSsn()
+   public java.util.Date getLastOkDate()
    {
-      return this.ssn;
+      return this.lastOkDate;
    }
 
-   public void setSsn(java.lang.String ssn)
+   public void setLastOkDate(java.util.Date lastOkDate)
    {
-      this.ssn = ssn;
+      this.lastOkDate = lastOkDate;
    }
 
-   public java.lang.String getPrimaryPhoneNumber()
+   public java.util.Date getDateOfBirth()
    {
-      return this.primaryPhoneNumber;
+      return this.dateOfBirth;
    }
 
-   public void setPrimaryPhoneNumber(java.lang.String primaryPhoneNumber)
+   public void setDateOfBirth(java.util.Date dateOfBirth)
    {
-      this.primaryPhoneNumber = primaryPhoneNumber;
+      this.dateOfBirth = dateOfBirth;
    }
 
-   public java.lang.String getAlternatePhoneNumber()
+   public java.lang.String getLegalName()
    {
-      return this.alternatePhoneNumber;
+      return this.legalName;
    }
 
-   public void setAlternatePhoneNumber(java.lang.String alternatePhoneNumber)
+   public void setLegalName(java.lang.String legalName)
    {
-      this.alternatePhoneNumber = alternatePhoneNumber;
+      this.legalName = legalName;
    }
 
-   public java.lang.String getAddress1()
+   public java.lang.String getMobilePhoneNumber()
    {
-      return this.address1;
+      return this.mobilePhoneNumber;
    }
 
-   public void setAddress1(java.lang.String address1)
+   public void setMobilePhoneNumber(java.lang.String mobilePhoneNumber)
    {
-      this.address1 = address1;
+      this.mobilePhoneNumber = mobilePhoneNumber;
    }
 
-   public java.lang.String getAddress2()
+   public java.lang.String getRelationshipStatus()
    {
-      return this.address2;
+      return this.relationshipStatus;
    }
 
-   public void setAddress2(java.lang.String address2)
+   public void setRelationshipStatus(java.lang.String relationshipStatus)
    {
-      this.address2 = address2;
+      this.relationshipStatus = relationshipStatus;
    }
 
-   public java.lang.String getCity()
+   public java.lang.String getCreditRating()
    {
-      return this.city;
+      return this.creditRating;
    }
 
-   public void setCity(java.lang.String city)
+   public void setCreditRating(java.lang.String creditRating)
    {
-      this.city = city;
+      this.creditRating = creditRating;
    }
 
-   public java.lang.String getState()
+   public java.lang.String getCreditLimit()
    {
-      return this.state;
+      return this.creditLimit;
    }
 
-   public void setState(java.lang.String state)
+   public void setCreditLimit(java.lang.String creditLimit)
    {
-      this.state = state;
+      this.creditLimit = creditLimit;
    }
 
-   public java.lang.String getPostalCode()
+   public java.lang.String getHighestEducationAttained()
    {
-      return this.postalCode;
+      return this.highestEducationAttained;
    }
 
-   public void setPostalCode(java.lang.String postalCode)
+   public void setHighestEducationAttained(
+         java.lang.String highestEducationAttained)
    {
-      this.postalCode = postalCode;
+      this.highestEducationAttained = highestEducationAttained;
    }
 
-   public java.lang.String getCountryCode()
+   public java.lang.String getEmploymentStatus()
    {
-      return this.countryCode;
+      return this.employmentStatus;
    }
 
-   public void setCountryCode(java.lang.String countryCode)
+   public void setEmploymentStatus(java.lang.String employmentStatus)
    {
-      this.countryCode = countryCode;
+      this.employmentStatus = employmentStatus;
    }
 
-   public java.lang.String getPrimaryEmail()
+   public Customer(java.lang.String email, java.lang.String customerNumber,
+         java.lang.String kycStatus, java.lang.String userId,
+         java.util.Date lastOkDate, java.util.Date dateOfBirth,
+         java.lang.String legalName, java.lang.String mobilePhoneNumber,
+         java.lang.String relationshipStatus, java.lang.String creditRating,
+         java.lang.String creditLimit,
+         java.lang.String highestEducationAttained,
+         java.lang.String employmentStatus)
    {
-      return this.primaryEmail;
-   }
-
-   public void setPrimaryEmail(java.lang.String primaryEmail)
-   {
-      this.primaryEmail = primaryEmail;
-   }
-
-   public java.lang.String getAlternateEmail()
-   {
-      return this.alternateEmail;
-   }
-
-   public void setAlternateEmail(java.lang.String alternateEmail)
-   {
-      this.alternateEmail = alternateEmail;
-   }
-
-   public java.lang.String getCountryName()
-   {
-      return this.countryName;
-   }
-
-   public void setCountryName(java.lang.String countryName)
-   {
-      this.countryName = countryName;
-   }
-
-   public Customer(java.lang.String status, java.lang.String id,
-         java.lang.String issuePlace, java.util.Date issueDate,
-         java.util.Date expirationDate, java.lang.String nationalityCode,
-         java.util.Date birthDate, java.lang.String email,
-         java.lang.String customerNumber, java.lang.String customerName,
-         java.lang.String customerType, java.lang.String ssn,
-         java.lang.String primaryPhoneNumber,
-         java.lang.String alternatePhoneNumber, java.lang.String address1,
-         java.lang.String address2, java.lang.String city,
-         java.lang.String state, java.lang.String postalCode,
-         java.lang.String countryCode, java.lang.String primaryEmail,
-         java.lang.String alternateEmail, java.lang.String countryName)
-   {
-      this.status = status;
-      this.id = id;
-      this.issuePlace = issuePlace;
-      this.issueDate = issueDate;
-      this.expirationDate = expirationDate;
-      this.nationalityCode = nationalityCode;
-      this.birthDate = birthDate;
       this.email = email;
       this.customerNumber = customerNumber;
-      this.customerName = customerName;
-      this.customerType = customerType;
-      this.ssn = ssn;
-      this.primaryPhoneNumber = primaryPhoneNumber;
-      this.alternatePhoneNumber = alternatePhoneNumber;
-      this.address1 = address1;
-      this.address2 = address2;
-      this.city = city;
-      this.state = state;
-      this.postalCode = postalCode;
-      this.countryCode = countryCode;
-      this.primaryEmail = primaryEmail;
-      this.alternateEmail = alternateEmail;
-      this.countryName = countryName;
+      this.kycStatus = kycStatus;
+      this.userId = userId;
+      this.lastOkDate = lastOkDate;
+      this.dateOfBirth = dateOfBirth;
+      this.legalName = legalName;
+      this.mobilePhoneNumber = mobilePhoneNumber;
+      this.relationshipStatus = relationshipStatus;
+      this.creditRating = creditRating;
+      this.creditLimit = creditLimit;
+      this.highestEducationAttained = highestEducationAttained;
+      this.employmentStatus = employmentStatus;
    }
 
 }
