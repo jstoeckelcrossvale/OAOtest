@@ -7,7 +7,7 @@ import java.util.Date;
  */
 
 @org.kie.api.definition.type.Label("Customer")
-@JsonIgnoreProperties(ignoreUnknown = true)
+/*@JsonIgnoreProperties(ignoreUnknown = true)*/
 public class Customer implements java.io.Serializable
 {
 
