@@ -26,7 +26,7 @@ public class Account implements java.io.Serializable
    private Double available;
 
    @org.kie.api.definition.type.Label("Posted")
-   private boolean posted;
+   private float posted;
 
    @org.kie.api.definition.type.Label("Status")
    private java.lang.String status;
@@ -75,16 +75,6 @@ public class Account implements java.io.Serializable
       this.accountType = accountType;
    }
 
-   public boolean isPosted()
-   {
-      return this.posted;
-   }
-
-   public void setPosted(boolean posted)
-   {
-      this.posted = posted;
-   }
-
    public java.lang.String getStatus()
    {
       return this.status;
@@ -105,9 +95,19 @@ public class Account implements java.io.Serializable
       this.available = available;
    }
 
+   public float getPosted()
+   {
+      return this.posted;
+   }
+
+   public void setPosted(float posted)
+   {
+      this.posted = posted;
+   }
+
    public Account(java.lang.String accountNumber, java.lang.String customerNumber,
          java.lang.String accountName, java.lang.String accountType,
-         java.lang.Double available, boolean posted, java.lang.String status)
+         java.lang.Double available, float posted, java.lang.String status)
    {
       this.accountNumber = accountNumber;
       this.customerNumber = customerNumber;
