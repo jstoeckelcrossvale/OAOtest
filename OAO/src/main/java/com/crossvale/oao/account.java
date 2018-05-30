@@ -5,7 +5,7 @@ package com.crossvale.oao;
  */
 
 @org.kie.api.definition.type.Label("Account")
-public class account implements java.io.Serializable
+public class Account implements java.io.Serializable
 {
 
    static final long serialVersionUID = 1L;
@@ -31,7 +31,7 @@ public class account implements java.io.Serializable
    @org.kie.api.definition.type.Label("Status")
    private java.lang.String status;
 
-   public account()
+   public Account()
    {
    }
 
@@ -105,7 +105,7 @@ public class account implements java.io.Serializable
       this.available = available;
    }
 
-   public account(java.lang.String accountNumber, java.lang.String customerNumber,
+   public Account(java.lang.String accountNumber, java.lang.String customerNumber,
          java.lang.String accountName, java.lang.String accountType,
          java.lang.Double available, boolean posted, java.lang.String status)
    {
