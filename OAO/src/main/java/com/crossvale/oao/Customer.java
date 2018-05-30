@@ -77,7 +77,7 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("countryName")
    private java.lang.String countryName;
 
-   @org.kie.api.definition.type.Label(value = "Accounts")
+   @org.kie.api.definition.type.Label("accounts")
    private com.crossvale.oao.Account accounts;
 
    public Customer()
