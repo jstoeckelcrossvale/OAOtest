@@ -78,6 +78,9 @@ public class Customer implements java.io.Serializable
 
    @org.kie.api.definition.type.Label("countryName")
    private java.lang.String countryName;
+   
+    @org.kie.api.definition.type.Label("accounts")
+   private java.util.List<com.crossvale.oao.Account> accounts;
 
    public Customer()
    {
@@ -312,6 +315,17 @@ public class Customer implements java.io.Serializable
    {
       this.countryName = countryName;
    }
+   
+    public java.util.List<com.crossvale.oao.Account> getAccounts()
+   {
+      return this.accounts;
+   }
+
+   public void setAccounts(java.util.List<com.crossvale.oao.Account> accounts)
+   {
+      this.accounts = accounts;
+   }
+
 
    public Customer(java.lang.String status, java.lang.String id,
          java.lang.String issuePlace, java.util.Date issueDate,
@@ -324,7 +338,8 @@ public class Customer implements java.io.Serializable
          java.lang.String address2, java.lang.String city,
          java.lang.String state, java.lang.String postalCode,
          java.lang.String countryCode, java.lang.String primaryEmail,
-         java.lang.String alternateEmail, java.lang.String countryName)
+         java.lang.String alternateEmail, java.lang.String countryName,
+         java.util.List<com.crossvale.oao.Account> accounts)
    {
       this.status = status;
       this.id = id;
@@ -349,6 +364,7 @@ public class Customer implements java.io.Serializable
       this.primaryEmail = primaryEmail;
       this.alternateEmail = alternateEmail;
       this.countryName = countryName;
+      this.accounts = accounts;
    }
 
 }
