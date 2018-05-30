@@ -7,10 +7,12 @@ import java.util.Date;
  */
 
 @org.kie.api.definition.type.Label("Customer")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Customer implements java.io.Serializable
 {
 
    static final long serialVersionUID = 1L;
+   
 
    @org.kie.api.definition.type.Label("status")
    private java.lang.String status;
@@ -76,9 +78,6 @@ public class Customer implements java.io.Serializable
 
    @org.kie.api.definition.type.Label("countryName")
    private java.lang.String countryName;
-
-   @org.kie.api.definition.type.Label("accounts")
-   private com.crossvale.oao.Account accounts;
 
    public Customer()
    {
@@ -314,16 +313,6 @@ public class Customer implements java.io.Serializable
       this.countryName = countryName;
    }
 
-   public com.crossvale.oao.Account getAccounts()
-   {
-      return this.accounts;
-   }
-
-   public void setAccounts(com.crossvale.oao.Account accounts)
-   {
-      this.accounts = accounts;
-   }
-
    public Customer(java.lang.String status, java.lang.String id,
          java.lang.String issuePlace, java.util.Date issueDate,
          java.util.Date expirationDate, java.lang.String nationalityCode,
@@ -335,8 +324,7 @@ public class Customer implements java.io.Serializable
          java.lang.String address2, java.lang.String city,
          java.lang.String state, java.lang.String postalCode,
          java.lang.String countryCode, java.lang.String primaryEmail,
-         java.lang.String alternateEmail, java.lang.String countryName,
-         com.crossvale.oao.Account accounts)
+         java.lang.String alternateEmail, java.lang.String countryName)
    {
       this.status = status;
       this.id = id;
@@ -361,7 +349,6 @@ public class Customer implements java.io.Serializable
       this.primaryEmail = primaryEmail;
       this.alternateEmail = alternateEmail;
       this.countryName = countryName;
-      this.accounts = accounts;
    }
 
 }
