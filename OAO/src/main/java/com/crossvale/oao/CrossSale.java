@@ -15,8 +15,8 @@ public class CrossSale implements java.io.Serializable
    @org.kie.api.definition.type.Label("creditScore")
    private java.lang.Integer creditScore;
 
-   @org.kie.api.definition.type.Label(value = "creditCard")
-   private java.lang.Boolean creditCard;
+   @org.kie.api.definition.type.Label("creditCard")
+   private String creditCard;
 
    public CrossSale()
    {
@@ -42,18 +42,18 @@ public class CrossSale implements java.io.Serializable
       this.creditScore = creditScore;
    }
 
-   public java.lang.Boolean getCreditCard()
+   public java.lang.String getCreditCard()
    {
       return this.creditCard;
    }
 
-   public void setCreditCard(java.lang.Boolean creditCard)
+   public void setCreditCard(java.lang.String creditCard)
    {
       this.creditCard = creditCard;
    }
 
    public CrossSale(java.lang.String customerType, java.lang.Integer creditScore,
-         java.lang.Boolean creditCard)
+         java.lang.String creditCard)
    {
       this.customerType = customerType;
       this.creditScore = creditScore;
