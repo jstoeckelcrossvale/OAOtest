@@ -10,10 +10,13 @@ public class CrossSale implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "customerType")
+   @org.kie.api.definition.type.Label("customerType")
    private java.lang.String customerType;
-   @org.kie.api.definition.type.Label(value = "creditScore")
+   @org.kie.api.definition.type.Label("creditScore")
    private java.lang.Integer creditScore;
+
+   @org.kie.api.definition.type.Label(value = "creditCard")
+   private java.lang.Boolean creditCard;
 
    public CrossSale()
    {
@@ -39,11 +42,22 @@ public class CrossSale implements java.io.Serializable
       this.creditScore = creditScore;
    }
 
-   public CrossSale(java.lang.String customerType,
-         java.lang.Integer creditScore)
+   public java.lang.Boolean getCreditCard()
+   {
+      return this.creditCard;
+   }
+
+   public void setCreditCard(java.lang.Boolean creditCard)
+   {
+      this.creditCard = creditCard;
+   }
+
+   public CrossSale(java.lang.String customerType, java.lang.Integer creditScore,
+         java.lang.Boolean creditCard)
    {
       this.customerType = customerType;
       this.creditScore = creditScore;
+      this.creditCard = creditCard;
    }
 
 }
