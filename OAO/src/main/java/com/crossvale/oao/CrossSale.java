@@ -21,8 +21,8 @@ public class CrossSale implements java.io.Serializable
    @org.kie.api.definition.type.Label("loan")
    private java.lang.String loan;
 
-   @org.kie.api.definition.type.Label("riskFactor")
-   private Integer riskFactor;
+   @org.kie.api.definition.type.Label(value = "rating")
+   private java.lang.String rating;
 
    public CrossSale()
    {
@@ -68,25 +68,25 @@ public class CrossSale implements java.io.Serializable
       this.loan = loan;
    }
 
-   public java.lang.Integer getRiskFactor()
+   public java.lang.String getRating()
    {
-      return this.riskFactor;
+      return this.rating;
    }
 
-   public void setRiskFactor(java.lang.Integer riskFactor)
+   public void setRating(java.lang.String rating)
    {
-      this.riskFactor = riskFactor;
+      this.rating = rating;
    }
 
    public CrossSale(java.lang.String customerType, java.lang.Integer creditScore,
          java.lang.String creditCard, java.lang.String loan,
-         java.lang.Integer riskFactor)
+         java.lang.String rating)
    {
       this.customerType = customerType;
       this.creditScore = creditScore;
       this.creditCard = creditCard;
       this.loan = loan;
-      this.riskFactor = riskFactor;
+      this.rating = rating;
    }
 
 }
