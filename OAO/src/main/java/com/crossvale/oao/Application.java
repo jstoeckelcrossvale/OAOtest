@@ -9,12 +9,18 @@ public class Application implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "applicationNumber")
+   @org.kie.api.definition.type.Label("applicationNumber")
    private java.lang.String applicationNumber;
-   @org.kie.api.definition.type.Label(value = "customerNumber")
+   @org.kie.api.definition.type.Label("customerNumber")
    private java.lang.String customerNumber;
-   @org.kie.api.definition.type.Label(value = "identity")
+   @org.kie.api.definition.type.Label("identity")
    private com.crossvale.oao.Identity identity;
+
+   @org.kie.api.definition.type.Label(value = "contactInfo")
+   private com.crossvale.oao.ContactInfo contactInfo;
+
+   @org.kie.api.definition.type.Label(value = "fund")
+   private com.crossvale.oao.Fund fund;
 
    public Application()
    {
@@ -50,12 +56,35 @@ public class Application implements java.io.Serializable
       this.identity = identity;
    }
 
+   public com.crossvale.oao.ContactInfo getContactInfo()
+   {
+      return this.contactInfo;
+   }
+
+   public void setContactInfo(com.crossvale.oao.ContactInfo contactInfo)
+   {
+      this.contactInfo = contactInfo;
+   }
+
+   public com.crossvale.oao.Fund getFund()
+   {
+      return this.fund;
+   }
+
+   public void setFund(com.crossvale.oao.Fund fund)
+   {
+      this.fund = fund;
+   }
+
    public Application(java.lang.String applicationNumber,
-         java.lang.String customerNumber, com.crossvale.oao.Identity identity)
+         java.lang.String customerNumber, com.crossvale.oao.Identity identity,
+         com.crossvale.oao.ContactInfo contactInfo, com.crossvale.oao.Fund fund)
    {
       this.applicationNumber = applicationNumber;
       this.customerNumber = customerNumber;
       this.identity = identity;
+      this.contactInfo = contactInfo;
+      this.fund = fund;
    }
 
 }
