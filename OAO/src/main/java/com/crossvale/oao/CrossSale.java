@@ -21,8 +21,26 @@ public class CrossSale implements java.io.Serializable
    @org.kie.api.definition.type.Label("loan")
    private java.lang.String loan;
 
-   @org.kie.api.definition.type.Label(value = "rating")
+   @org.kie.api.definition.type.Label("rating")
    private java.lang.String rating;
+
+   @org.kie.api.definition.type.Label(value = "savingsFlag")
+   private java.lang.Boolean savingsFlag;
+
+   @org.kie.api.definition.type.Label(value = "checkingFlag")
+   private java.lang.Boolean checkingFlag;
+
+   @org.kie.api.definition.type.Label(value = "loanFlag")
+   private java.lang.Boolean loanFlag;
+
+   @org.kie.api.definition.type.Label(value = "creditCardFlag")
+   private java.lang.Boolean creditCardFlag;
+
+   @org.kie.api.definition.type.Label(value = "checking")
+   private java.lang.String checking;
+
+   @org.kie.api.definition.type.Label(value = "savings")
+   private java.lang.String savings;
 
    public CrossSale()
    {
@@ -78,15 +96,84 @@ public class CrossSale implements java.io.Serializable
       this.rating = rating;
    }
 
+   public java.lang.Boolean getSavingsFlag()
+   {
+      return this.savingsFlag;
+   }
+
+   public void setSavingsFlag(java.lang.Boolean savingsFlag)
+   {
+      this.savingsFlag = savingsFlag;
+   }
+
+   public java.lang.Boolean getCheckingFlag()
+   {
+      return this.checkingFlag;
+   }
+
+   public void setCheckingFlag(java.lang.Boolean checkingFlag)
+   {
+      this.checkingFlag = checkingFlag;
+   }
+
+   public java.lang.Boolean getLoanFlag()
+   {
+      return this.loanFlag;
+   }
+
+   public void setLoanFlag(java.lang.Boolean loanFlag)
+   {
+      this.loanFlag = loanFlag;
+   }
+
+   public java.lang.Boolean getCreditCardFlag()
+   {
+      return this.creditCardFlag;
+   }
+
+   public void setCreditCardFlag(java.lang.Boolean creditCardFlag)
+   {
+      this.creditCardFlag = creditCardFlag;
+   }
+
+   public java.lang.String getChecking()
+   {
+      return this.checking;
+   }
+
+   public void setChecking(java.lang.String checking)
+   {
+      this.checking = checking;
+   }
+
+   public java.lang.String getSavings()
+   {
+      return this.savings;
+   }
+
+   public void setSavings(java.lang.String savings)
+   {
+      this.savings = savings;
+   }
+
    public CrossSale(java.lang.String customerType, java.lang.Integer creditScore,
          java.lang.String creditCard, java.lang.String loan,
-         java.lang.String rating)
+         java.lang.String rating, java.lang.Boolean savingsFlag,
+         java.lang.Boolean checkingFlag, java.lang.Boolean loanFlag,
+         java.lang.Boolean creditCardFlag, java.lang.String checking,
+         java.lang.String savings)
    {
       this.customerType = customerType;
       this.creditScore = creditScore;
       this.creditCard = creditCard;
       this.loan = loan;
       this.rating = rating;
+      this.savingsFlag = savingsFlag;
+      this.checkingFlag = checkingFlag;
+      this.loanFlag = loanFlag;
+      this.creditCardFlag = creditCardFlag;
+      this.checking = checking;
+      this.savings = savings;
    }
 
 }
