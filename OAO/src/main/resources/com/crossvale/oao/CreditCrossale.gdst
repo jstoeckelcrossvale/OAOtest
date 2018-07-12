@@ -10,8 +10,113 @@
   </descriptionCol>
   <metadataCols/>
   <attributeCols/>
-  <conditionPatterns/>
-  <actionCols/>
+  <conditionPatterns>
+    <Pattern52>
+      <factType>CrossSale</factType>
+      <boundName>creditCrossale</boundName>
+      <isNegated>false</isNegated>
+      <conditions>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueNumeric class="int">700</valueNumeric>
+            <valueString></valueString>
+            <dataType>NUMERIC_INTEGER</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>-1</width>
+          <header>Max Score</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>creditScore</factField>
+          <fieldType>Integer</fieldType>
+          <operator>&lt;</operator>
+          <parameters/>
+        </condition-column52>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueString>A</valueString>
+            <dataType>STRING</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>-1</width>
+          <header>Rating</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>rating</factField>
+          <fieldType>String</fieldType>
+          <operator>in</operator>
+          <parameters/>
+        </condition-column52>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueBoolean>false</valueBoolean>
+            <valueString></valueString>
+            <dataType>BOOLEAN</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>-1</width>
+          <header>Has CC Account</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>creditCardFlag</factField>
+          <fieldType>Boolean</fieldType>
+          <operator>==</operator>
+          <parameters/>
+        </condition-column52>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueString>consumer</valueString>
+            <dataType>STRING</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>-1</width>
+          <header>Customer Type</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>customerType</factField>
+          <fieldType>String</fieldType>
+          <operator>==</operator>
+          <parameters/>
+        </condition-column52>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueNumeric class="int">650</valueNumeric>
+            <valueString></valueString>
+            <dataType>NUMERIC_INTEGER</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>-1</width>
+          <header>Min Score</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>creditScore</factField>
+          <fieldType>Integer</fieldType>
+          <operator>&gt;=</operator>
+          <parameters/>
+        </condition-column52>
+      </conditions>
+      <window>
+        <operator></operator>
+        <parameters/>
+      </window>
+    </Pattern52>
+  </conditionPatterns>
+  <actionCols>
+    <set-field-col52>
+      <typedDefaultValue>
+        <valueString>Yes</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </typedDefaultValue>
+      <hideColumn>false</hideColumn>
+      <width>-1</width>
+      <header>CC Crossale</header>
+      <boundName>creditCrossale</boundName>
+      <factField>creditCard</factField>
+      <type>String</type>
+      <update>false</update>
+    </set-field-col52>
+  </actionCols>
   <auditLog>
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
       <acceptedTypes>
@@ -44,5 +149,51 @@
   </imports>
   <packageName>com.crossvale.oao</packageName>
   <tableFormat>EXTENDED_ENTRY</tableFormat>
-  <data/>
+  <data>
+    <list>
+      <value>
+        <valueNumeric class="int">1</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>A,B</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueNumeric class="int">650</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>Yes</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+    </list>
+  </data>
 </decision-table52>
