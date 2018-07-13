@@ -1,0 +1,305 @@
+{
+  "kind": "Template",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "panorama-bpm",
+    "annotations": {
+      "openshift.io/display-name": "Panorama-BPM",
+      "description": "BPM"
+    }
+  },
+  "message": "The following service(s) have been created in your project: Panorama.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/openshift/nodejs-ex/blob/master/README.md.",
+  "labels": {
+      "template": "panorama-bpm"
+  },
+  "objects": [
+	  {
+	"apiVersion": "v1",
+	"kind": "BuildConfig",
+	"metadata": {
+		"labels": {
+			"app": "processserver64-basic-s2i",
+			"application": "kie-app",
+			"xpaas": "1.4.0"
+		},
+		"name": "kie-app",
+		"namespace": "panorama"
+	},
+	"spec": {
+		"nodeSelector": null,
+		"output": {
+			"to": {
+				"kind": "ImageStreamTag",
+				"name": "kie-app:latest"
+			}
+		},
+		"postCommit": {},
+		"resources": {},
+		"runPolicy": "Serial",
+		"source": {
+			"contextDir": "OAO",
+			"git": {
+				"ref": "master",
+				"uri": "https://github.com/crossvale-inc/panorama-oao-bpm.git"
+			},
+			"sourceSecret": {
+				"name": "demo-crossvale"
+			},
+			"type": "Git"
+		},
+		"strategy": {
+			"sourceStrategy": {
+				"env": [
+					{
+						"name": "KIE_CONTAINER_DEPLOYMENT",
+						"value": "processserver-library=com.crossvale:OAO:1.0"
+					},
+					{
+						"name": "MAVEN_MIRROR_URL"
+					},
+					{
+						"name": "ARTIFACT_DIR"
+					}
+				],
+				"forcePull": true,
+				"from": {
+					"kind": "ImageStreamTag",
+					"name": "jboss-processserver64-openshift:1.0",
+					"namespace": "openshift"
+				}
+			},
+			"type": "Source"
+		},
+		"triggers": [
+			{
+				"github": {
+					"secret": "okwn0kAk"
+				},
+				"type": "GitHub"
+			},
+			{
+				"generic": {
+					"secret": "PBpscmf6"
+				},
+				"type": "Generic"
+			},
+			{
+				"type": "ImageChange"
+			},
+			{
+				"type": "ConfigChange"
+			}
+		]
+	}
+},
+	  {
+	"apiVersion": "v1",
+	"kind": "ImageStream",
+	"metadata": {
+		"labels": {
+			"app": "processserver64-basic-s2i",
+			"application": "kie-app",
+			"xpaas": "1.4.0"
+		},
+		"name": "kie-app",
+		"namespace": "panorama"
+	},
+	"spec": {
+		"lookupPolicy": {
+			"local": false
+		}
+	}
+}, 
+	  {
+	"apiVersion": "v1",
+	"kind": "Service",
+	"metadata": {
+		"annotations": {
+			"description": "The web server's http port."
+		},
+		"labels": {
+			"app": "processserver64-basic-s2i",
+			"application": "kie-app",
+			"xpaas": "1.4.0"
+		},
+		"name": "kie-app",
+		"namespace": "panorama"
+	},
+	"spec": {
+		"ports": [
+			{
+				"port": 8080,
+				"protocol": "TCP",
+				"targetPort": 8080
+			}
+		],
+		"selector": {
+			"deploymentConfig": "kie-app"
+		},
+		"sessionAffinity": "None",
+		"type": "ClusterIP"
+	}
+},
+	  {
+	"apiVersion": "v1",
+	"kind": "Route",
+	"metadata": {
+		"annotations": {
+			"description": "Route for application's http service."
+		},
+		"labels": {
+			"app": "processserver64-basic-s2i",
+			"application": "kie-app",
+			"xpaas": "1.4.0"
+		},
+		"name": "kie-app",
+		"namespace": "panorama"
+	},
+	"spec": {
+		"host": "kie-app-panorama.apps.crossvale-ocp.com",
+		"to": {
+			"kind": "Service",
+			"name": "kie-app",
+			"weight": 100
+		},
+		"wildcardPolicy": "None"
+	}
+},
+	  {
+	"apiVersion": "v1",
+	"kind": "DeploymentConfig",
+	"metadata": {
+		"labels": {
+			"app": "processserver64-basic-s2i",
+			"application": "kie-app",
+			"xpaas": "1.4.0"
+		},
+		"name": "kie-app",
+		"namespace": "panorama"
+	},
+	"spec": {
+		"replicas": 1,
+		"selector": {
+			"deploymentConfig": "kie-app"
+		},
+		"strategy": {
+			"activeDeadlineSeconds": 21600,
+			"recreateParams": {
+				"timeoutSeconds": 900
+			},
+			"resources": {},
+			"type": "Recreate"
+		},
+		"template": {
+			"metadata": {
+				"creationTimestamp": null,
+				"labels": {
+					"application": "kie-app",
+					"deploymentConfig": "kie-app"
+				},
+				"name": "kie-app"
+			},
+			"spec": {
+				"containers": [
+					{
+						"env": [
+							{
+								"name": "KIE_CONTAINER_DEPLOYMENT",
+								"value": "processserver-library=com.crossvale:OAO:1.0"
+							},
+							{
+								"name": "KIE_SERVER_USER",
+								"value": "kieserver"
+							},
+							{
+								"name": "KIE_SERVER_PASSWORD",
+								"value": "password@1"
+							},
+							{
+								"name": "HORNETQ_CLUSTER_PASSWORD",
+								"value": "OhdEBpGk"
+							},
+							{
+								"name": "HORNETQ_QUEUES"
+							},
+							{
+								"name": "HORNETQ_TOPICS"
+							}
+						],
+						"image": " ",
+						"imagePullPolicy": "Always",
+						"livenessProbe": {
+							"exec": {
+								"command": [
+									"/bin/bash",
+									"-c",
+									"/opt/eap/bin/livenessProbe.sh"
+								]
+							},
+							"failureThreshold": 3,
+							"periodSeconds": 10,
+							"successThreshold": 1,
+							"timeoutSeconds": 1
+						},
+						"name": "kie-app",
+						"ports": [
+							{
+								"containerPort": 8778,
+								"name": "jolokia",
+								"protocol": "TCP"
+							},
+							{
+								"containerPort": 8080,
+								"name": "http",
+								"protocol": "TCP"
+							}
+						],
+						"readinessProbe": {
+							"exec": {
+								"command": [
+									"/bin/bash",
+									"-c",
+									"/opt/eap/bin/readinessProbe.sh"
+								]
+							},
+							"failureThreshold": 3,
+							"periodSeconds": 10,
+							"successThreshold": 1,
+							"timeoutSeconds": 1
+						},
+						"resources": {},
+						"terminationMessagePath": "/dev/termination-log",
+						"terminationMessagePolicy": "File"
+					}
+				],
+				"dnsPolicy": "ClusterFirst",
+				"restartPolicy": "Always",
+				"schedulerName": "default-scheduler",
+				"securityContext": {},
+				"terminationGracePeriodSeconds": 60
+			}
+		},
+		"test": false,
+		"triggers": [
+			{
+				"imageChangeParams": {
+					"automatic": true,
+					"containerNames": [
+						"kie-app"
+					],
+					"from": {
+						"kind": "ImageStreamTag",
+						"name": "kie-app:latest",
+						"namespace": "panorama"
+					}
+				},
+				"type": "ImageChange"
+			},
+			{
+				"type": "ConfigChange"
+			}
+		]
+	}
+}
+  ]
+}
