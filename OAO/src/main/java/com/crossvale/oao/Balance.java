@@ -13,7 +13,7 @@ public class Balance implements java.io.Serializable
    @org.kie.api.definition.type.Label("currency")
    private java.lang.String currency;
    @org.kie.api.definition.type.Label("amount")
-   private java.lang.String amount;
+   private Double amount;
 
    public Balance()
    {
@@ -29,17 +29,17 @@ public class Balance implements java.io.Serializable
       this.currency = currency;
    }
 
-   public java.lang.String getAmount()
+   public java.lang.Double getAmount()
    {
       return this.amount;
    }
 
-   public void setAmount(java.lang.String amount)
+   public void setAmount(java.lang.Double amount)
    {
       this.amount = amount;
    }
 
-   public Balance(java.lang.String currency, java.lang.String amount)
+   public Balance(java.lang.String currency, java.lang.Double amount)
    {
       this.currency = currency;
       this.amount = amount;
