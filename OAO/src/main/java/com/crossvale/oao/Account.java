@@ -20,7 +20,7 @@ public class Account implements java.io.Serializable
    private java.lang.String type;
 
    @org.kie.api.definition.type.Label(value = "balance")
-   private com.crossvale.oao.balance balance;
+   private com.crossvale.oao.Balance balance;
 
    @org.kie.api.definition.type.Label(value = "branch_id")
    private java.lang.String branch_id;
@@ -93,7 +93,7 @@ public class Account implements java.io.Serializable
    }
 
    public Account(java.lang.String customerNumber, java.lang.String label,
-         java.lang.String type, com.crossvale.oao.balance balance,
+         java.lang.String type, com.crossvale.oao.Balance balance,
          java.lang.String branch_id,
          com.crossvale.oao.Account_routing account_routing)
    {
