@@ -22,50 +22,50 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("countryCode")
    private java.lang.String countryCode;
 
-   @org.kie.api.definition.type.Label(value = "address")
+   @org.kie.api.definition.type.Label("address")
    private com.crossvale.oao.Address address;
 
-   @org.kie.api.definition.type.Label(value = "identification")
+   @org.kie.api.definition.type.Label("identification")
    private com.crossvale.oao.Identification identification;
 
-   @org.kie.api.definition.type.Label(value = "accounts")
-   private java.util.List<com.crossvale.oao.Accounts> account;
-
-   @org.kie.api.definition.type.Label(value = "user_id")
+   @org.kie.api.definition.type.Label("user_id")
    private java.lang.String user_id;
 
-   @org.kie.api.definition.type.Label(value = "customer_number")
+   @org.kie.api.definition.type.Label("customer_number")
    private java.lang.String customer_number;
 
-   @org.kie.api.definition.type.Label(value = "legal_name")
+   @org.kie.api.definition.type.Label("legal_name")
    private java.lang.String legal_name;
 
-   @org.kie.api.definition.type.Label(value = "mobile_phone_number")
+   @org.kie.api.definition.type.Label("mobile_phone_number")
    private java.lang.String mobile_phone_number;
 
-   @org.kie.api.definition.type.Label(value = "date_of_birth")
+   @org.kie.api.definition.type.Label("date_of_birth")
    private java.lang.String date_of_birth;
 
-   @org.kie.api.definition.type.Label(value = "relationship_status")
+   @org.kie.api.definition.type.Label("relationship_status")
    private java.lang.String relationship_status;
 
-   @org.kie.api.definition.type.Label(value = "credit_rating")
+   @org.kie.api.definition.type.Label("credit_rating")
    private com.crossvale.oao.Credit_Rating credit_rating;
 
-   @org.kie.api.definition.type.Label(value = "credit_limit")
+   @org.kie.api.definition.type.Label("credit_limit")
    private com.crossvale.oao.Credit_limit credit_limit;
 
-   @org.kie.api.definition.type.Label(value = "highest_education_attained")
+   @org.kie.api.definition.type.Label("highest_education_attained")
    private java.lang.String highest_education_attained;
 
-   @org.kie.api.definition.type.Label(value = "employment_status")
+   @org.kie.api.definition.type.Label("employment_status")
    private java.lang.String employment_status;
 
-   @org.kie.api.definition.type.Label(value = "kyc_status")
+   @org.kie.api.definition.type.Label("kyc_status")
    private java.lang.String kyc_status;
 
-   @org.kie.api.definition.type.Label(value = "last_ok_date")
+   @org.kie.api.definition.type.Label("last_ok_date")
    private java.lang.String last_ok_date;
+
+   @org.kie.api.definition.type.Label(value = "accounts")
+   private java.util.List<com.crossvale.oao.Accounts> accounts;
 
    public Customer()
    {
@@ -119,16 +119,6 @@ public class Customer implements java.io.Serializable
    public void setIdentification(com.crossvale.oao.Identification identification)
    {
       this.identification = identification;
-   }
-
-   public java.util.List<com.crossvale.oao.Accounts> getAccount()
-   {
-      return this.account;
-   }
-
-   public void setAccount(java.util.List<com.crossvale.oao.Accounts> account)
-   {
-      this.account = account;
    }
 
    public java.lang.String getUser_id()
@@ -252,10 +242,19 @@ public class Customer implements java.io.Serializable
       this.last_ok_date = last_ok_date;
    }
 
+   public java.util.List<com.crossvale.oao.Accounts> getAccounts()
+   {
+      return this.accounts;
+   }
+
+   public void setAccounts(java.util.List<com.crossvale.oao.Accounts> accounts)
+   {
+      this.accounts = accounts;
+   }
+
    public Customer(java.lang.String email, java.lang.String alternatePhoneNumber,
          java.lang.String countryCode, com.crossvale.oao.Address address,
          com.crossvale.oao.Identification identification,
-         java.util.List<com.crossvale.oao.Accounts> account,
          java.lang.String user_id, java.lang.String customer_number,
          java.lang.String legal_name, java.lang.String mobile_phone_number,
          java.lang.String date_of_birth, java.lang.String relationship_status,
@@ -263,14 +262,14 @@ public class Customer implements java.io.Serializable
          com.crossvale.oao.Credit_limit credit_limit,
          java.lang.String highest_education_attained,
          java.lang.String employment_status, java.lang.String kyc_status,
-         java.lang.String last_ok_date)
+         java.lang.String last_ok_date,
+         java.util.List<com.crossvale.oao.Accounts> accounts)
    {
       this.email = email;
       this.alternatePhoneNumber = alternatePhoneNumber;
       this.countryCode = countryCode;
       this.address = address;
       this.identification = identification;
-      this.account = account;
       this.user_id = user_id;
       this.customer_number = customer_number;
       this.legal_name = legal_name;
@@ -283,6 +282,7 @@ public class Customer implements java.io.Serializable
       this.employment_status = employment_status;
       this.kyc_status = kyc_status;
       this.last_ok_date = last_ok_date;
+      this.accounts = accounts;
    }
 
 }
