@@ -12,118 +12,63 @@ public class Customer implements java.io.Serializable
 {
 
    static final long serialVersionUID = 1L;
-   
-
-   @org.kie.api.definition.type.Label("status")
-   private java.lang.String status;
-   @org.kie.api.definition.type.Label("id")
-   private java.lang.String id;
-   @org.kie.api.definition.type.Label("issuePlace")
-   private java.lang.String issuePlace;
-   @org.kie.api.definition.type.Label("issueDate")
-   private Date issueDate;
-   @org.kie.api.definition.type.Label("expirationDate")
-   private Date expirationDate;
-
-   @org.kie.api.definition.type.Label("nationalityCode")
-   private java.lang.String nationalityCode;
-
-   @org.kie.api.definition.type.Label("birthDate")
-   private Date birthDate;
 
    @org.kie.api.definition.type.Label("email")
    private java.lang.String email;
 
-   @org.kie.api.definition.type.Label("customerNumber")
-   private java.lang.String customerNumber;
-
-   @org.kie.api.definition.type.Label("customerName")
-   private java.lang.String customerName;
-
-   @org.kie.api.definition.type.Label("customerType")
-   private java.lang.String customerType;
-
-   @org.kie.api.definition.type.Label("ssn")
-   private java.lang.String ssn;
-
-   @org.kie.api.definition.type.Label("primaryPhoneNumber")
-   private java.lang.String primaryPhoneNumber;
-
    @org.kie.api.definition.type.Label("alternatePhoneNumber")
    private java.lang.String alternatePhoneNumber;
-
-   @org.kie.api.definition.type.Label("address1")
-   private java.lang.String address1;
-
-   @org.kie.api.definition.type.Label("address2")
-   private java.lang.String address2;
-
-   @org.kie.api.definition.type.Label("city")
-   private java.lang.String city;
-
-   @org.kie.api.definition.type.Label("state")
-   private java.lang.String state;
-
-   @org.kie.api.definition.type.Label("postalCode")
-   private java.lang.String postalCode;
 
    @org.kie.api.definition.type.Label("countryCode")
    private java.lang.String countryCode;
 
-   @org.kie.api.definition.type.Label("primaryEmail")
-   private java.lang.String primaryEmail;
+   @org.kie.api.definition.type.Label(value = "address")
+   private com.crossvale.oao.Address address;
 
-   @org.kie.api.definition.type.Label("alternateEmail")
-   private java.lang.String alternateEmail;
+   @org.kie.api.definition.type.Label(value = "identification")
+   private com.crossvale.oao.Identification identification;
 
-   @org.kie.api.definition.type.Label("countryName")
-   private java.lang.String countryName;
-   
-    @org.kie.api.definition.type.Label("accounts")
-   private java.util.List<com.crossvale.oao.Account> accounts;
+   @org.kie.api.definition.type.Label(value = "accounts")
+   private java.util.List<com.crossvale.oao.Accounts> account;
+
+   @org.kie.api.definition.type.Label(value = "user_id")
+   private java.lang.String user_id;
+
+   @org.kie.api.definition.type.Label(value = "customer_number")
+   private java.lang.String customer_number;
+
+   @org.kie.api.definition.type.Label(value = "legal_name")
+   private java.lang.String legal_name;
+
+   @org.kie.api.definition.type.Label(value = "mobile_phone_number")
+   private java.lang.String mobile_phone_number;
+
+   @org.kie.api.definition.type.Label(value = "date_of_birth")
+   private java.lang.String date_of_birth;
+
+   @org.kie.api.definition.type.Label(value = "relationship_status")
+   private java.lang.String relationship_status;
+
+   @org.kie.api.definition.type.Label(value = "credit_rating")
+   private com.crossvale.oao.Credit_Rating credit_rating;
+
+   @org.kie.api.definition.type.Label(value = "credit_limit")
+   private com.crossvale.oao.Credit_limit credit_limit;
+
+   @org.kie.api.definition.type.Label(value = "highest_education_attained")
+   private java.lang.String highest_education_attained;
+
+   @org.kie.api.definition.type.Label(value = "employment_status")
+   private java.lang.String employment_status;
+
+   @org.kie.api.definition.type.Label(value = "kyc_status")
+   private java.lang.String kyc_status;
+
+   @org.kie.api.definition.type.Label(value = "last_ok_date")
+   private java.lang.String last_ok_date;
 
    public Customer()
    {
-   }
-
-   public java.lang.String getStatus()
-   {
-      return this.status;
-   }
-
-   public void setStatus(java.lang.String status)
-   {
-      this.status = status;
-   }
-
-   public java.lang.String getId()
-   {
-      return this.id;
-   }
-
-   public void setId(java.lang.String id)
-   {
-      this.id = id;
-   }
-
-   public java.lang.String getIssuePlace()
-   {
-      return this.issuePlace;
-   }
-
-   public void setIssuePlace(java.lang.String issuePlace)
-   {
-      this.issuePlace = issuePlace;
-   }
-
-   public java.lang.String getNationalityCode()
-   {
-      return this.nationalityCode;
-   }
-
-   public void setNationalityCode(java.lang.String nationalityCode)
-   {
-      this.nationalityCode = nationalityCode;
    }
 
    public java.lang.String getEmail()
@@ -136,86 +81,6 @@ public class Customer implements java.io.Serializable
       this.email = email;
    }
 
-   public java.util.Date getIssueDate()
-   {
-      return this.issueDate;
-   }
-
-   public void setIssueDate(java.util.Date issueDate)
-   {
-      this.issueDate = issueDate;
-   }
-
-   public java.util.Date getExpirationDate()
-   {
-      return this.expirationDate;
-   }
-
-   public void setExpirationDate(java.util.Date expirationDate)
-   {
-      this.expirationDate = expirationDate;
-   }
-
-   public java.util.Date getBirthDate()
-   {
-      return this.birthDate;
-   }
-
-   public void setBirthDate(java.util.Date birthDate)
-   {
-      this.birthDate = birthDate;
-   }
-
-   public java.lang.String getCustomerNumber()
-   {
-      return this.customerNumber;
-   }
-
-   public void setCustomerNumber(java.lang.String customerNumber)
-   {
-      this.customerNumber = customerNumber;
-   }
-
-   public java.lang.String getCustomerName()
-   {
-      return this.customerName;
-   }
-
-   public void setCustomerName(java.lang.String customerName)
-   {
-      this.customerName = customerName;
-   }
-
-   public java.lang.String getCustomerType()
-   {
-      return this.customerType;
-   }
-
-   public void setCustomerType(java.lang.String customerType)
-   {
-      this.customerType = customerType;
-   }
-
-   public java.lang.String getSsn()
-   {
-      return this.ssn;
-   }
-
-   public void setSsn(java.lang.String ssn)
-   {
-      this.ssn = ssn;
-   }
-
-   public java.lang.String getPrimaryPhoneNumber()
-   {
-      return this.primaryPhoneNumber;
-   }
-
-   public void setPrimaryPhoneNumber(java.lang.String primaryPhoneNumber)
-   {
-      this.primaryPhoneNumber = primaryPhoneNumber;
-   }
-
    public java.lang.String getAlternatePhoneNumber()
    {
       return this.alternatePhoneNumber;
@@ -224,56 +89,6 @@ public class Customer implements java.io.Serializable
    public void setAlternatePhoneNumber(java.lang.String alternatePhoneNumber)
    {
       this.alternatePhoneNumber = alternatePhoneNumber;
-   }
-
-   public java.lang.String getAddress1()
-   {
-      return this.address1;
-   }
-
-   public void setAddress1(java.lang.String address1)
-   {
-      this.address1 = address1;
-   }
-
-   public java.lang.String getAddress2()
-   {
-      return this.address2;
-   }
-
-   public void setAddress2(java.lang.String address2)
-   {
-      this.address2 = address2;
-   }
-
-   public java.lang.String getCity()
-   {
-      return this.city;
-   }
-
-   public void setCity(java.lang.String city)
-   {
-      this.city = city;
-   }
-
-   public java.lang.String getState()
-   {
-      return this.state;
-   }
-
-   public void setState(java.lang.String state)
-   {
-      this.state = state;
-   }
-
-   public java.lang.String getPostalCode()
-   {
-      return this.postalCode;
-   }
-
-   public void setPostalCode(java.lang.String postalCode)
-   {
-      this.postalCode = postalCode;
    }
 
    public java.lang.String getCountryCode()
@@ -286,85 +101,188 @@ public class Customer implements java.io.Serializable
       this.countryCode = countryCode;
    }
 
-   public java.lang.String getPrimaryEmail()
+   public com.crossvale.oao.Address getAddress()
    {
-      return this.primaryEmail;
+      return this.address;
    }
 
-   public void setPrimaryEmail(java.lang.String primaryEmail)
+   public void setAddress(com.crossvale.oao.Address address)
    {
-      this.primaryEmail = primaryEmail;
+      this.address = address;
    }
 
-   public java.lang.String getAlternateEmail()
+   public com.crossvale.oao.Identification getIdentification()
    {
-      return this.alternateEmail;
+      return this.identification;
    }
 
-   public void setAlternateEmail(java.lang.String alternateEmail)
+   public void setIdentification(com.crossvale.oao.Identification identification)
    {
-      this.alternateEmail = alternateEmail;
+      this.identification = identification;
    }
 
-   public java.lang.String getCountryName()
+   public java.util.List<com.crossvale.oao.Accounts> getAccount()
    {
-      return this.countryName;
+      return this.account;
    }
 
-   public void setCountryName(java.lang.String countryName)
+   public void setAccount(java.util.List<com.crossvale.oao.Accounts> account)
    {
-      this.countryName = countryName;
-   }
-   
-    public java.util.List<com.crossvale.oao.Account> getAccounts()
-   {
-      return this.accounts;
+      this.account = account;
    }
 
-   public void setAccounts(java.util.List<com.crossvale.oao.Account> accounts)
+   public java.lang.String getUser_id()
    {
-      this.accounts = accounts;
+      return this.user_id;
    }
 
-
-   public Customer(java.lang.String status, java.lang.String id,
-         java.lang.String issuePlace, java.util.Date issueDate,
-         java.util.Date expirationDate, java.lang.String nationalityCode,
-         java.util.Date birthDate, java.lang.String email,
-         java.lang.String customerNumber, java.lang.String customerName,
-         java.lang.String customerType, java.lang.String ssn,
-         java.lang.String primaryPhoneNumber,
-         java.lang.String alternatePhoneNumber, java.lang.String address1,
-         java.lang.String address2, java.lang.String city,
-         java.lang.String state, java.lang.String postalCode,
-         java.lang.String countryCode, java.lang.String primaryEmail,
-         java.lang.String alternateEmail, java.lang.String countryName,
-         java.util.List<com.crossvale.oao.Account> accounts)
+   public void setUser_id(java.lang.String user_id)
    {
-      this.status = status;
-      this.id = id;
-      this.issuePlace = issuePlace;
-      this.issueDate = issueDate;
-      this.expirationDate = expirationDate;
-      this.nationalityCode = nationalityCode;
-      this.birthDate = birthDate;
+      this.user_id = user_id;
+   }
+
+   public java.lang.String getCustomer_number()
+   {
+      return this.customer_number;
+   }
+
+   public void setCustomer_number(java.lang.String customer_number)
+   {
+      this.customer_number = customer_number;
+   }
+
+   public java.lang.String getLegal_name()
+   {
+      return this.legal_name;
+   }
+
+   public void setLegal_name(java.lang.String legal_name)
+   {
+      this.legal_name = legal_name;
+   }
+
+   public java.lang.String getMobile_phone_number()
+   {
+      return this.mobile_phone_number;
+   }
+
+   public void setMobile_phone_number(java.lang.String mobile_phone_number)
+   {
+      this.mobile_phone_number = mobile_phone_number;
+   }
+
+   public java.lang.String getDate_of_birth()
+   {
+      return this.date_of_birth;
+   }
+
+   public void setDate_of_birth(java.lang.String date_of_birth)
+   {
+      this.date_of_birth = date_of_birth;
+   }
+
+   public java.lang.String getRelationship_status()
+   {
+      return this.relationship_status;
+   }
+
+   public void setRelationship_status(java.lang.String relationship_status)
+   {
+      this.relationship_status = relationship_status;
+   }
+
+   public com.crossvale.oao.Credit_Rating getCredit_rating()
+   {
+      return this.credit_rating;
+   }
+
+   public void setCredit_rating(com.crossvale.oao.Credit_Rating credit_rating)
+   {
+      this.credit_rating = credit_rating;
+   }
+
+   public com.crossvale.oao.Credit_limit getCredit_limit()
+   {
+      return this.credit_limit;
+   }
+
+   public void setCredit_limit(com.crossvale.oao.Credit_limit credit_limit)
+   {
+      this.credit_limit = credit_limit;
+   }
+
+   public java.lang.String getHighest_education_attained()
+   {
+      return this.highest_education_attained;
+   }
+
+   public void setHighest_education_attained(
+         java.lang.String highest_education_attained)
+   {
+      this.highest_education_attained = highest_education_attained;
+   }
+
+   public java.lang.String getEmployment_status()
+   {
+      return this.employment_status;
+   }
+
+   public void setEmployment_status(java.lang.String employment_status)
+   {
+      this.employment_status = employment_status;
+   }
+
+   public java.lang.String getKyc_status()
+   {
+      return this.kyc_status;
+   }
+
+   public void setKyc_status(java.lang.String kyc_status)
+   {
+      this.kyc_status = kyc_status;
+   }
+
+   public java.lang.String getLast_ok_date()
+   {
+      return this.last_ok_date;
+   }
+
+   public void setLast_ok_date(java.lang.String last_ok_date)
+   {
+      this.last_ok_date = last_ok_date;
+   }
+
+   public Customer(java.lang.String email, java.lang.String alternatePhoneNumber,
+         java.lang.String countryCode, com.crossvale.oao.Address address,
+         com.crossvale.oao.Identification identification,
+         java.util.List<com.crossvale.oao.Accounts> account,
+         java.lang.String user_id, java.lang.String customer_number,
+         java.lang.String legal_name, java.lang.String mobile_phone_number,
+         java.lang.String date_of_birth, java.lang.String relationship_status,
+         com.crossvale.oao.Credit_Rating credit_rating,
+         com.crossvale.oao.Credit_limit credit_limit,
+         java.lang.String highest_education_attained,
+         java.lang.String employment_status, java.lang.String kyc_status,
+         java.lang.String last_ok_date)
+   {
       this.email = email;
-      this.customerNumber = customerNumber;
-      this.customerName = customerName;
-      this.customerType = customerType;
-      this.ssn = ssn;
-      this.primaryPhoneNumber = primaryPhoneNumber;
       this.alternatePhoneNumber = alternatePhoneNumber;
-      this.address1 = address1;
-      this.address2 = address2;
-      this.city = city;
-      this.state = state;
-      this.postalCode = postalCode;
       this.countryCode = countryCode;
-      this.primaryEmail = primaryEmail;
-      this.alternateEmail = alternateEmail;
-      this.countryName = countryName;
-      this.accounts = accounts;
+      this.address = address;
+      this.identification = identification;
+      this.account = account;
+      this.user_id = user_id;
+      this.customer_number = customer_number;
+      this.legal_name = legal_name;
+      this.mobile_phone_number = mobile_phone_number;
+      this.date_of_birth = date_of_birth;
+      this.relationship_status = relationship_status;
+      this.credit_rating = credit_rating;
+      this.credit_limit = credit_limit;
+      this.highest_education_attained = highest_education_attained;
+      this.employment_status = employment_status;
+      this.kyc_status = kyc_status;
+      this.last_ok_date = last_ok_date;
    }
 
 }
