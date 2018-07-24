@@ -62,12 +62,12 @@ public class Account implements java.io.Serializable
       this.type = type;
    }
 
-   public com.crossvale.oao.balance getBalance()
+   public com.crossvale.oao.Balance getBalance()
    {
       return this.balance;
    }
 
-   public void setBalance(com.crossvale.oao.balance balance)
+   public void setBalance(com.crossvale.oao.Balance balance)
    {
       this.balance = balance;
    }
