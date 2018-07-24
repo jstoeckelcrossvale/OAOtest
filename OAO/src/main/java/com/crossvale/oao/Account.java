@@ -10,39 +10,26 @@ public class Account implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label("Account Number")
-   private java.lang.String accountNumber;
-
    @org.kie.api.definition.type.Label("Customer Number")
    private java.lang.String customerNumber;
 
-   @org.kie.api.definition.type.Label("Account Name")
-   private java.lang.String accountName;
+   @org.kie.api.definition.type.Label(value = "label")
+   private java.lang.String label;
 
-   @org.kie.api.definition.type.Label("Account Type")
-   private java.lang.String accountType;
+   @org.kie.api.definition.type.Label(value = "type")
+   private java.lang.String type;
 
-   @org.kie.api.definition.type.Label("Amount Available")
-   private Double available;
+   @org.kie.api.definition.type.Label(value = "balance")
+   private com.crossvale.oao.balance balance;
 
-   @org.kie.api.definition.type.Label("Posted")
-   private float posted;
+   @org.kie.api.definition.type.Label(value = "branch_id")
+   private java.lang.String branch_id;
 
-   @org.kie.api.definition.type.Label("Status")
-   private java.lang.String status;
+   @org.kie.api.definition.type.Label(value = "account_routing")
+   private com.crossvale.oao.Account_routing account_routing;
 
    public Account()
    {
-   }
-
-   public java.lang.String getAccountNumber()
-   {
-      return this.accountNumber;
-   }
-
-   public void setAccountNumber(java.lang.String accountNumber)
-   {
-      this.accountNumber = accountNumber;
    }
 
    public java.lang.String getCustomerNumber()
@@ -55,67 +42,67 @@ public class Account implements java.io.Serializable
       this.customerNumber = customerNumber;
    }
 
-   public java.lang.String getAccountName()
+   public java.lang.String getLabel()
    {
-      return this.accountName;
+      return this.label;
    }
 
-   public void setAccountName(java.lang.String accountName)
+   public void setLabel(java.lang.String label)
    {
-      this.accountName = accountName;
+      this.label = label;
    }
 
-   public java.lang.String getAccountType()
+   public java.lang.String getType()
    {
-      return this.accountType;
+      return this.type;
    }
 
-   public void setAccountType(java.lang.String accountType)
+   public void setType(java.lang.String type)
    {
-      this.accountType = accountType;
+      this.type = type;
    }
 
-   public java.lang.String getStatus()
+   public com.crossvale.oao.balance getBalance()
    {
-      return this.status;
+      return this.balance;
    }
 
-   public void setStatus(java.lang.String status)
+   public void setBalance(com.crossvale.oao.balance balance)
    {
-      this.status = status;
+      this.balance = balance;
    }
 
-   public java.lang.Double getAvailable()
+   public java.lang.String getBranch_id()
    {
-      return this.available;
+      return this.branch_id;
    }
 
-   public void setAvailable(java.lang.Double available)
+   public void setBranch_id(java.lang.String branch_id)
    {
-      this.available = available;
+      this.branch_id = branch_id;
    }
 
-   public float getPosted()
+   public com.crossvale.oao.Account_routing getAccount_routing()
    {
-      return this.posted;
+      return this.account_routing;
    }
 
-   public void setPosted(float posted)
+   public void setAccount_routing(com.crossvale.oao.Account_routing account_routing)
    {
-      this.posted = posted;
+      this.account_routing = account_routing;
    }
 
-   public Account(java.lang.String accountNumber, java.lang.String customerNumber,
-         java.lang.String accountName, java.lang.String accountType,
-         java.lang.Double available, float posted, java.lang.String status)
+   public Account(java.lang.String customerNumber, java.lang.String label,
+         java.lang.String type, com.crossvale.oao.balance balance,
+         java.lang.String branch_id,
+         com.crossvale.oao.Account_routing account_routing)
    {
-      this.accountNumber = accountNumber;
       this.customerNumber = customerNumber;
-      this.accountName = accountName;
-      this.accountType = accountType;
-      this.available = available;
-      this.posted = posted;
-      this.status = status;
+      this.label = label;
+      this.type = type;
+      this.balance = balance;
+      this.branch_id = branch_id;
+      this.account_routing = account_routing;
    }
 
 }
