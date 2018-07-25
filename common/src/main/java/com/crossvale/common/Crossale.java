@@ -9,25 +9,25 @@ public class Crossale implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "creditScore")
+   @org.kie.api.definition.type.Label("creditScore")
    private java.lang.Integer creditScore;
-   @org.kie.api.definition.type.Label(value = "rating")
+   @org.kie.api.definition.type.Label("rating")
    private java.lang.String rating;
-   @org.kie.api.definition.type.Label(value = "hasLoan")
+   @org.kie.api.definition.type.Label("hasLoan")
    private java.lang.Boolean hasLoan;
-   @org.kie.api.definition.type.Label(value = "hasCreditCard")
-   private boolean hasCreditCard;
-   @org.kie.api.definition.type.Label(value = "hasChecking")
+   @org.kie.api.definition.type.Label("hasCreditCard")
+   private Boolean hasCreditCard;
+   @org.kie.api.definition.type.Label("hasChecking")
    private java.lang.Boolean hasChecking;
-   @org.kie.api.definition.type.Label(value = "hasSavings")
+   @org.kie.api.definition.type.Label("hasSavings")
    private java.lang.Boolean hasSavings;
-   @org.kie.api.definition.type.Label(value = "checkingCrossale")
+   @org.kie.api.definition.type.Label("checkingCrossale")
    private java.lang.Boolean checkingCrossale;
-   @org.kie.api.definition.type.Label(value = "loanCrossale")
+   @org.kie.api.definition.type.Label("loanCrossale")
    private java.lang.Boolean loanCrossale;
-   @org.kie.api.definition.type.Label(value = "creditCardCrossale")
+   @org.kie.api.definition.type.Label("creditCardCrossale")
    private java.lang.Boolean creditCardCrossale;
-   @org.kie.api.definition.type.Label(value = "savingsCrossale")
+   @org.kie.api.definition.type.Label("savingsCrossale")
    private java.lang.Boolean savingsCrossale;
 
    public Crossale()
@@ -62,16 +62,6 @@ public class Crossale implements java.io.Serializable
    public void setHasLoan(java.lang.Boolean hasLoan)
    {
       this.hasLoan = hasLoan;
-   }
-
-   public boolean isHasCreditCard()
-   {
-      return this.hasCreditCard;
-   }
-
-   public void setHasCreditCard(boolean hasCreditCard)
-   {
-      this.hasCreditCard = hasCreditCard;
    }
 
    public java.lang.Boolean getHasChecking()
@@ -134,12 +124,21 @@ public class Crossale implements java.io.Serializable
       this.savingsCrossale = savingsCrossale;
    }
 
+   public java.lang.Boolean getHasCreditCard()
+   {
+      return this.hasCreditCard;
+   }
+
+   public void setHasCreditCard(java.lang.Boolean hasCreditCard)
+   {
+      this.hasCreditCard = hasCreditCard;
+   }
+
    public Crossale(java.lang.Integer creditScore, java.lang.String rating,
-         java.lang.Boolean hasLoan, boolean hasCreditCard,
+         java.lang.Boolean hasLoan, java.lang.Boolean hasCreditCard,
          java.lang.Boolean hasChecking, java.lang.Boolean hasSavings,
          java.lang.Boolean checkingCrossale, java.lang.Boolean loanCrossale,
-         java.lang.Boolean creditCardCrossale,
-         java.lang.Boolean savingsCrossale)
+         java.lang.Boolean creditCardCrossale, java.lang.Boolean savingsCrossale)
    {
       this.creditScore = creditScore;
       this.rating = rating;
