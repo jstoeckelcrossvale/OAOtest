@@ -27,10 +27,6 @@ public class Customer implements java.io.Serializable
    private java.lang.String mobile_phone_number;
    @org.kie.api.definition.type.Label("date_of_birth")
    private java.lang.String date_of_birth;
-   @org.kie.api.definition.type.Label("credit_rating")
-   private com.crossvale.common.creditRating credit_rating;
-   @org.kie.api.definition.type.Label("credit_limit")
-   private com.crossvale.common.creditLimit credit_limit;
    @org.kie.api.definition.type.Label("highest_education_attained")
    private java.lang.String highest_education_attained;
    @org.kie.api.definition.type.Label("employment_status")
@@ -40,7 +36,7 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("last_ok_date")
    private java.lang.String last_ok_date;
 
-   @org.kie.api.definition.type.Label(value = "relationship_status")
+   @org.kie.api.definition.type.Label("relationship_status")
    private java.lang.String relationship_status;
 
    public Customer()
@@ -139,26 +135,6 @@ public class Customer implements java.io.Serializable
       this.date_of_birth = date_of_birth;
    }
 
-   public com.crossvale.common.creditRating getCredit_rating()
-   {
-      return this.credit_rating;
-   }
-
-   public void setCredit_rating(com.crossvale.common.creditRating credit_rating)
-   {
-      this.credit_rating = credit_rating;
-   }
-
-   public com.crossvale.common.creditLimit getCredit_limit()
-   {
-      return this.credit_limit;
-   }
-
-   public void setCredit_limit(com.crossvale.common.creditLimit credit_limit)
-   {
-      this.credit_limit = credit_limit;
-   }
-
    public java.lang.String getHighest_education_attained()
    {
       return this.highest_education_attained;
@@ -216,8 +192,6 @@ public class Customer implements java.io.Serializable
          java.lang.String user_id, java.lang.String customer_number,
          java.lang.String legal_name, java.lang.String mobile_phone_number,
          java.lang.String date_of_birth,
-         com.crossvale.common.creditRating credit_rating,
-         com.crossvale.common.creditLimit credit_limit,
          java.lang.String highest_education_attained,
          java.lang.String employment_status, java.lang.String kyc_status,
          java.lang.String last_ok_date, java.lang.String relationship_status)
@@ -231,8 +205,6 @@ public class Customer implements java.io.Serializable
       this.legal_name = legal_name;
       this.mobile_phone_number = mobile_phone_number;
       this.date_of_birth = date_of_birth;
-      this.credit_rating = credit_rating;
-      this.credit_limit = credit_limit;
       this.highest_education_attained = highest_education_attained;
       this.employment_status = employment_status;
       this.kyc_status = kyc_status;
