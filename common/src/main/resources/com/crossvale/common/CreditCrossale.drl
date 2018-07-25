@@ -1,2 +1,13 @@
 package com.crossvale.common;
 
+import com.crossvale.common.Crossale;
+
+rule "CreditCardCrossale"
+	lock-on-active true
+	ruleflow-group "crossale"
+	dialect "mvel"
+	when
+		crossale : Crossale( creditScore > 650 , rating in ( "A", "B" ) , hasCreditCard == false )
+	then
+		crossale.setCreditCardCrossale( true );
+end
