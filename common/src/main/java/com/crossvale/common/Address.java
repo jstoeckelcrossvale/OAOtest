@@ -9,16 +9,19 @@ public class Address implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "address1")
+   @org.kie.api.definition.type.Label("address1")
    private java.lang.String address1;
-   @org.kie.api.definition.type.Label(value = "address2")
+   @org.kie.api.definition.type.Label("address2")
    private java.lang.String address2;
-   @org.kie.api.definition.type.Label(value = "city")
+   @org.kie.api.definition.type.Label("city")
    private java.lang.String city;
-   @org.kie.api.definition.type.Label(value = "state")
+   @org.kie.api.definition.type.Label("state")
    private java.lang.String state;
-   @org.kie.api.definition.type.Label(value = "postalCode")
+   @org.kie.api.definition.type.Label("postalCode")
    private java.lang.String postalCode;
+
+   @org.kie.api.definition.type.Label(value = "country")
+   private java.lang.String country;
 
    public Address()
    {
@@ -74,15 +77,26 @@ public class Address implements java.io.Serializable
       this.postalCode = postalCode;
    }
 
+   public java.lang.String getCountry()
+   {
+      return this.country;
+   }
+
+   public void setCountry(java.lang.String country)
+   {
+      this.country = country;
+   }
+
    public Address(java.lang.String address1, java.lang.String address2,
          java.lang.String city, java.lang.String state,
-         java.lang.String postalCode)
+         java.lang.String postalCode, java.lang.String country)
    {
       this.address1 = address1;
       this.address2 = address2;
       this.city = city;
       this.state = state;
       this.postalCode = postalCode;
+      this.country = country;
    }
 
 }
