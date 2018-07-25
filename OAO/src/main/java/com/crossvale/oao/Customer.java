@@ -46,12 +46,6 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("relationship_status")
    private java.lang.String relationship_status;
 
-   @org.kie.api.definition.type.Label("credit_rating")
-   private com.crossvale.oao.Credit_Rating credit_rating;
-
-   @org.kie.api.definition.type.Label("credit_limit")
-   private com.crossvale.oao.Credit_limit credit_limit;
-
    @org.kie.api.definition.type.Label("highest_education_attained")
    private java.lang.String highest_education_attained;
 
@@ -64,8 +58,14 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("last_ok_date")
    private java.lang.String last_ok_date;
 
-   @org.kie.api.definition.type.Label(value = "accounts")
+   @org.kie.api.definition.type.Label("accounts")
    private java.util.List<com.crossvale.oao.Accounts> accounts;
+
+   @org.kie.api.definition.type.Label(value = "credit_rating")
+   private com.crossvale.oao.Credit_Rating credit_rating;
+
+   @org.kie.api.definition.type.Label(value = "credit_limit")
+   private com.crossvale.oao.CreditLimit credit_limit;
 
    public Customer()
    {
@@ -181,26 +181,6 @@ public class Customer implements java.io.Serializable
       this.relationship_status = relationship_status;
    }
 
-   public com.crossvale.oao.Credit_Rating getCredit_rating()
-   {
-      return this.credit_rating;
-   }
-
-   public void setCredit_rating(com.crossvale.oao.Credit_Rating credit_rating)
-   {
-      this.credit_rating = credit_rating;
-   }
-
-   public com.crossvale.oao.Credit_limit getCredit_limit()
-   {
-      return this.credit_limit;
-   }
-
-   public void setCredit_limit(com.crossvale.oao.Credit_limit credit_limit)
-   {
-      this.credit_limit = credit_limit;
-   }
-
    public java.lang.String getHighest_education_attained()
    {
       return this.highest_education_attained;
@@ -252,18 +232,38 @@ public class Customer implements java.io.Serializable
       this.accounts = accounts;
    }
 
+   public com.crossvale.oao.Credit_Rating getCredit_rating()
+   {
+      return this.credit_rating;
+   }
+
+   public void setCredit_rating(com.crossvale.oao.Credit_Rating credit_rating)
+   {
+      this.credit_rating = credit_rating;
+   }
+
+   public com.crossvale.oao.CreditLimit getCredit_limit()
+   {
+      return this.credit_limit;
+   }
+
+   public void setCredit_limit(com.crossvale.oao.CreditLimit credit_limit)
+   {
+      this.credit_limit = credit_limit;
+   }
+
    public Customer(java.lang.String email, java.lang.String alternatePhoneNumber,
          java.lang.String countryCode, com.crossvale.oao.Address address,
          com.crossvale.oao.Identification identification,
          java.lang.String user_id, java.lang.String customer_number,
          java.lang.String legal_name, java.lang.String mobile_phone_number,
          java.lang.String date_of_birth, java.lang.String relationship_status,
-         com.crossvale.oao.Credit_Rating credit_rating,
-         com.crossvale.oao.Credit_limit credit_limit,
          java.lang.String highest_education_attained,
          java.lang.String employment_status, java.lang.String kyc_status,
          java.lang.String last_ok_date,
-         java.util.List<com.crossvale.oao.Accounts> accounts)
+         java.util.List<com.crossvale.oao.Accounts> accounts,
+         com.crossvale.oao.Credit_Rating credit_rating,
+         com.crossvale.oao.CreditLimit credit_limit)
    {
       this.email = email;
       this.alternatePhoneNumber = alternatePhoneNumber;
@@ -276,13 +276,13 @@ public class Customer implements java.io.Serializable
       this.mobile_phone_number = mobile_phone_number;
       this.date_of_birth = date_of_birth;
       this.relationship_status = relationship_status;
-      this.credit_rating = credit_rating;
-      this.credit_limit = credit_limit;
       this.highest_education_attained = highest_education_attained;
       this.employment_status = employment_status;
       this.kyc_status = kyc_status;
       this.last_ok_date = last_ok_date;
       this.accounts = accounts;
+      this.credit_rating = credit_rating;
+      this.credit_limit = credit_limit;
    }
 
 }
