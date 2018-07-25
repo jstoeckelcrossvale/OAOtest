@@ -39,6 +39,12 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("relationship_status")
    private java.lang.String relationship_status;
 
+   @org.kie.api.definition.type.Label(value = "credit_rating")
+   private com.crossvale.common.CreditRating credit_rating;
+
+   @org.kie.api.definition.type.Label(value = "credit_limit")
+   private com.crossvale.common.CreditLimit credit_limit;
+
    public Customer()
    {
    }
@@ -186,6 +192,26 @@ public class Customer implements java.io.Serializable
       this.relationship_status = relationship_status;
    }
 
+   public com.crossvale.common.CreditRating getCredit_rating()
+   {
+      return this.credit_rating;
+   }
+
+   public void setCredit_rating(com.crossvale.common.CreditRating credit_rating)
+   {
+      this.credit_rating = credit_rating;
+   }
+
+   public com.crossvale.common.CreditLimit getCredit_limit()
+   {
+      return this.credit_limit;
+   }
+
+   public void setCredit_limit(com.crossvale.common.CreditLimit credit_limit)
+   {
+      this.credit_limit = credit_limit;
+   }
+
    public Customer(java.lang.String email, com.crossvale.common.Address address,
          com.crossvale.common.Identification identification,
          java.util.List<com.crossvale.common.Account> accounts,
@@ -194,7 +220,9 @@ public class Customer implements java.io.Serializable
          java.lang.String date_of_birth,
          java.lang.String highest_education_attained,
          java.lang.String employment_status, java.lang.String kyc_status,
-         java.lang.String last_ok_date, java.lang.String relationship_status)
+         java.lang.String last_ok_date, java.lang.String relationship_status,
+         com.crossvale.common.CreditRating credit_rating,
+         com.crossvale.common.CreditLimit credit_limit)
    {
       this.email = email;
       this.address = address;
@@ -210,6 +238,8 @@ public class Customer implements java.io.Serializable
       this.kyc_status = kyc_status;
       this.last_ok_date = last_ok_date;
       this.relationship_status = relationship_status;
+      this.credit_rating = credit_rating;
+      this.credit_limit = credit_limit;
    }
 
 }
