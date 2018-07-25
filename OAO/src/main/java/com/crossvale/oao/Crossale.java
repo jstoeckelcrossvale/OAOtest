@@ -10,50 +10,29 @@ public class Crossale implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label("customerType")
-   private java.lang.String customerType;
    @org.kie.api.definition.type.Label("creditScore")
    private java.lang.Integer creditScore;
-
-   @org.kie.api.definition.type.Label("creditCard")
-   private String creditCard;
-
-   @org.kie.api.definition.type.Label("loan")
-   private java.lang.String loan;
-
    @org.kie.api.definition.type.Label("rating")
    private java.lang.String rating;
-
-   @org.kie.api.definition.type.Label("savingsFlag")
-   private java.lang.Boolean savingsFlag;
-
-   @org.kie.api.definition.type.Label("checkingFlag")
-   private java.lang.Boolean checkingFlag;
-
-   @org.kie.api.definition.type.Label("loanFlag")
-   private java.lang.Boolean loanFlag;
-
-   @org.kie.api.definition.type.Label("creditCardFlag")
-   private java.lang.Boolean creditCardFlag;
-
-   @org.kie.api.definition.type.Label("checking")
-   private java.lang.String checking;
-
-   @org.kie.api.definition.type.Label("savings")
-   private java.lang.String savings;
+   @org.kie.api.definition.type.Label("hasLoan")
+   private java.lang.Boolean hasLoan;
+   @org.kie.api.definition.type.Label("hasCreditCard")
+   private Boolean hasCreditCard;
+   @org.kie.api.definition.type.Label("hasChecking")
+   private java.lang.Boolean hasChecking;
+   @org.kie.api.definition.type.Label("hasSavings")
+   private java.lang.Boolean hasSavings;
+   @org.kie.api.definition.type.Label("checkingCrossale")
+   private java.lang.Boolean checkingCrossale;
+   @org.kie.api.definition.type.Label("loanCrossale")
+   private java.lang.Boolean loanCrossale;
+   @org.kie.api.definition.type.Label("creditCardCrossale")
+   private java.lang.Boolean creditCardCrossale;
+   @org.kie.api.definition.type.Label("savingsCrossale")
+   private java.lang.Boolean savingsCrossale;
 
    public Crossale()
    {
-   }
-
-   public java.lang.String getCustomerType()
-   {
-      return this.customerType;
-   }
-
-   public void setCustomerType(java.lang.String customerType)
-   {
-      this.customerType = customerType;
    }
 
    public java.lang.Integer getCreditScore()
@@ -66,26 +45,6 @@ public class Crossale implements java.io.Serializable
       this.creditScore = creditScore;
    }
 
-   public java.lang.String getCreditCard()
-   {
-      return this.creditCard;
-   }
-
-   public void setCreditCard(java.lang.String creditCard)
-   {
-      this.creditCard = creditCard;
-   }
-
-   public java.lang.String getLoan()
-   {
-      return this.loan;
-   }
-
-   public void setLoan(java.lang.String loan)
-   {
-      this.loan = loan;
-   }
-
    public java.lang.String getRating()
    {
       return this.rating;
@@ -96,84 +55,102 @@ public class Crossale implements java.io.Serializable
       this.rating = rating;
    }
 
-   public java.lang.Boolean getSavingsFlag()
+   public java.lang.Boolean getHasLoan()
    {
-      return this.savingsFlag;
+      return this.hasLoan;
    }
 
-   public void setSavingsFlag(java.lang.Boolean savingsFlag)
+   public void setHasLoan(java.lang.Boolean hasLoan)
    {
-      this.savingsFlag = savingsFlag;
+      this.hasLoan = hasLoan;
    }
 
-   public java.lang.Boolean getCheckingFlag()
+   public java.lang.Boolean getHasChecking()
    {
-      return this.checkingFlag;
+      return this.hasChecking;
    }
 
-   public void setCheckingFlag(java.lang.Boolean checkingFlag)
+   public void setHasChecking(java.lang.Boolean hasChecking)
    {
-      this.checkingFlag = checkingFlag;
+      this.hasChecking = hasChecking;
    }
 
-   public java.lang.Boolean getLoanFlag()
+   public java.lang.Boolean getHasSavings()
    {
-      return this.loanFlag;
+      return this.hasSavings;
    }
 
-   public void setLoanFlag(java.lang.Boolean loanFlag)
+   public void setHasSavings(java.lang.Boolean hasSavings)
    {
-      this.loanFlag = loanFlag;
+      this.hasSavings = hasSavings;
    }
 
-   public java.lang.Boolean getCreditCardFlag()
+   public java.lang.Boolean getCheckingCrossale()
    {
-      return this.creditCardFlag;
+      return this.checkingCrossale;
    }
 
-   public void setCreditCardFlag(java.lang.Boolean creditCardFlag)
+   public void setCheckingCrossale(java.lang.Boolean checkingCrossale)
    {
-      this.creditCardFlag = creditCardFlag;
+      this.checkingCrossale = checkingCrossale;
    }
 
-   public java.lang.String getChecking()
+   public java.lang.Boolean getLoanCrossale()
    {
-      return this.checking;
+      return this.loanCrossale;
    }
 
-   public void setChecking(java.lang.String checking)
+   public void setLoanCrossale(java.lang.Boolean loanCrossale)
    {
-      this.checking = checking;
+      this.loanCrossale = loanCrossale;
    }
 
-   public java.lang.String getSavings()
+   public java.lang.Boolean getCreditCardCrossale()
    {
-      return this.savings;
+      return this.creditCardCrossale;
    }
 
-   public void setSavings(java.lang.String savings)
+   public void setCreditCardCrossale(java.lang.Boolean creditCardCrossale)
    {
-      this.savings = savings;
+      this.creditCardCrossale = creditCardCrossale;
    }
 
-   public Crossale(java.lang.String customerType, java.lang.Integer creditScore,
-         java.lang.String creditCard, java.lang.String loan,
-         java.lang.String rating, java.lang.Boolean savingsFlag,
-         java.lang.Boolean checkingFlag, java.lang.Boolean loanFlag,
-         java.lang.Boolean creditCardFlag, java.lang.String checking,
-         java.lang.String savings)
+   public java.lang.Boolean getSavingsCrossale()
    {
-      this.customerType = customerType;
+      return this.savingsCrossale;
+   }
+
+   public void setSavingsCrossale(java.lang.Boolean savingsCrossale)
+   {
+      this.savingsCrossale = savingsCrossale;
+   }
+
+   public java.lang.Boolean getHasCreditCard()
+   {
+      return this.hasCreditCard;
+   }
+
+   public void setHasCreditCard(java.lang.Boolean hasCreditCard)
+   {
+      this.hasCreditCard = hasCreditCard;
+   }
+
+   public Crossale(java.lang.Integer creditScore, java.lang.String rating,
+         java.lang.Boolean hasLoan, java.lang.Boolean hasCreditCard,
+         java.lang.Boolean hasChecking, java.lang.Boolean hasSavings,
+         java.lang.Boolean checkingCrossale, java.lang.Boolean loanCrossale,
+         java.lang.Boolean creditCardCrossale, java.lang.Boolean savingsCrossale)
+   {
       this.creditScore = creditScore;
-      this.creditCard = creditCard;
-      this.loan = loan;
       this.rating = rating;
-      this.savingsFlag = savingsFlag;
-      this.checkingFlag = checkingFlag;
-      this.loanFlag = loanFlag;
-      this.creditCardFlag = creditCardFlag;
-      this.checking = checking;
-      this.savings = savings;
+      this.hasLoan = hasLoan;
+      this.hasCreditCard = hasCreditCard;
+      this.hasChecking = hasChecking;
+      this.hasSavings = hasSavings;
+      this.checkingCrossale = checkingCrossale;
+      this.loanCrossale = loanCrossale;
+      this.creditCardCrossale = creditCardCrossale;
+      this.savingsCrossale = savingsCrossale;
    }
 
 }
