@@ -1,2 +1,13 @@
 package com.crossvale.common;
 
+import com.crossvale.common.Crossale;
+
+rule "LoanCrossale"
+	lock-on-active true
+	ruleflow-group "crossale"
+	dialect "mvel"
+	when
+		crossale : Crossale( creditScore > 650 , rating in ( "A", "B" ) , hasLoan == false )
+	then
+		crossale.setLoanCrossale( true );
+end
