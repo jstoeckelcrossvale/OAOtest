@@ -1,2 +1,13 @@
 package com.crossvale.common;
 
+import com.crossvale.common.Crossale;
+
+rule "SavingsCrossale"
+	lock-on-active true
+	ruleflow-group "crossale"
+	dialect "mvel"
+	when
+		crossale : Crossale(hasSavings == false )
+	then
+		crossale.setSavingsCrossale( true );
+end
