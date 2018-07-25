@@ -1,2 +1,44 @@
 package com.crossvale.oao;
 
+import com.crossvale.oao.Crossale;
+
+rule "CheckingCrossale"
+	lock-on-active true
+	ruleflow-group "crossale"
+	dialect "mvel"
+	when
+		crossale : Crossale(hasChecking == false )
+	then
+		crossale.setCheckingCrossale( true );
+end
+
+rule "CreditCardCrossale"
+	lock-on-active true
+	ruleflow-group "crossale"
+	dialect "mvel"
+	when
+		crossale : Crossale( creditScore > 650 , rating in ( "A", "B" ) , hasCreditCard == false )
+	then
+		crossale.setCreditCardCrossale( true );
+end
+
+rule "LoanCrossale"
+	lock-on-active true
+	ruleflow-group "crossale"
+	dialect "mvel"
+	when
+		crossale : Crossale( creditScore > 650 , rating in ( "A", "B" ) , hasLoan == false )
+	then
+		crossale.setLoanCrossale( true );
+end
+
+rule "SavingsCrossale"
+	lock-on-active true
+	ruleflow-group "crossale"
+	dialect "mvel"
+	when
+		crossale : Crossale(hasSavings == false )
+	then
+		crossale.setSavingsCrossale( true );
+end
+
