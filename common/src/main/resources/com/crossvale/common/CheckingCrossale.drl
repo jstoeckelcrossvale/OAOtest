@@ -1,2 +1,14 @@
 package com.crossvale.common;
 
+import com.crossvale.common.Crossale;
+
+rule "CheckingCrossale"
+	lock-on-active true
+	ruleflow-group "crossale"
+	dialect "mvel"
+	when
+		crossale : Crossale(hasChecking == false )
+	then
+		crossale.setCheckingCrossale( true );
+end
+
