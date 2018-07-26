@@ -9,27 +9,25 @@ public class Account implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "customerNumber")
+   @org.kie.api.definition.type.Label("customerNumber")
    private java.lang.String customerNumber;
-   @org.kie.api.definition.type.Label(value = "status")
+   @org.kie.api.definition.type.Label("status")
    private java.lang.String status;
-   @org.kie.api.definition.type.Label(value = "label")
+   @org.kie.api.definition.type.Label("label")
    private java.lang.String label;
-   @org.kie.api.definition.type.Label(value = "balance")
+   @org.kie.api.definition.type.Label("balance")
    private com.crossvale.common.Balance balance;
-   @org.kie.api.definition.type.Label(value = "type")
+   @org.kie.api.definition.type.Label("type")
    private java.lang.String type;
-   @org.kie.api.definition.type.Label(value = "accountRoutingAsString")
+   @org.kie.api.definition.type.Label("accountRoutingAsString")
    private java.lang.String accountRoutingAsString;
-   @org.kie.api.definition.type.Label(value = "accountRulesAsString")
+   @org.kie.api.definition.type.Label("accountRulesAsString")
    private java.lang.String accountRulesAsString;
-   @org.kie.api.definition.type.Label(value = "id")
+   @org.kie.api.definition.type.Label("id")
    private java.lang.String id;
-   @org.kie.api.definition.type.Label(value = "bank_id")
+   @org.kie.api.definition.type.Label("bank_id")
    private java.lang.String bank_id;
-   @org.kie.api.definition.type.Label(value = "account_routing")
-   private java.util.List<com.crossvale.common.Account_routing> account_routing;
-   @org.kie.api.definition.type.Label(value = "account_rules")
+   @org.kie.api.definition.type.Label("account_rules")
    private java.util.List<com.crossvale.common.Account_rules> account_rules;
 
    public Account()
@@ -127,17 +125,6 @@ public class Account implements java.io.Serializable
       this.bank_id = bank_id;
    }
 
-   public java.util.List<com.crossvale.common.Account_routing> getAccount_routing()
-   {
-      return this.account_routing;
-   }
-
-   public void setAccount_routing(
-         java.util.List<com.crossvale.common.Account_routing> account_routing)
-   {
-      this.account_routing = account_routing;
-   }
-
    public java.util.List<com.crossvale.common.Account_rules> getAccount_rules()
    {
       return this.account_rules;
@@ -154,7 +141,6 @@ public class Account implements java.io.Serializable
          java.lang.String type, java.lang.String accountRoutingAsString,
          java.lang.String accountRulesAsString, java.lang.String id,
          java.lang.String bank_id,
-         java.util.List<com.crossvale.common.Account_routing> account_routing,
          java.util.List<com.crossvale.common.Account_rules> account_rules)
    {
       this.customerNumber = customerNumber;
@@ -166,7 +152,6 @@ public class Account implements java.io.Serializable
       this.accountRulesAsString = accountRulesAsString;
       this.id = id;
       this.bank_id = bank_id;
-      this.account_routing = account_routing;
       this.account_rules = account_rules;
    }
 
