@@ -30,6 +30,9 @@ public class Account implements java.io.Serializable
    @org.kie.api.definition.type.Label("account_rules")
    private java.util.List<com.crossvale.common.Account_rules> account_rules;
 
+   @org.kie.api.definition.type.Label(value = "account_routing")
+   private java.util.List<com.crossvale.common.AccountRouting> account_routing;
+
    public Account()
    {
    }
@@ -136,12 +139,24 @@ public class Account implements java.io.Serializable
       this.account_rules = account_rules;
    }
 
+   public java.util.List<com.crossvale.common.AccountRouting> getAccount_routing()
+   {
+      return this.account_routing;
+   }
+
+   public void setAccount_routing(
+         java.util.List<com.crossvale.common.AccountRouting> account_routing)
+   {
+      this.account_routing = account_routing;
+   }
+
    public Account(java.lang.String customerNumber, java.lang.String status,
          java.lang.String label, com.crossvale.common.Balance balance,
          java.lang.String type, java.lang.String accountRoutingAsString,
          java.lang.String accountRulesAsString, java.lang.String id,
          java.lang.String bank_id,
-         java.util.List<com.crossvale.common.Account_rules> account_rules)
+         java.util.List<com.crossvale.common.Account_rules> account_rules,
+         java.util.List<com.crossvale.common.AccountRouting> account_routing)
    {
       this.customerNumber = customerNumber;
       this.status = status;
@@ -153,6 +168,7 @@ public class Account implements java.io.Serializable
       this.id = id;
       this.bank_id = bank_id;
       this.account_rules = account_rules;
+      this.account_routing = account_routing;
    }
 
 }
