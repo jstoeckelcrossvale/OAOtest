@@ -9,30 +9,31 @@ public class Action implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "actionNumber")
+   @org.kie.api.definition.type.Label("actionNumber")
    private java.lang.String actionNumber;
-   @org.kie.api.definition.type.Label(value = "actionTime")
+   @org.kie.api.definition.type.Label("actionTime")
    private java.lang.String actionTime;
-   @org.kie.api.definition.type.Label(value = "ticketNumber")
+   @org.kie.api.definition.type.Label("ticketNumber")
    private java.lang.String ticketNumber;
-   @org.kie.api.definition.type.Label(value = "actionCode")
+   @org.kie.api.definition.type.Label("actionCode")
    private java.lang.String actionCode;
-   @org.kie.api.definition.type.Label(value = "globalId")
+   @org.kie.api.definition.type.Label("globalId")
    private java.lang.String globalId;
-   @org.kie.api.definition.type.Label(value = "narrative")
+   @org.kie.api.definition.type.Label("narrative")
    private java.lang.String narrative;
-   @org.kie.api.definition.type.Label(value = "statusFlag")
+   @org.kie.api.definition.type.Label("statusFlag")
    private java.lang.String statusFlag;
-   @org.kie.api.definition.type.Label(value = "assignTo")
+   @org.kie.api.definition.type.Label("assignTo")
    private com.crossvale.common.AssignTo assignTo;
-   @org.kie.api.definition.type.Label(value = "level")
+   @org.kie.api.definition.type.Label("level")
    private com.crossvale.common.CodeValue level;
-   @org.kie.api.definition.type.Label(value = "type")
+   @org.kie.api.definition.type.Label("type")
    private com.crossvale.common.CodeValue type;
-   @org.kie.api.definition.type.Label(value = "paramList")
-   private com.crossvale.common.KeyValueParam paramList;
-   @org.kie.api.definition.type.Label(value = "taskNumber")
+   @org.kie.api.definition.type.Label("taskNumber")
    private java.lang.String taskNumber;
+
+   @org.kie.api.definition.type.Label(value = "paramList")
+   private java.util.List<com.crossvale.common.KeyValueParam> paramList;
 
    public Action()
    {
@@ -138,16 +139,6 @@ public class Action implements java.io.Serializable
       this.type = type;
    }
 
-   public com.crossvale.common.KeyValueParam getParamList()
-   {
-      return this.paramList;
-   }
-
-   public void setParamList(com.crossvale.common.KeyValueParam paramList)
-   {
-      this.paramList = paramList;
-   }
-
    public java.lang.String getTaskNumber()
    {
       return this.taskNumber;
@@ -158,15 +149,24 @@ public class Action implements java.io.Serializable
       this.taskNumber = taskNumber;
    }
 
+   public java.util.List<com.crossvale.common.KeyValueParam> getParamList()
+   {
+      return this.paramList;
+   }
+
+   public void setParamList(
+         java.util.List<com.crossvale.common.KeyValueParam> paramList)
+   {
+      this.paramList = paramList;
+   }
+
    public Action(java.lang.String actionNumber, java.lang.String actionTime,
          java.lang.String ticketNumber, java.lang.String actionCode,
          java.lang.String globalId, java.lang.String narrative,
-         java.lang.String statusFlag,
-         com.crossvale.common.AssignTo assignTo,
+         java.lang.String statusFlag, com.crossvale.common.AssignTo assignTo,
          com.crossvale.common.CodeValue level,
-         com.crossvale.common.CodeValue type,
-         com.crossvale.common.KeyValueParam paramList,
-         java.lang.String taskNumber)
+         com.crossvale.common.CodeValue type, java.lang.String taskNumber,
+         java.util.List<com.crossvale.common.KeyValueParam> paramList)
    {
       this.actionNumber = actionNumber;
       this.actionTime = actionTime;
@@ -178,8 +178,8 @@ public class Action implements java.io.Serializable
       this.assignTo = assignTo;
       this.level = level;
       this.type = type;
-      this.paramList = paramList;
       this.taskNumber = taskNumber;
+      this.paramList = paramList;
    }
 
 }
