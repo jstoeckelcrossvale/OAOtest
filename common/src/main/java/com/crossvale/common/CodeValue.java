@@ -9,10 +9,10 @@ public class CodeValue implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "code")
+   @org.kie.api.definition.type.Label("code")
    private java.lang.String code;
-   @org.kie.api.definition.type.Label(value = "value")
-   private java.lang.String value;
+   @org.kie.api.definition.type.Label(value = "description")
+   private java.lang.String description;
 
    public CodeValue()
    {
@@ -28,20 +28,20 @@ public class CodeValue implements java.io.Serializable
       this.code = code;
    }
 
-   public java.lang.String getValue()
+   public java.lang.String getDescription()
    {
-      return this.value;
+      return this.description;
    }
 
-   public void setValue(java.lang.String value)
+   public void setDescription(java.lang.String description)
    {
-      this.value = value;
+      this.description = description;
    }
 
-   public CodeValue(java.lang.String code, java.lang.String value)
+   public CodeValue(java.lang.String code, java.lang.String description)
    {
       this.code = code;
-      this.value = value;
+      this.description = description;
    }
 
 }
