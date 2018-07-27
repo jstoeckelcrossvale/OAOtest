@@ -9,14 +9,20 @@ public class TransactionDetails implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "type")
+   @org.kie.api.definition.type.Label("type")
    private java.lang.String type;
-   @org.kie.api.definition.type.Label(value = "description")
+   @org.kie.api.definition.type.Label("description")
    private java.lang.String description;
-   @org.kie.api.definition.type.Label(value = "posted")
+   @org.kie.api.definition.type.Label("posted")
    private java.lang.String posted;
-   @org.kie.api.definition.type.Label(value = "completed")
+   @org.kie.api.definition.type.Label("completed")
    private java.lang.String completed;
+
+   @org.kie.api.definition.type.Label(value = "new_balance")
+   private com.crossvale.common.Money new_balance;
+
+   @org.kie.api.definition.type.Label(value = "value")
+   private com.crossvale.common.Money value;
 
    public TransactionDetails()
    {
@@ -62,14 +68,36 @@ public class TransactionDetails implements java.io.Serializable
       this.completed = completed;
    }
 
-   public TransactionDetails(java.lang.String type,
-         java.lang.String description, java.lang.String posted,
-         java.lang.String completed)
+   public com.crossvale.common.Money getNew_balance()
+   {
+      return this.new_balance;
+   }
+
+   public void setNew_balance(com.crossvale.common.Money new_balance)
+   {
+      this.new_balance = new_balance;
+   }
+
+   public com.crossvale.common.Money getValue()
+   {
+      return this.value;
+   }
+
+   public void setValue(com.crossvale.common.Money value)
+   {
+      this.value = value;
+   }
+
+   public TransactionDetails(java.lang.String type, java.lang.String description,
+         java.lang.String posted, java.lang.String completed,
+         com.crossvale.common.Money new_balance, com.crossvale.common.Money value)
    {
       this.type = type;
       this.description = description;
       this.posted = posted;
       this.completed = completed;
+      this.new_balance = new_balance;
+      this.value = value;
    }
 
 }
