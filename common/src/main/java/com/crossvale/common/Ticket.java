@@ -9,54 +9,55 @@ public class Ticket implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "ticketNumber")
+   @org.kie.api.definition.type.Label("ticketNumber")
    private java.lang.String ticketNumber;
-   @org.kie.api.definition.type.Label(value = "narrative")
+   @org.kie.api.definition.type.Label("narrative")
    private java.lang.String narrative;
-   @org.kie.api.definition.type.Label(value = "complaintFlag")
+   @org.kie.api.definition.type.Label("complaintFlag")
    private java.lang.String complaintFlag;
-   @org.kie.api.definition.type.Label(value = "approvalFlag")
+   @org.kie.api.definition.type.Label("approvalFlag")
    private java.lang.String approvalFlag;
-   @org.kie.api.definition.type.Label(value = "securityLevelCode")
+   @org.kie.api.definition.type.Label("securityLevelCode")
    private java.lang.String securityLevelCode;
-   @org.kie.api.definition.type.Label(value = "createdDate")
+   @org.kie.api.definition.type.Label("createdDate")
    private java.lang.String createdDate;
-   @org.kie.api.definition.type.Label(value = "receivedDate")
+   @org.kie.api.definition.type.Label("receivedDate")
    private java.lang.String receivedDate;
-   @org.kie.api.definition.type.Label(value = "assignTo")
+   @org.kie.api.definition.type.Label("assignTo")
    private com.crossvale.common.AssignTo assignTo;
-   @org.kie.api.definition.type.Label(value = "audit")
+   @org.kie.api.definition.type.Label("audit")
    private com.crossvale.common.Audit audit;
-   @org.kie.api.definition.type.Label(value = "category")
+   @org.kie.api.definition.type.Label("category")
    private com.crossvale.common.CodeValue category;
-   @org.kie.api.definition.type.Label(value = "item")
+   @org.kie.api.definition.type.Label("item")
    private com.crossvale.common.CodeValue item;
-   @org.kie.api.definition.type.Label(value = "status")
+   @org.kie.api.definition.type.Label("status")
    private com.crossvale.common.CodeValue status;
-   @org.kie.api.definition.type.Label(value = "severity")
+   @org.kie.api.definition.type.Label("severity")
    private com.crossvale.common.CodeValue severity;
-   @org.kie.api.definition.type.Label(value = "priority")
+   @org.kie.api.definition.type.Label("priority")
    private com.crossvale.common.CodeValue priority;
-   @org.kie.api.definition.type.Label(value = "originator")
+   @org.kie.api.definition.type.Label("originator")
    private com.crossvale.common.Originator originator;
-   @org.kie.api.definition.type.Label(value = "requestor")
+   @org.kie.api.definition.type.Label("requestor")
    private com.crossvale.common.Requestor requestor;
-   @org.kie.api.definition.type.Label(value = "contactMethod")
+   @org.kie.api.definition.type.Label("contactMethod")
    private com.crossvale.common.ContactMethod contactMethod;
-   @org.kie.api.definition.type.Label(value = "classification")
+   @org.kie.api.definition.type.Label("classification")
    private com.crossvale.common.Classification classification;
-   @org.kie.api.definition.type.Label(value = "transactionList")
+   @org.kie.api.definition.type.Label("transactionList")
    private java.util.List<com.crossvale.common.Transaction> transactionList;
-   @org.kie.api.definition.type.Label(value = "attributeList")
+   @org.kie.api.definition.type.Label("attributeList")
    private java.util.List<com.crossvale.common.Attribute> attributeList;
-   @org.kie.api.definition.type.Label(value = "attachmentList")
+   @org.kie.api.definition.type.Label("attachmentList")
    private java.util.List<com.crossvale.common.Attachment> attachmentList;
-   @org.kie.api.definition.type.Label(value = "actionList")
+   @org.kie.api.definition.type.Label("actionList")
    private java.util.List<com.crossvale.common.Action> actionList;
-   @org.kie.api.definition.type.Label(value = "taskList")
-   private com.crossvale.common.Task taskList;
-   @org.kie.api.definition.type.Label(value = "sla")
+   @org.kie.api.definition.type.Label("sla")
    private java.lang.String sla;
+
+   @org.kie.api.definition.type.Label(value = "taskList")
+   private java.util.List<com.crossvale.common.Task> taskList;
 
    public Ticket()
    {
@@ -288,16 +289,6 @@ public class Ticket implements java.io.Serializable
       this.actionList = actionList;
    }
 
-   public com.crossvale.common.Task getTaskList()
-   {
-      return this.taskList;
-   }
-
-   public void setTaskList(com.crossvale.common.Task taskList)
-   {
-      this.taskList = taskList;
-   }
-
    public java.lang.String getSla()
    {
       return this.sla;
@@ -308,11 +299,20 @@ public class Ticket implements java.io.Serializable
       this.sla = sla;
    }
 
+   public java.util.List<com.crossvale.common.Task> getTaskList()
+   {
+      return this.taskList;
+   }
+
+   public void setTaskList(java.util.List<com.crossvale.common.Task> taskList)
+   {
+      this.taskList = taskList;
+   }
+
    public Ticket(java.lang.String ticketNumber, java.lang.String narrative,
          java.lang.String complaintFlag, java.lang.String approvalFlag,
          java.lang.String securityLevelCode, java.lang.String createdDate,
-         java.lang.String receivedDate,
-         com.crossvale.common.AssignTo assignTo,
+         java.lang.String receivedDate, com.crossvale.common.AssignTo assignTo,
          com.crossvale.common.Audit audit,
          com.crossvale.common.CodeValue category,
          com.crossvale.common.CodeValue item,
@@ -327,7 +327,7 @@ public class Ticket implements java.io.Serializable
          java.util.List<com.crossvale.common.Attribute> attributeList,
          java.util.List<com.crossvale.common.Attachment> attachmentList,
          java.util.List<com.crossvale.common.Action> actionList,
-         com.crossvale.common.Task taskList, java.lang.String sla)
+         java.lang.String sla, java.util.List<com.crossvale.common.Task> taskList)
    {
       this.ticketNumber = ticketNumber;
       this.narrative = narrative;
@@ -351,8 +351,8 @@ public class Ticket implements java.io.Serializable
       this.attributeList = attributeList;
       this.attachmentList = attachmentList;
       this.actionList = actionList;
-      this.taskList = taskList;
       this.sla = sla;
+      this.taskList = taskList;
    }
 
 }
