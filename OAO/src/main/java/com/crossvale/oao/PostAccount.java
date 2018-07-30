@@ -19,7 +19,7 @@ public class PostAccount implements java.io.Serializable
    private java.lang.String branch_id;
 
    @org.kie.api.definition.type.Label(value = "balance")
-   private com.crossvale.oao.Balance balance;
+   private com.crossvale.common.Balance balance;
 
    @org.kie.api.definition.type.Label(value = "account_routing")
    private java.lang.String account_routing;
@@ -68,12 +68,12 @@ public class PostAccount implements java.io.Serializable
       this.branch_id = branch_id;
    }
 
-   public com.crossvale.oao.Balance getBalance()
+   public com.crossvale.common.Balance getBalance()
    {
       return this.balance;
    }
 
-   public void setBalance(com.crossvale.oao.Balance balance)
+   public void setBalance(com.crossvale.common.Balance balance)
    {
       this.balance = balance;
    }
@@ -90,7 +90,7 @@ public class PostAccount implements java.io.Serializable
 
    public PostAccount(java.lang.String customerNumber, java.lang.String label,
          java.lang.String type, java.lang.String branch_id,
-         com.crossvale.oao.Balance balance, java.lang.String account_routing)
+         com.crossvale.common.Balance balance, java.lang.String account_routing)
    {
       this.customerNumber = customerNumber;
       this.label = label;
