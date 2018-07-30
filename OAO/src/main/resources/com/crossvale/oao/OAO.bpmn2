@@ -17,7 +17,7 @@
   <bpmn2:itemDefinition id="_userCodeItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_userDescrItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_taskNumberItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__dueDateItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_dueDateItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_agentApprItem" structureRef="Boolean"/>
   <bpmn2:itemDefinition id="_customerNrItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_postAccountItem" structureRef="com.crossvale.oao.PostAccount"/>
@@ -46,7 +46,7 @@
   <bpmn2:itemDefinition id="__F00C5A30-153C-4483-9BF8-076DDB9F8EE1_groupCodeInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__F00C5A30-153C-4483-9BF8-076DDB9F8EE1_groupDescrInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__F00C5A30-153C-4483-9BF8-076DDB9F8EE1_taskNumberOutputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__F00C5A30-153C-4483-9BF8-076DDB9F8EE1__dueDateOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__F00C5A30-153C-4483-9BF8-076DDB9F8EE1_dueDateOutputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__EBDE9BB4-10A8-42AB-A930-9B918E3059CA_taskNumberInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__EBDE9BB4-10A8-42AB-A930-9B918E3059CA_DueDateInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__EBDE9BB4-10A8-42AB-A930-9B918E3059CA_ApplicationInputXItem" structureRef="com.crossvale.common.Application"/>
@@ -81,7 +81,7 @@
     <bpmn2:property id="userCode" itemSubjectRef="_userCodeItem"/>
     <bpmn2:property id="userDescr" itemSubjectRef="_userDescrItem"/>
     <bpmn2:property id="taskNumber" itemSubjectRef="_taskNumberItem"/>
-    <bpmn2:property id="_dueDate" itemSubjectRef="__dueDateItem"/>
+    <bpmn2:property id="dueDate" itemSubjectRef="_dueDateItem"/>
     <bpmn2:property id="agentAppr" itemSubjectRef="_agentApprItem"/>
     <bpmn2:property id="customerNr" itemSubjectRef="_customerNrItem"/>
     <bpmn2:property id="postAccount" itemSubjectRef="_postAccountItem"/>
@@ -318,7 +318,7 @@ kcontext.setVariable("groupDescr", groupDescr);]]></bpmn2:script>
         <bpmn2:dataInput id="_F00C5A30-153C-4483-9BF8-076DDB9F8EE1_groupCodeInputX" drools:dtype="String" itemSubjectRef="__F00C5A30-153C-4483-9BF8-076DDB9F8EE1_groupCodeInputXItem" name="groupCode"/>
         <bpmn2:dataInput id="_F00C5A30-153C-4483-9BF8-076DDB9F8EE1_groupDescrInputX" drools:dtype="String" itemSubjectRef="__F00C5A30-153C-4483-9BF8-076DDB9F8EE1_groupDescrInputXItem" name="groupDescr"/>
         <bpmn2:dataOutput id="_F00C5A30-153C-4483-9BF8-076DDB9F8EE1_taskNumberOutputX" drools:dtype="String" itemSubjectRef="__F00C5A30-153C-4483-9BF8-076DDB9F8EE1_taskNumberOutputXItem" name="taskNumber"/>
-        <bpmn2:dataOutput id="_F00C5A30-153C-4483-9BF8-076DDB9F8EE1__dueDateOutputX" drools:dtype="String" itemSubjectRef="__F00C5A30-153C-4483-9BF8-076DDB9F8EE1__dueDateOutputXItem" name="_dueDate"/>
+        <bpmn2:dataOutput id="_F00C5A30-153C-4483-9BF8-076DDB9F8EE1_dueDateOutputX" drools:dtype="String" itemSubjectRef="__F00C5A30-153C-4483-9BF8-076DDB9F8EE1_dueDateOutputXItem" name="_dueDate"/>
         <bpmn2:inputSet id="_4Au2R5QYEeiJuNlL2VXtTA">
           <bpmn2:dataInputRefs>_F00C5A30-153C-4483-9BF8-076DDB9F8EE1_ticketNrInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_F00C5A30-153C-4483-9BF8-076DDB9F8EE1_taskNarrativeInputX</bpmn2:dataInputRefs>
@@ -331,7 +331,7 @@ kcontext.setVariable("groupDescr", groupDescr);]]></bpmn2:script>
         </bpmn2:inputSet>
         <bpmn2:outputSet id="_4AvdQJQYEeiJuNlL2VXtTA">
           <bpmn2:dataOutputRefs>_F00C5A30-153C-4483-9BF8-076DDB9F8EE1_taskNumberOutputX</bpmn2:dataOutputRefs>
-          <bpmn2:dataOutputRefs>_F00C5A30-153C-4483-9BF8-076DDB9F8EE1__dueDateOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_F00C5A30-153C-4483-9BF8-076DDB9F8EE1_dueDateOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_4AvdQZQYEeiJuNlL2VXtTA">
@@ -371,7 +371,7 @@ kcontext.setVariable("groupDescr", groupDescr);]]></bpmn2:script>
         <bpmn2:targetRef>taskNumber</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
       <bpmn2:dataOutputAssociation id="_4AvdSpQYEeiJuNlL2VXtTA">
-        <bpmn2:sourceRef>_F00C5A30-153C-4483-9BF8-076DDB9F8EE1__dueDateOutputX</bpmn2:sourceRef>
+        <bpmn2:sourceRef>_F00C5A30-153C-4483-9BF8-076DDB9F8EE1_dueDateOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>DueDate</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
     </bpmn2:callActivity>
@@ -406,7 +406,7 @@ kcontext.setVariable("groupDescr", groupDescr);]]></bpmn2:script>
         <bpmn2:targetRef>_EBDE9BB4-10A8-42AB-A930-9B918E3059CA_taskNumberInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_4AzusZQYEeiJuNlL2VXtTA">
-        <bpmn2:sourceRef>_dueDate</bpmn2:sourceRef>
+        <bpmn2:sourceRef>dueDate</bpmn2:sourceRef>
         <bpmn2:targetRef>_EBDE9BB4-10A8-42AB-A930-9B918E3059CA_DueDateInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_4AzuspQYEeiJuNlL2VXtTA">
