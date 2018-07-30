@@ -9,14 +9,20 @@ public class PostAccount implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "customerNumber")
+   @org.kie.api.definition.type.Label("customerNumber")
    private java.lang.String customerNumber;
-   @org.kie.api.definition.type.Label(value = "label")
+   @org.kie.api.definition.type.Label("label")
    private java.lang.String label;
-   @org.kie.api.definition.type.Label(value = "type")
+   @org.kie.api.definition.type.Label("type")
    private java.lang.String type;
-   @org.kie.api.definition.type.Label(value = "branch_id")
+   @org.kie.api.definition.type.Label("branch_id")
    private java.lang.String branch_id;
+
+   @org.kie.api.definition.type.Label(value = "balance")
+   private com.crossvale.oao.Balance balance;
+
+   @org.kie.api.definition.type.Label(value = "account_routing")
+   private java.lang.String account_routing;
 
    public PostAccount()
    {
@@ -62,13 +68,36 @@ public class PostAccount implements java.io.Serializable
       this.branch_id = branch_id;
    }
 
+   public com.crossvale.oao.Balance getBalance()
+   {
+      return this.balance;
+   }
+
+   public void setBalance(com.crossvale.oao.Balance balance)
+   {
+      this.balance = balance;
+   }
+
+   public java.lang.String getAccount_routing()
+   {
+      return this.account_routing;
+   }
+
+   public void setAccount_routing(java.lang.String account_routing)
+   {
+      this.account_routing = account_routing;
+   }
+
    public PostAccount(java.lang.String customerNumber, java.lang.String label,
-         java.lang.String type, java.lang.String branch_id)
+         java.lang.String type, java.lang.String branch_id,
+         com.crossvale.oao.Balance balance, java.lang.String account_routing)
    {
       this.customerNumber = customerNumber;
       this.label = label;
       this.type = type;
       this.branch_id = branch_id;
+      this.balance = balance;
+      this.account_routing = account_routing;
    }
 
 }
