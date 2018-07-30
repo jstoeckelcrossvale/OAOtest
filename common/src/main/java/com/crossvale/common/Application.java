@@ -9,12 +9,18 @@ public class Application implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "applicationNumber")
+   @org.kie.api.definition.type.Label("applicationNumber")
    private java.lang.String applicationNumber;
-   @org.kie.api.definition.type.Label(value = "customerNumber")
+   @org.kie.api.definition.type.Label("customerNumber")
    private java.lang.String customerNumber;
-   @org.kie.api.definition.type.Label(value = "identity")
-   private com.crossvale.common.Account_rules identity;
+   @org.kie.api.definition.type.Label("identity")
+   private Identity identity;
+
+   @org.kie.api.definition.type.Label(value = "contactInfo")
+   private com.crossvale.common.ContactInfo contactInfo;
+
+   @org.kie.api.definition.type.Label(value = "fund")
+   private com.crossvale.common.Fund fund;
 
    public Application()
    {
@@ -40,23 +46,47 @@ public class Application implements java.io.Serializable
       this.customerNumber = customerNumber;
    }
 
-   public com.crossvale.common.Account_rules getIdentity()
+   public com.crossvale.common.Identity getIdentity()
    {
       return this.identity;
    }
 
-   public void setIdentity(com.crossvale.common.Account_rules identity)
+   public void setIdentity(com.crossvale.common.Identity identity)
    {
       this.identity = identity;
    }
 
+   public com.crossvale.common.ContactInfo getContactInfo()
+   {
+      return this.contactInfo;
+   }
+
+   public void setContactInfo(com.crossvale.common.ContactInfo contactInfo)
+   {
+      this.contactInfo = contactInfo;
+   }
+
+   public com.crossvale.common.Fund getFund()
+   {
+      return this.fund;
+   }
+
+   public void setFund(com.crossvale.common.Fund fund)
+   {
+      this.fund = fund;
+   }
+
    public Application(java.lang.String applicationNumber,
          java.lang.String customerNumber,
-         com.crossvale.common.Account_rules identity)
+         com.crossvale.common.Identity identity,
+         com.crossvale.common.ContactInfo contactInfo,
+         com.crossvale.common.Fund fund)
    {
       this.applicationNumber = applicationNumber;
       this.customerNumber = customerNumber;
       this.identity = identity;
+      this.contactInfo = contactInfo;
+      this.fund = fund;
    }
 
 }
