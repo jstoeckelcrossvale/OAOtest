@@ -9,53 +9,55 @@ public class Response implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "restType")
-   private java.lang.String restType;
-   @org.kie.api.definition.type.Label(value = "dataType")
-   private java.lang.String dataType;
-   @org.kie.api.definition.type.Label(value = "jsonBody")
-   private java.lang.String jsonBody;
+   @org.kie.api.definition.type.Label(value = "errors")
+   private java.util.List<java.lang.String> errors;
+
+   @org.kie.api.definition.type.Label(value = "status")
+   private java.lang.String status;
+
+   @org.kie.api.definition.type.Label(value = "entities")
+   private java.util.List<java.lang.String> entities;
 
    public Response()
    {
    }
 
-   public java.lang.String getRestType()
+   public java.util.List<java.lang.String> getErrors()
    {
-      return this.restType;
+      return this.errors;
    }
 
-   public void setRestType(java.lang.String restType)
+   public void setErrors(java.util.List<java.lang.String> errors)
    {
-      this.restType = restType;
+      this.errors = errors;
    }
 
-   public java.lang.String getDataType()
+   public java.lang.String getStatus()
    {
-      return this.dataType;
+      return this.status;
    }
 
-   public void setDataType(java.lang.String dataType)
+   public void setStatus(java.lang.String status)
    {
-      this.dataType = dataType;
+      this.status = status;
    }
 
-   public java.lang.String getJsonBody()
+   public java.util.List<java.lang.String> getEntities()
    {
-      return this.jsonBody;
+      return this.entities;
    }
 
-   public void setJsonBody(java.lang.String jsonBody)
+   public void setEntities(java.util.List<java.lang.String> entities)
    {
-      this.jsonBody = jsonBody;
+      this.entities = entities;
    }
 
-   public Response(java.lang.String restType, java.lang.String dataType,
-         java.lang.String jsonBody)
+   public Response(java.util.List<java.lang.String> errors,
+         java.lang.String status, java.util.List<java.lang.String> entities)
    {
-      this.restType = restType;
-      this.dataType = dataType;
-      this.jsonBody = jsonBody;
+      this.errors = errors;
+      this.status = status;
+      this.entities = entities;
    }
 
 }
